@@ -15,7 +15,7 @@ export function EventOverview() {
   return (
     <section
       id="about"
-      className={`relative w-full ${SECTION_STYLES.sticky} flex flex-col items-center justify-center`}
+      className={`relative w-full ${SECTION_STYLES.sticky} flex flex-col items-center justify-center scroll-mt-24`}
       style={{
         backgroundImage: "url('/carp.jpg')",
         backgroundAttachment,

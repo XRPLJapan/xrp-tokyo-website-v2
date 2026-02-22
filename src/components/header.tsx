@@ -21,11 +21,18 @@ export function Header() {
   const { openDialog } = useGiveawayDialog();
 
   const navItems = [
-    { label: t("header.about"), href: "#about" },
-    { label: t("header.highlights"), href: "#highlights" },
-    { label: t("header.speakers"), href: "#speakers" },
-    { label: t("header.sponsors"), href: "#sponsors" },
+    { label: t("header.about"), id: "about" },
+    { label: t("header.highlights"), id: "highlights" },
+    { label: t("header.speakers"), id: "speakers" },
+    { label: t("header.sponsors"), id: "sponsors" },
   ];
+
+  const handleNavClick = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -50,13 +57,14 @@ export function Header() {
         {/* デスクトップナビゲーション */}
         <nav className="hidden items-center gap-2 md:flex">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => handleNavClick(item.id)}
               className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
             >
               {item.label}
-            </Link>
+            </button>
           ))}
         </nav>
 
@@ -182,14 +190,17 @@ export function Header() {
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15"
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => {
+                      handleNavClick(item.id);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 ))}
               </div>
               {/* モバイル用チケットボタン */}

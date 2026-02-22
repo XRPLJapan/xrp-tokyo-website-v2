@@ -151,7 +151,7 @@ export function SponsorSection() {
   return (
     <section
       id="sponsors"
-      className="relative w-full flex flex-col items-center justify-center bg-black py-16 md:py-24 rounded-tr-2xl rounded-tl-2xl text-white"
+      className="relative w-full flex flex-col items-center justify-center bg-black py-16 md:py-24 rounded-tr-2xl rounded-tl-2xl text-white scroll-mt-24"
     >
       <div className={SECTION_STYLES.container}>
         <div className="flex flex-col items-center text-center">

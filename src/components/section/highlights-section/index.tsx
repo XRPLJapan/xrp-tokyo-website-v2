@@ -17,7 +17,10 @@ const HIGHLIGHT_IMAGES = [
 
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative w-full bg-black text-white">
+    <section
+      id="highlights"
+      className="relative w-full bg-black text-white scroll-mt-24"
+    >
       <div className={`${SECTION_STYLES.container} py-16 md:py-24`}>
         <div className="flex flex-col items-center text-center">
           <p className="text-xs uppercase tracking-[0.6em] text-[#e81111]">

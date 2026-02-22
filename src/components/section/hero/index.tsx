@@ -26,60 +26,84 @@ export function Hero() {
 
   return (
     <section
-      id="highlights"
-      className="relative min-h-screen md:min-h-[calc(100vh-4rem)] overflow-hidden flex items-center bg-[#050505]"
+      id="hero"
+      className="relative min-h-screen md:min-h-[calc(100vh-4rem)] overflow-hidden flex items-start md:items-center bg-[#050505] pt-14 md:pt-0"
     >
       {/* Animated X Background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
-      <svg
+   <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
-  aria-hidden="true"
 >
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      
-      {/* Top Part - Continuous Flow Animation */}
-      <motion.path
-        d="M437,0h74L357,152.48c-55.77,55.19-146.19,55.19-202,0L.94,0H75L192,115.83a91.11,91.11,0,0,0,127.91,0Z"
-        fill="none"
-        stroke="#e81111"
-        strokeWidth="2.5" // बॉर्डर को पतला रखा है ताकि हैवी न लगे
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        style={{ filter: "drop-shadow(0 0 12px #e81111)" }}
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ 
-          duration: 4,      // घूमने की स्पीड (इसे कम/ज्यादा कर सकते हैं)
-          repeat: Infinity, 
-          ease: "easeInOut", // इससे घूमना ज्यादा स्मूथ लगेगा
-          repeatType: "loop" 
-        }}
-      />
+  <defs>
+    <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
 
-      {/* Bottom Part - Continuous Flow Animation */}
-      <motion.path
-        d="M74.05,424H0L155,270.58c55.77-55.19,146.19-55.19,202,0L512,424H438L320,307.23a91.11,91.11,0,0,0-127.91,0Z"
-        fill="none"
-        stroke="#e81111"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        style={{ filter: "drop-shadow(0 0 12px #e81111)" }}
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ 
-          duration: 4, 
-          repeat: Infinity, 
-          ease: "easeInOut",
-          repeatType: "loop"
-        }}
-      />
-      
-    </g>
-  </g>
+  {/* 1. The 'X' Logo Section */}
+  <motion.g
+    animate={{ 
+      opacity: [1, 1, 0, 0, 1],
+      scale: [1, 1.1, 0.8, 0.8, 1] 
+    }}
+    transition={{ duration: 6, repeat: Infinity, times: [0, 0.3, 0.4, 0.9, 1] }}
+  >
+    <motion.path
+      d="M437,0h74L357,152.48c-55.77,55.19-146.19,55.19-202,0L.94,0H75L192,115.83a91.11,91.11,0,0,0,127.91,0Z"
+      fill="none" stroke="#e81111" strokeWidth="3" filter="url(#neonBlur)"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: [0, 1, 1] }}
+      transition={{ duration: 6, repeat: Infinity, times: [0, 0.3, 1] }}
+    />
+    <motion.path
+      d="M74.05,424H0L155,270.58c55.77-55.19,146.19-55.19,202,0L512,424H438L320,307.23a91.11,91.11,0,0,0-127.91,0Z"
+      fill="none" stroke="#e81111" strokeWidth="3" filter="url(#neonBlur)"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: [0, 1, 1] }}
+      transition={{ duration: 6, repeat: Infinity, times: [0, 0.3, 1] }}
+    />
+  </motion.g>
+
+  {/* 2. The "TOKYO" Text Section (Appears after X breaks) */}
+  <motion.text
+    x="50%" y="50%"
+    dominantBaseline="middle" textAnchor="middle"
+    fill="none" stroke="#e81111" strokeWidth="2"
+    style={{ fontSize: "80px", fontWeight: "bold", letterSpacing: "8px", filter: "url(#neonBlur)" }}
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ 
+      opacity: [0, 0, 1, 1, 0],
+      scale: [0.5, 0.5, 1, 1.2, 1.5],
+      letterSpacing: ["2px", "2px", "8px", "15px", "30px"]
+    }}
+    transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
+  >
+   JOIN THE FUTURE
+  </motion.text>
+
+ 
+  {[...Array(20)].map((_, i) => (
+    <motion.circle
+      key={i}
+      cx="256" cy="212" r="1.5" fill="#e81111"
+      initial={{ opacity: 0 }}
+      animate={{ 
+        opacity: [0, 1, 0],
+        x: [0, (i - 10) * 40 * Math.random()],
+        y: [0, (i - 10) * 40 * Math.random()],
+        scale: [0, 1.5, 0]
+      }}
+      transition={{ 
+        duration: 6, 
+        repeat: Infinity, 
+        delay: 2.1, // 
+        times: [0.35, 0.5, 0.7] 
+      }}
+    />
+  ))}
 </svg>
       </div>
 
