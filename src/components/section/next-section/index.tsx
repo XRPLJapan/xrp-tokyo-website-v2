@@ -1,25 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { sanityClient } from "@/sanity/sanity.client";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0 },
 };
 
-interface JourneyContent {
-  journeyHeading: string;
-  journeySubtext: string;
-  journeyPrimaryLabel: string;
-  journeyPrimaryUrl: string;
-  journeySecondaryLabel: string;
-  journeySecondaryUrl: string;
-}
-
 export function NextSection() {
-  const [content, setContent] = useState<JourneyContent>({
+  const content = {
     journeyHeading: "THE JOURNEY BEGINS",
     journeySubtext:
       "Join us in Tokyo for the most influential XRP event of 2026.",
@@ -27,31 +16,7 @@ export function NextSection() {
     journeyPrimaryUrl: "#",
     journeySecondaryLabel: "View Agenda",
     journeySecondaryUrl: "#",
-  });
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        const data = await sanityClient.fetch<JourneyContent>(
-          `*[_type == "landingPageContent"][0]{
-            journeyHeading,
-            journeySubtext,
-            journeyPrimaryLabel,
-            journeyPrimaryUrl,
-            journeySecondaryLabel,
-            journeySecondaryUrl
-          }`,
-        );
-        if (data?.journeyHeading) {
-          setContent((prev) => ({ ...prev, ...data }));
-        }
-      } catch (error) {
-        console.error("Failed to fetch landing page content from Sanity", error);
-      }
-    };
-
-    fetchContent();
-  }, []);
+  };
 
   return (
     <section
