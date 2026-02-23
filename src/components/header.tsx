@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Ticket, Gift } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -42,16 +43,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-black/90 text-white backdrop-blur border-b border-white/10">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
         {/* ブランド */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-white tracking-[0.25em] text-sm sm:text-base font-semibold"
-          aria-label="XRP Tokyo 2026"
-        >
-          <span className="uppercase">XRP</span>
-          <span className="uppercase tracking-[0.2em]">Tokyo</span>
-          <span className="uppercase text-[#e81111] tracking-[0.25em]">
-            2026
-          </span>
+        <Link href="/" className="flex items-center" aria-label="XRP Tokyo 2026">
+          <Image
+            src="/logo-dark.svg"
+            alt="XRP Tokyo 2026"
+            width={140}
+            height={24}
+            className="h-6 w-auto"
+            priority
+          />
         </Link>
 
         {/* デスクトップナビゲーション */}

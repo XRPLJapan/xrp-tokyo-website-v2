@@ -10,7 +10,7 @@ import { SponsorSection } from "@/components/section/sponsor-section";
 import { SpeakerSection } from "@/components/section/speaker-section";
 import { MobileTicketButton } from "@/components/mobile-ticket-button";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
-
+import Image from "next/image";
 export default function Home() {
   const t = useTranslations();
   const isAtBottom = useScrollPosition(0.95);
@@ -55,8 +55,14 @@ export default function Home() {
           }}
         >
           <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-            <span>XRP </span>
-            <span className="text-[#e81111]">TOKYO ’26</span>
+          <Image
+            src="/logo-dark.svg"
+            alt="XRP Tokyo 2026"
+            width={140}
+            height={24}
+            className="h-6 w-auto"
+            priority
+          />
           </div>
 
           <div className="flex items-center gap-3">

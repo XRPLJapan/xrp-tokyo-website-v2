@@ -17,7 +17,8 @@ import { useSplash } from "@/contexts/splash-context";
 import { SECTION_STYLES } from "@/lib/styles/common";
 import { EventInfo } from "../../hero/event-info";
 import { CTAButtons } from "../../hero/cta-buttons";
-
+import Image from "next/image";
+import Link from "next/link";
 export function Hero() {
   const t = useTranslations();
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
@@ -35,6 +36,7 @@ export function Hero() {
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
+  style={{ opacity: 0.5 }} // यहाँ ओपेसिटी को आधा (0.5) किया गया है
 >
   <defs>
     <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
@@ -67,24 +69,29 @@ export function Hero() {
     />
   </motion.g>
 
-  {/* 2. The "TOKYO" Text Section (Appears after X breaks) */}
+  {/* 2. The "JOIN THE FUTURE" Text Section */}
   <motion.text
-    x="50%" y="50%"
-    dominantBaseline="middle" textAnchor="middle"
-    fill="none" stroke="#e81111" strokeWidth="2"
-    style={{ fontSize: "80px", fontWeight: "bold", letterSpacing: "8px", filter: "url(#neonBlur)" }}
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ 
-      opacity: [0, 0, 1, 1, 0],
-      scale: [0.5, 0.5, 1, 1.2, 1.5],
-      letterSpacing: ["2px", "2px", "8px", "15px", "30px"]
-    }}
-    transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
-  >
-   JOIN THE FUTURE
-  </motion.text>
+  x="50%" y="50%"
+  dominantBaseline="middle" textAnchor="middle"
+  fill="none" stroke="#e81111" strokeWidth="2"
+  style={{ 
+    fontSize: "45px", 
+    fontWeight: "bold", 
+    letterSpacing: "4px", 
+    filter: "url(#neonBlur)" 
+  }}
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ 
+    opacity: [0, 0, 1, 1, 0],
+    scale: [0.8, 0.8, 1, 1.05, 1.1], 
+    letterSpacing: ["2px", "2px", "4px", "8px", "12px"] 
+  }}
+  transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
+>
+  JOIN THE FUTURE FINANCE
+</motion.text>
 
- 
+  {/* 3. Particle Explosion Section */}
   {[...Array(20)].map((_, i) => (
     <motion.circle
       key={i}
@@ -99,7 +106,7 @@ export function Hero() {
       transition={{ 
         duration: 6, 
         repeat: Infinity, 
-        delay: 2.1, // 
+        delay: 2.1, 
         times: [0.35, 0.5, 0.7] 
       }}
     />
@@ -109,8 +116,8 @@ export function Hero() {
 
       {/* コンテンツ */}
       <div className={`${SECTION_STYLES.container} relative z-10`}>
-        <div className="flex flex-col items-center justify-center text-center">
-          {/* 見出し */}
+       {/* <div className="flex flex-col items-center justify-center text-center">
+        
           <div
             className={`mb-10 ${isSplashComplete ? logoAnimation.className : "opacity-0"}`}
             style={isSplashComplete ? logoAnimation.style : undefined}
@@ -123,15 +130,27 @@ export function Hero() {
             />
           </div>
 
-          {/* 日付と場所 */}
+          
           <EventInfo
             onCalendarClick={() => setIsCalendarOpen(true)}
             shouldAnimate={isSplashComplete}
           />
 
-          {/* CTAボタン */}
+          
           <CTAButtons shouldAnimate={isSplashComplete} />
-        </div>
+        </div> */}
+        <div className="flex flex-col items-center justify-center text-center">
+  <Link href="https://tickets.teamz.co.jp/?utm_source=xrp" target="_blank">
+    <Image
+      src="/headerinternalimage.png"
+      alt="XRP Tokyo 2026"
+      width={1000}
+      height={800}
+      className="w-full max-w-4xl h-auto"
+      priority
+    />
+  </Link>
+</div>
       </div>
 
       {/* カレンダーモーダル */}
