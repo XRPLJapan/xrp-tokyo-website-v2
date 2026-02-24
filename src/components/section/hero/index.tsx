@@ -74,23 +74,24 @@ export function Hero() {
   x="50%" y="50%"
   dominantBaseline="middle" textAnchor="middle"
   fill="none" stroke="#e81111" strokeWidth="2"
-  className="text-[28px] md:text-[70px] font-bold" 
+ 
+  className="text-[26px] md:text-[30px] font-bold" 
   style={{ 
-    letterSpacing: "2px", 
+    letterSpacing: "3px", 
     filter: "url(#neonBlur)",
     fontFamily: "sans-serif"
   }}
-  initial={{ opacity: 0, scale: 1 }}
+  initial={{ opacity: 0 }}
   animate={{ 
     opacity: [0, 0, 1, 1, 0],
-    scale: typeof window !== 'undefined' && window.innerWidth < 768 ? [1, 1, 1, 1, 1] : [1, 1, 1, 1.1, 1.2],
-    
-    letterSpacing: typeof window !== 'undefined' && window.innerWidth < 768 ? ["1px", "2px", "2px"] : ["2px", "4px", "15px"]
+  
+    letterSpacing: ["2px", "4px", "2px"],
+    strokeWidth: [1.5, 2, 1.5]
   }}
   transition={{ 
     duration: 6, 
     repeat: Infinity, 
-    times: [0, 0.35, 0.45, 0.7, 0.8] 
+    times: [0, 0.35, 0.5, 0.75, 1] 
   }}
 >
   JOIN THE FUTURE OF FINANCE
@@ -150,7 +151,7 @@ export function Hero() {
   target="_blank" 
   className="block w-full overflow-hidden rounded-xl" 
 >
-  <div className="relative w-full transition-transform duration-500 ease-out hover:scale-105">
+  <div className="w-full lg:w-[85%] mx-auto max-h-[650px] object-cover">
     <Image
       src="/headerinternalimage.png"
       alt="XRP Tokyo 2026"
