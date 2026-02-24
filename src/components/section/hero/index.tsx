@@ -36,7 +36,7 @@ export function Hero() {
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
-  style={{ opacity: 0.5 }} // यहाँ ओपेसिटी को आधा (0.5) किया गया है
+  style={{ opacity: 0.5 }} 
 >
   <defs>
     <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
@@ -75,16 +75,18 @@ export function Hero() {
   dominantBaseline="middle" textAnchor="middle"
   fill="none" stroke="#e81111" strokeWidth="2"
   style={{ 
-    fontSize: "45px", 
+    // मोबाइल के लिए छोटा फॉन्ट, डेस्कटॉप के लिए बड़ा
+    fontSize: typeof window !== 'undefined' && window.innerWidth < 768 ? "32px" : "60px", 
     fontWeight: "bold", 
     letterSpacing: "4px", 
     filter: "url(#neonBlur)" 
   }}
-  initial={{ opacity: 0, scale: 0.8 }}
+  initial={{ opacity: 0, scale: 0.9 }}
   animate={{ 
     opacity: [0, 0, 1, 1, 0],
-    scale: [0.8, 0.8, 1, 1.05, 1.1], 
-    letterSpacing: ["2px", "2px", "4px", "8px", "12px"] 
+    // मोबाइल पर ज़ूम हटा दिया (1.0), डेस्कटॉप पर हल्का ज़ूम रखा (1.1)
+    scale: typeof window !== 'undefined' && window.innerWidth < 768 ? [0.9, 0.9, 1, 1, 1] : [0.9, 0.9, 1, 1.1, 1.2],
+    letterSpacing: typeof window !== 'undefined' && window.innerWidth < 768 ? ["1px", "1px", "2px", "2px", "2px"] : ["2px", "2px", "4px", "8px", "15px"]
   }}
   transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
 >

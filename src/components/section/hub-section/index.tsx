@@ -17,7 +17,7 @@ const STATS = [
 function HubImages() {
   return (
     <div className="relative">
-      <div className="grid grid-cols-2 grid-rows-2 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-[1.1fr_1fr] grid-rows-2 gap-4">
         <div className="col-span-2">                                 
           <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
             <Image
@@ -100,7 +100,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
   return (
     <section className="relative w-full bg-black text-white">
       <div className={`${SECTION_STYLES.container} py-16 md:py-24 space-y-16`}>
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.25fr] lg:items-center">
           {isImageLeft ? (
             <>
               <HubImages />
@@ -116,9 +116,24 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
 
         {/* New reversed block (as per screenshot) */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-         
-
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-2 space-y-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
+              XRP TOKYO 2026
+              <br />
+              RED CARPET GALA
+              <br />
+              VIP AFTER PARTY.
+            </h3>
+            <p className="text-sm sm:text-base text-white/70">
+              7th April 2026 | 6F HALL HAKU | Main Building
+            </p>
+            <p className="text-sm sm:text-base text-white/60 max-w-xl">
+              XRP Tokyo is a global conference focused on the XRP Ledger
+              ecosystem, institutional blockchain adoption, and real-world
+              on-chain use cases.
+            </p>
+          </div>
+          <div className="order-1 lg:order-1">
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
@@ -150,23 +165,6 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
                 />
               </div>
             </div>
-          </div>
-           <div className="order-2 lg:order-1 space-y-4">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
-              XRP TOKYO 2026
-              <br />
-              RED CARPET GALA
-              <br />
-              VIP AFTER PARTY.
-            </h3>
-            <p className="text-sm sm:text-base text-white/70">
-              7th April 2026 | 6F HALL HAKU | Main Building
-            </p>
-            <p className="text-sm sm:text-base text-white/60 max-w-xl">
-              XRP Tokyo is a global conference focused on the XRP Ledger
-              ecosystem, institutional blockchain adoption, and real-world
-              on-chain use cases.
-            </p>
           </div>
         </div>
         
