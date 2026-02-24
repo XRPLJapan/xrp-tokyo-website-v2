@@ -30,7 +30,9 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen md:min-h-[calc(100vh-4rem)] overflow-hidden flex items-start md:items-center bg-[#050505] pt-14 md:pt-0"
     >
+
       {/* Animated X Background */}
+ <div className="absolute inset-0 z-0 bg-[url('/herobackground.png')] bg-cover bg-center bg-no-repeat opacity-40" />
       <div className="absolute inset-0 z-0 flex items-center justify-center">
    <svg
   xmlns="http://www.w3.org/2000/svg"

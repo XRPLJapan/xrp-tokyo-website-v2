@@ -68,7 +68,7 @@ export function SpeakerCard({
         <p className="text-white text-base md:text-xl font-bold leading-snug">
           {name}
         </p>
-        <p className="mt-1 text-xs md:text-sm text-[#e81111] leading-snug">
+        <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug">
           {role}
         </p>
         <p className="text-[11px] md:text-xs text-white/60 leading-snug">

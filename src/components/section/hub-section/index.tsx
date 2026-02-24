@@ -116,57 +116,61 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
 
         {/* New reversed block (as per screenshot) */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          <div className="order-2 lg:order-2 space-y-4">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
-              XRP TOKYO 2026
-              <br />
-              RED CARPET GALA
-              <br />
-              VIP AFTER PARTY.
-            </h3>
-            <p className="text-sm sm:text-base text-white/70">
-              7th April 2026 | 6F HALL HAKU | Main Building
-            </p>
-            <p className="text-sm sm:text-base text-white/60 max-w-xl">
-              XRP Tokyo is a global conference focused on the XRP Ledger
-              ecosystem, institutional blockchain adoption, and real-world
-              on-chain use cases.
-            </p>
-          </div>
-          <div className="order-1 lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="col-span-2">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-                  <Image
-                    src="/rcarpet1.png"
-                    alt="Red carpet wall"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                  />
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-                <Image
-                  src="/rcarpet2.png"
-                  alt="Networking"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                />
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-                <Image
-                  src="/rcarpet3.png"
-                  alt="VIP after party"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                />
-              </div>
-            </div>
-          </div>
+  {/* TEXT: first on mobile, second on desktop */}
+  <div className="order-1 lg:order-2 space-y-4">
+    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
+      XRP TOKYO 2026
+      <br />
+      RED CARPET GALA
+      <br />
+      VIP AFTER PARTY.
+    </h3>
+    <p className="text-sm sm:text-base text-white/70">
+      7th April 2026 | 6F HALL HAKU | Main Building
+    </p>
+    <p className="text-sm sm:text-base text-white/60 max-w-xl">
+      XRP Tokyo is a global conference focused on the XRP Ledger ecosystem,
+      institutional blockchain adoption, and real-world on-chain use cases.
+    </p>
+  </div>
+
+  {/* IMAGES: second on mobile, first on desktop */}
+  <div className="order-2 lg:order-1">
+    <div className="grid grid-cols-2 gap-4">
+      <div className="col-span-2">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+          <Image
+            src="/rcarpet1.png"
+            alt="Red carpet wall"
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
         </div>
+      </div>
+
+      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+        <Image
+          src="/rcarpet2.png"
+          alt="Networking"
+          fill
+          className="object-cover"
+          sizes="(min-width: 1024px) 25vw, 50vw"
+        />
+      </div>
+
+      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+        <Image
+          src="/rcarpet3.png"
+          alt="VIP after party"
+          fill
+          className="object-cover"
+          sizes="(min-width: 1024px) 25vw, 50vw"
+        />
+      </div>
+    </div>
+  </div>
+</div>
         
       </div>
     </section>
