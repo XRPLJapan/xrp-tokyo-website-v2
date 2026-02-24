@@ -74,7 +74,6 @@ export function Hero() {
   x="50%" y="50%"
   dominantBaseline="middle" textAnchor="middle"
   fill="none" stroke="#e81111" strokeWidth="2"
-  // मोबाइल पर छोटा साइज (text-[28px]) और डेस्कटॉप पर बड़ा (md:text-[70px])
   className="text-[28px] md:text-[70px] font-bold" 
   style={{ 
     letterSpacing: "2px", 
@@ -94,7 +93,7 @@ export function Hero() {
     times: [0, 0.35, 0.45, 0.7, 0.8] 
   }}
 >
-  JOIN THE FUTURE FINANCE
+  JOIN THE FUTURE OF FINANCE
 </motion.text>
 
   {/* 3. Particle Explosion Section */}
@@ -120,7 +119,7 @@ export function Hero() {
 </svg>
       </div>
 
-      {/* コンテンツ */}
+  
       <div className={`${SECTION_STYLES.container} relative z-10`}>
        {/* <div className="flex flex-col items-center justify-center text-center">
         
