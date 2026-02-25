@@ -73,20 +73,25 @@ export function Hero() {
 
   {/* 2. The "JOIN THE FUTURE" Text Section */}
   <motion.text
-  x="50%" y="50%"
-  dominantBaseline="middle" textAnchor="middle"
-  fill="none" stroke="#e81111" strokeWidth="2"
- 
-  className="text-[26px] md:text-[30px] font-bold" 
+  x="50%"
+  // मोबाइल पर सेंटर (50%), डेस्कटॉप पर सेंटर से 40px नीचे खिसका दिया
+  y={typeof window !== 'undefined' && window.innerWidth < 768 
+    ? "50%" 
+    : "calc(83% + 40px)"} 
+  dominantBaseline="middle"
+  textAnchor="middle"
+  fill="none"
+  stroke="#e81111"
+  strokeWidth="2"
+  className="text-[26px] md:text-[35px] font-bold"
   style={{ 
     letterSpacing: "3px", 
-    filter: "url(#neonBlur)",
+    filter: "drop-shadow(0 0 8px rgba(232, 17, 17, 0.8))",
     fontFamily: "sans-serif"
   }}
   initial={{ opacity: 0 }}
   animate={{ 
     opacity: [0, 0, 1, 1, 0],
-  
     letterSpacing: ["2px", "4px", "2px"],
     strokeWidth: [1.5, 2, 1.5]
   }}
@@ -155,7 +160,7 @@ export function Hero() {
 >
   <div className="w-full lg:w-[85%] mx-auto max-h-[650px] object-cover">
     <Image
-      src="/headerinternalimage.png"
+      src="/headerinternalimagedesktop1.png"
       alt="XRP Tokyo 2026"
       width={1920} 
       height={800}
