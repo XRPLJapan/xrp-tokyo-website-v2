@@ -174,7 +174,7 @@ export function Hero() {
       {/* Desktop image */}
       <div className="hidden md:block">
         <Image
-          src="/headerinternalimagedesktop2.png"
+          src="/headerinternalimagedesktop4.png"
           alt="XRP Tokyo 2026"
           width={1920}
           height={800}
