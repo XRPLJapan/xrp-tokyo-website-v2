@@ -120,21 +120,50 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
         {/* New reversed block (as per screenshot) */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
   {/* TEXT: first on mobile, second on desktop */}
-          <div className="order-1 lg:order-2 space-y-4">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
-              {t("redCarpetSection.heading.line1")}
-              <br />
-              {t("redCarpetSection.heading.line2")}
-              <br />
-              {t("redCarpetSection.heading.line3")}
-            </h3>
-            <p className="text-sm sm:text-base text-white/70">
-              {t("redCarpetSection.meta")}
-            </p>
-            <p className="text-sm sm:text-base text-white/60 max-w-xl">
-              {t("redCarpetSection.description")}
-            </p>
-          </div>
+        <div className="order-1 lg:order-2 space-y-6">
+  <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+    <span className="block text-white">
+      {t("redCarpetSection.heading.line1")}
+    </span>
+
+    <span className="block text-white">
+      {t("redCarpetSection.heading.line2")}
+    </span>
+
+    <span className="block bg-gradient-to-r from-[#c89b3c] via-[#f6d365] to-[#b8860b] bg-clip-text text-transparent">
+      {t("redCarpetSection.heading.line3")}
+    </span>
+  </h3>
+
+  <p className="text-sm sm:text-base text-white/70 tracking-wide">
+    {t("redCarpetSection.meta")}
+  </p>
+
+  <p className="text-sm sm:text-base text-white/60 max-w-xl leading-relaxed">
+    {t("redCarpetSection.description")}
+  </p>
+
+  {/* VIP Button */}
+  <a
+    href={t("redCarpetSection.ctaUrl")} // or content.redCarpetVipUrl
+    target="_blank"
+    rel="noreferrer"
+    className="
+      inline-flex items-center justify-center
+      rounded-full px-8 py-3
+      font-semibold uppercase tracking-wide
+      text-black
+      bg-gradient-to-r from-[#c89b3c] via-[#f6d365] to-[#b8860b]
+      shadow-[0_0_18px_rgba(246,211,101,0.35)]
+      transition-all duration-300
+      hover:scale-105
+      hover:shadow-[0_0_28px_rgba(246,211,101,0.6)]
+      focus:outline-none focus:ring-2 focus:ring-[#f6d365]/70 focus:ring-offset-2 focus:ring-offset-black
+    "
+  >
+   VIP PASS TICKET
+  </a>
+</div>
 
   {/* IMAGES: second on mobile, first on desktop */}
   <div className="order-2 lg:order-1">
@@ -142,7 +171,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
       <div className="col-span-2">
         <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
           <Image
-            src="/rcarpet1.png"
+            src="/redcarpet1img.png"
             alt="Red carpet wall"
             fill
             className="object-cover"
