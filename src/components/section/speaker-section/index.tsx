@@ -55,7 +55,7 @@ export function SpeakerSection() {
   return (
     <section
       id="speakers"
-      className={`relative w-full flex flex-col items-center justify-center bg-black rounded-tr-2xl rounded-tl-2xl ${SECTION_STYLES.sticky} scroll-mt-24`}
+      className="relative w-full flex flex-col items-center justify-center bg-black rounded-tr-2xl rounded-tl-2xl scroll-mt-24"
     >
       <div className={`${SECTION_STYLES.container} px-4 sm:px-6 lg:px-8`}>
         <div className="flex flex-col items-center text-center text-white">

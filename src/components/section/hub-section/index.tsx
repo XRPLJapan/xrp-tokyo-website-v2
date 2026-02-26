@@ -145,7 +145,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
 
   {/* VIP Button */}
   <a
-    href={t("redCarpetSection.ctaUrl")}
+    href="https://luma.com/da2ucul1"
     target="_blank"
     rel="noreferrer"
     className="
@@ -171,7 +171,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
       <div className="col-span-2">
         <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
           <Image
-            src="/redcarpet1img.png"
+            src="/redcarpet1img.webp"
             alt="Red carpet wall"
             fill
             className="object-cover"

@@ -5,28 +5,36 @@
       "role": "Senior Director, Ecosystem Growth Ripple",
       "company": "Ripple",
       "bio": "Christina Chan, Senior Director and Ecosystem Growth of Ripple  As the Head of Funding Programs at Ripple, she leads a cross-functional global team that manages a 1 billion XRP fund for builders on the XRP Ledger ecosystem. With over 10 years of experience in web3, blockchain, crypto, and fintech, she fosters strategic collaborations and partnerships to grow and strengthen the web3 ecosystem.",
-      "image": "/Christina-Chan.jpg"
+      "image": "/Christina-Chan.jpg",
+      "twitter": "https://x.com/ghostfacex_0",
+      "linkedin": "https://www.linkedin.com/in/christinabchan"
     },
     {
-      "name": "Christinass Chanss",
-      "role": "Seniorss Directorss, Ecosystem Growthss",
+      "name": "Markus Infanger",
+      "role": "SVP, RippleX",
       "company": "Ripple",
-      "bio": "Christinasss Chan leads ecosystem growth initiatives, partnering with builders and institutions to expand real-world use cases across the XRP Ledger.",
-      "image": "/avtarimage.jpg"
+      "bio": "Markus Infanger, SVP of RippleX at Ripple.  He leads product development, strategic partnerships, and the expansion of the XRP Ledger developer ecosystem.  Bringing 20+ years of experience in global Foreign Exchange leadership at top-tier financial institutions, he bridges the worlds of traditional finance and blockchain innovation.",
+      "image": "/Markus-Infanger.jpg",
+      "twitter": "https://x.com/markusinfanger",
+      "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/"
     },
     {
-      "name": "Kelvin Koh",
-      "role": "Co-Founder and Partner",
-      "company": "Spartan Group",
-      "bio": "Kelvin Koh is a co-founder and partner at Spartan Group, advising and investing in leading Web3 projects.",
-      "image": "/avtarimage.jpg"
+      "name": "Takuya Sugiyama",
+      "role": "Vice President",
+      "company": "SBI Ripple Asia",
+      "bio": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
+      "image": "/Takuy-Sugiyama.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
     },
     {
       "name": "Nihal Maunder",
       "role": "Partner",
       "company": "Pantera Capital",
       "bio": "Nihal Maunder is a partner at Pantera Capital, focusing on growth-stage investments in the digital asset ecosystem.",
-      "image": "/avtarimage.jpg"
+      "image": "/avtarimage.jpg",
+      "twitter": "",
+      "linkedin": ""
     }
   ],
   "sponsors": [

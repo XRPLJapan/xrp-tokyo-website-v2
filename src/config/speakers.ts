@@ -9,6 +9,7 @@ export interface Speaker {
   bioJa?: string;
   image?: string;
   twitter?: string;
+  linkedin?: string;
   website?: string;
 }
 

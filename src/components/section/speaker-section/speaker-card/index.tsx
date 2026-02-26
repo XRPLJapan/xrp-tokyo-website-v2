@@ -54,12 +54,38 @@ export function SpeakerCard({
         )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
         <div className="absolute bottom-3 right-3 flex items-center gap-2">
-          <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm md:h-7 md:w-7">
-            X
-          </span>
-          <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm md:h-7 md:w-7">
-            in
-          </span>
+          {speaker.twitter ? (
+            <a
+              href={speaker.twitter}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => event.stopPropagation()}
+              aria-label={`${name} on X`}
+              className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm transition hover:bg-white md:h-7 md:w-7"
+            >
+              X
+            </a>
+          ) : (
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/40 text-[10px] font-semibold text-black/60 shadow-sm md:h-7 md:w-7">
+              X
+            </span>
+          )}
+          {speaker.linkedin ? (
+            <a
+              href={speaker.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => event.stopPropagation()}
+              aria-label={`${name} on LinkedIn`}
+              className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm transition hover:bg-white md:h-7 md:w-7"
+            >
+              in
+            </a>
+          ) : (
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/40 text-[10px] font-semibold text-black/60 shadow-sm md:h-7 md:w-7">
+              in
+            </span>
+          )}
         </div>
       </div>
 
