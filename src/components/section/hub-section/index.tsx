@@ -32,7 +32,7 @@ function HubImages() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
           <Image
             src="/hub2.png"
             alt="Venue"
@@ -42,7 +42,7 @@ function HubImages() {
           />
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[#e81111]/60 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
           <Image
             src="/hub3.png"
             alt="Community"
@@ -145,7 +145,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
 
   {/* VIP Button */}
   <a
-    href={t("redCarpetSection.ctaUrl")} // or content.redCarpetVipUrl
+    href={t("redCarpetSection.ctaUrl")}
     target="_blank"
     rel="noreferrer"
     className="
@@ -161,7 +161,7 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
       focus:outline-none focus:ring-2 focus:ring-[#f6d365]/70 focus:ring-offset-2 focus:ring-offset-black
     "
   >
-   VIP PASS TICKET
+    {t("redCarpetSection.ctaLabel")}
   </a>
 </div>
 

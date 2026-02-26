@@ -59,7 +59,9 @@
       "line3": "VIP AFTER PARTY."
     },
     "meta": "7th April 2026 | 6F HALL HAKU | Main Building",
-    "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases."
+    "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases.",
+    "ctaLabel": "VIP PASS TICKET",
+    "ctaUrl": "https://www.teamz.co.jp/tickets?utm_source=xrp"
   },
   "highlightsSection": {
     "kicker": "Highlights",
