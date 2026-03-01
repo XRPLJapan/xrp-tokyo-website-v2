@@ -109,7 +109,7 @@
       "name": "渋谷Web3大学",
       "tier": "Community Partner",
       "logo": "/partners/community/渋谷Web3大学横.jpg",
-      "website": "https://www.shibuyaweb3univ-co.com/"
+      "website": "https://www.shibuyaweb3univ.com/"
     },
     {
       "name": "OP Market",
@@ -126,7 +126,8 @@
     {
       "name": "Wavee",
       "tier": "Community Partner",
-      "logo": "/partners/community/wavee1.png"
+      "logo": "/partners/community/wavee-bg-white.png",
+      "website": "https://wavee.world/"
     },
     {
       "name": "Wave of Innovation",
