@@ -118,7 +118,7 @@ export const SPONSORS = [
     tier: Tier.MediaPartner,
     name: "NADA NEWS",
     logo: "/partners/media/news_tagline.png",
-    website: "https://nadanews.io/",
+    website: "https://www.nadanews.com/",
   },
   {
     tier: Tier.CommunityPartner,
@@ -130,7 +130,7 @@ export const SPONSORS = [
     tier: Tier.CommunityPartner,
     name: "渋谷Web3大学",
     logo: "/partners/community/渋谷Web3大学横.jpg",
-    website: "https://www.shibuyaweb3univ-co.com/",
+    website: "https://www.shibuyaweb3univ.com/",
   },
   {
     tier: Tier.CommunityPartner,
@@ -140,7 +140,7 @@ export const SPONSORS = [
   },
   {
     tier: Tier.CommunityPartner,
-    name: "Text RP",
+    name: "TextRP",
     logo: "/partners/community/text-rp.jpg",
     website: "https://textrp.io/",
   },
@@ -148,6 +148,7 @@ export const SPONSORS = [
     tier: Tier.CommunityPartner,
     name: "Wavee",
     logo: "/partners/community/wavee.svg",
+    website: "https://wavee.world/",
   },
   {
     tier: Tier.CommunityPartner,
@@ -171,13 +172,13 @@ export const SPONSORS = [
     tier: Tier.CommunityPartner,
     name: "XRPL Korea",
     logo: "/partners/community/xrplkorea_v_black.svg",
-    website: "https://xrplkorea.org/",
+    website: "https://www.xrplkorea.org/",
   },
   {
     tier: Tier.CommunityPartner,
     name: "XRPL Africa",
     logo: "/partners/community/xrpl-africa.jpg",
-    website: "https://africanxrcommunity.org/",
+    website: "https://x.com/XRPL_AF",
   },
   {
     tier: Tier.CommunityPartner,
@@ -189,6 +190,7 @@ export const SPONSORS = [
     tier: Tier.CommunityPartner,
     name: "XRPL Malaysia",
     logo: "/partners/community/xrpl-malaysia.jpg",
+    website: "https://x.com/xrplmalaysia",
   },
   {
     tier: Tier.CommunityPartner,
