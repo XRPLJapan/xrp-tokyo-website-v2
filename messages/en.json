@@ -49,6 +49,8 @@
       "countries": "Countries",
       "attendees": "Attendees",
       "speakers": "Speakers",
+      "sessions": "Sessions",
+      "sponsors": "Sponsors",
       "days": "Days"
     }
   },

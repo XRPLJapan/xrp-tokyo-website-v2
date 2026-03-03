@@ -9,10 +9,10 @@ type HubSectionProps = {
 };
 
 const STATS = [
-  { value: "40+", labelKey: "hubSection.stats.countries" },
   { value: "3,000+", labelKey: "hubSection.stats.attendees" },
-  { value: "100+", labelKey: "hubSection.stats.speakers" },
-  { value: "3", labelKey: "hubSection.stats.days" },
+  { value: "20+", labelKey: "hubSection.stats.sessions" },
+  { value: "30+", labelKey: "hubSection.stats.sponsors" },
+  { value: "1", labelKey: "hubSection.stats.days" },
 ];
 
 function HubImages() {

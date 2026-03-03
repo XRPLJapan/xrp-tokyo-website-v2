@@ -39,9 +39,9 @@
   },
   "hubSection": {
     "heading": {
-      "line1": "2026年4月東京で。",
-      "line2": "XRPの最前線を",
-      "line3": "体感する1日間。"
+      "line1": "東京・八芳園で",
+      "line2": "XRP の最前線を",
+      "line3": "体感できる1日間"
     },
     "subheading": "アジア最速で成長するXRP特化型ブロックチェーンカンファレンス",
     "description": "XRP TokyoはXRP Ledgerエコシステム、機関投資家のブロックチェーン導入、そして実社会でのオンチェーン活用に焦点を当てた国際カンファレンスです。",
@@ -49,6 +49,8 @@
       "countries": "国",
       "attendees": "参加者",
       "speakers": "スピーカー",
+      "sessions": "登壇",
+      "sponsors": "スポンサー",
       "days": "日間"
     }
   },

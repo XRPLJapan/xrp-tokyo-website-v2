@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -129,13 +130,21 @@ export function SponsorSection() {
         };
 
         if (isMounted) {
+          const mapped = (data.sponsors ?? []).map((sponsor) => ({
+            name: sponsor.name,
+            tier: tierMap[sponsor.tier] ?? Tier.CommunityPartner,
+            logo: sponsor.logo,
+            website: sponsor.website,
+          }));
+          // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）
+          const seen = new Set<string>();
           setSponsorsByTier(
-            (data.sponsors ?? []).map((sponsor) => ({
-              name: sponsor.name,
-              tier: tierMap[sponsor.tier] ?? Tier.CommunityPartner,
-              logo: sponsor.logo,
-              website: sponsor.website,
-            })),
+            mapped.filter((s) => {
+              const key = `${s.tier}:${s.logo}`;
+              if (seen.has(key)) return false;
+              seen.add(key);
+              return true;
+            }),
           );
         }
       } catch (error) {
