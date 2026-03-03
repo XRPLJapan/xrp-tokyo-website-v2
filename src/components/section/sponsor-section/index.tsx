@@ -96,7 +96,7 @@ export function SponsorSection() {
     {
       name: string;
       tier: Tier;
-      logo: string;
+      logo?: string;
       website?: string;
     }[]
   >([]);
@@ -112,8 +112,8 @@ export function SponsorSection() {
         const data = (await res.json()) as {
           sponsors?: {
             name: string;
-            tier: string;
-            logo: string;
+            tier?: string;
+            logo?: string;
             website?: string;
           }[];
         };
@@ -132,15 +132,15 @@ export function SponsorSection() {
         if (isMounted) {
           const mapped = (data.sponsors ?? []).map((sponsor) => ({
             name: sponsor.name,
-            tier: tierMap[sponsor.tier] ?? Tier.CommunityPartner,
+            tier: tierMap[sponsor.tier ?? ""] ?? Tier.CommunityPartner,
             logo: sponsor.logo,
             website: sponsor.website,
           }));
-          // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）
+          // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
           const seen = new Set<string>();
           setSponsorsByTier(
             mapped.filter((s) => {
-              const key = `${s.tier}:${s.logo}`;
+              const key = s.logo ? `${s.tier}:${s.logo}` : `${s.tier}:${s.name}`;
               if (seen.has(key)) return false;
               seen.add(key);
               return true;
