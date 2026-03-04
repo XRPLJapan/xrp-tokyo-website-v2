@@ -29,16 +29,18 @@ export function Header() {
   ];
 
   const handleNavClick = (id: string) => {
-    if (id === "about") {
-      // about だけ 100svh の位置に固定してスクロール（スクロール先を安定させる）
-      const scrollTop = typeof window !== "undefined" ? window.innerHeight : 0;
-      window.scrollTo({ top: scrollTop, behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // 概要: モバイルブラウザUI分だけスクロールが足りないため、上方向に余分にスクロール
+    if (id === "about" && typeof window !== "undefined") {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      const extra = 80; // ブラウザUI分の補正（足りない分を上にずらす）
+      window.scrollTo({ top: Math.max(0, top - extra), behavior: "smooth" });
       return;
     }
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const toggleMobileMenu = () => {
