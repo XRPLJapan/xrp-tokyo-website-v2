@@ -57,7 +57,9 @@ export function SpeakerSection() {
       id="speakers"
       className="relative w-full flex flex-col items-center justify-center bg-black rounded-tr-2xl rounded-tl-2xl scroll-mt-24"
     >
-      <div className={`${SECTION_STYLES.container} px-4 sm:px-6 lg:px-8`}>
+      <div
+        className={`${SECTION_STYLES.container} px-4 sm:px-6 lg:px-8`}
+      >
         <div className="flex flex-col items-center text-center text-white">
           <div className="mb-3 h-px w-24 bg-[#e81111]" aria-hidden="true" />
           <SectionTitle
@@ -94,7 +96,7 @@ export function SpeakerSection() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ staggerChildren: 0.06 }}
             >
-              {speakers.map((speaker) => (
+              {speakers.map((speaker, index) => (
                 <SpeakerCard
                   key={speaker.name}
                   speaker={speaker}

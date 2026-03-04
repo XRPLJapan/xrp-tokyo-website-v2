@@ -66,15 +66,35 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-              X
-            </span>
-            <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-              in
-            </span>
-            <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-              tg
-            </span>
+            <a
+  href="https://x.com/XRPLJapan"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
+    X
+  </span>
+</a>
+
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
+    in
+  </span>
+</a>
+
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
+    tg
+  </span>
+</a>
           </div>
         </div>
 
