@@ -45,6 +45,15 @@ export function Header() {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  /** モバイル: メニューを閉じてからアニメーション完了後にスクロール（位置ずれ防止） */
+  const MOBILE_MENU_CLOSE_MS = 320;
+  const handleMobileNavClick = (id: string) => {
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      handleNavClick(id);
+    }, MOBILE_MENU_CLOSE_MS);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-black/90 text-white backdrop-blur border-b border-white/10">
       <div className="w-full flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
@@ -199,10 +208,7 @@ export function Header() {
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => {
-                      handleNavClick(item.id);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => handleMobileNavClick(item.id)}
                     className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
                   >
                     {item.label}
