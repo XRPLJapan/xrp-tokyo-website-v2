@@ -93,7 +93,7 @@ export function NextSection() {
    {content.journeyPrimaryLabel}
   </a>
 
-  {/* General Pass */}
+  {/* チケット購入 */}
   <a
     href={content.journeySecondaryUrl}
     target="_blank"
