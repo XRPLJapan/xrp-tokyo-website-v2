@@ -15,9 +15,9 @@ export function NextSection() {
     journeyHeading: t("journeySection.heading"),
     journeySubtext: t("journeySection.subtext"),
     journeyPrimaryLabel: t("journeySection.primaryCta"),
-    journeyPrimaryUrl: "#",
+    journeyPrimaryUrl: "https://luma.com/da2ucul1",
     journeySecondaryLabel: t("journeySection.secondaryCta"),
-    journeySecondaryUrl: "#",
+    journeySecondaryUrl: "https://luma.com/da2ucul1",
   };
 
   return (
