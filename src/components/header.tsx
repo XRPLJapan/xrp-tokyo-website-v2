@@ -25,6 +25,7 @@ export function Header() {
     { label: t("header.about"), id: "about" },
     { label: t("header.highlights"), id: "highlights" },
     { label: t("header.speakers"), id: "speakers" },
+    { label: t("header.partners"), id: "strategic-partner" },
     { label: t("header.sponsors"), id: "sponsors" },
   ];
 

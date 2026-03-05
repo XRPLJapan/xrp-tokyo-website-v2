@@ -392,6 +392,31 @@
     }
   }
 
+  /* Strategic Partner セクション用：紫グローの脈動 */
+  @keyframes glow-drift {
+    0%,
+    100% {
+      opacity: 0.55;
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.08) translateY(-12px);
+    }
+  }
+
+  .animate-glow-drift {
+    animation: glow-drift 8s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-glow-drift {
+      animation: none;
+      opacity: 0.75;
+    }
+  }
+
   /* グラデーションアニメーション（流れる効果） */
   @keyframes gradient-shift {
     0% {

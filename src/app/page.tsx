@@ -7,6 +7,7 @@ import { HighlightsSection } from "@/components/section/highlights-section";
 import { EventOverview } from "@/components/event-overview";
 import { NextSection } from "@/components/section/next-section";
 import { SponsorSection } from "@/components/section/sponsor-section";
+import { StrategicPartnerSection } from "@/components/section/strategic-partner-section";
 import { SpeakerSection } from "@/components/section/speaker-section";
 import { MobileTicketButton } from "@/components/mobile-ticket-button";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
@@ -36,6 +37,9 @@ export default function Home() {
 
         {/* Speaker Section */}
         <SpeakerSection />
+
+        {/* Strategic Partner Section */}
+        <StrategicPartnerSection />
 
         {/* Sponsor Section */}
         <SponsorSection />
