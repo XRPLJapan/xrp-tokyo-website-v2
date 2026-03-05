@@ -42,7 +42,7 @@ const TIER_STYLES: Record<
     hover: "hover:shadow-sm hover:scale-105",
     shadow: "",
   },
-  [Tier.MediaPartner]: {
+  [Tier.Media]: {
     padding: "p-3 md:p-4",
     rounded: "rounded-lg",
     hover: "hover:shadow-sm hover:scale-105",
@@ -54,7 +54,7 @@ const TIER_STYLES: Record<
     hover: "hover:shadow-sm hover:scale-105",
     shadow: "",
   },
-  [Tier.CommunityPartner]: {
+  [Tier.Community]: {
     padding: "p-2.5 md:p-3",
     rounded: "rounded-md",
     hover: "hover:shadow-sm hover:scale-105",

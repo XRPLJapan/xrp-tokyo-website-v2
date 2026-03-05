@@ -69,7 +69,7 @@ logoClass: "w-[calc(33.333%-0.5rem)] max-w-[160px] aspect-[1.4/1] border border-
     initialY: 24,
   },
   {
-    tier: Tier.MediaPartner,
+    tier: Tier.Media,
     containerClass:
       "grid grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-lg mx-auto",
     
@@ -79,7 +79,17 @@ logoClass: "aspect-[1.4/1] border border-[#4A90E2]/40 rounded-md bg-white/5 shad
     initialY: 24,
   },
   {
-    tier: Tier.CommunityPartner,
+    tier: Tier.Education,
+    containerClass:
+      "flex flex-wrap justify-center gap-3 w-full max-w-lg mx-auto",
+    logoClass:
+      "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] aspect-[1.4/1] border border-[#10B981]/40 rounded-md bg-white/5 shadow-sm",
+    gap: "mt-10 md:mt-12",
+    titleGap: "mb-3",
+    initialY: 24,
+  },
+  {
+    tier: Tier.Community,
     containerClass:
       "grid grid-cols-3 md:grid-cols-4 gap-2.5 w-full max-w-xl mx-auto",
    
@@ -124,15 +134,18 @@ export function SponsorSection() {
           Gold: Tier.Gold,
           Silver: Tier.Silver,
           Bronze: Tier.Bronze,
-          "Media Partner": Tier.MediaPartner,
+          Media: Tier.Media,
+          "Media Partner": Tier.Media,
           Education: Tier.Education,
-          "Community Partner": Tier.CommunityPartner,
+          "Education Partner": Tier.Education,
+          Community: Tier.Community,
+          "Community Partner": Tier.Community,
         };
 
         if (isMounted) {
           const mapped = (data.sponsors ?? []).map((sponsor) => ({
             name: sponsor.name,
-            tier: tierMap[sponsor.tier ?? ""] ?? Tier.CommunityPartner,
+            tier: tierMap[sponsor.tier ?? ""] ?? Tier.Community,
             logo: sponsor.logo,
             website: sponsor.website,
           }));
