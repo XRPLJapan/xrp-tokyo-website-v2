@@ -11,21 +11,16 @@ function PartnerCard({
   imageAlt,
   title,
   subtitle,
+  href,
 }: {
   imageSrc?: string;
   imageAlt: string;
   title: string;
   subtitle?: string;
+  href?: string;
 }) {
-  return (
-    <motion.div
-      className="flex flex-col items-center gap-6 rounded-2xl border border-white/15 bg-white/[0.07] p-10 shadow-[0_0_40px_rgba(255,255,255,0.06)] backdrop-blur-sm"
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+  const content = (
+    <>
       <div className="flex h-36 w-72 items-center justify-center overflow-hidden rounded-xl bg-white p-8 shadow-md">
         {imageSrc ? (
           <Image
@@ -49,6 +44,40 @@ function PartnerCard({
           </p>
         )}
       </div>
+    </>
+  );
+
+  const baseClass =
+    "flex flex-col items-center gap-6 rounded-2xl border border-white/15 bg-white/[0.07] p-10 backdrop-blur-sm transition-all duration-500 ease-out shadow-[0_0_40px_rgba(255,255,255,0.06)] hover:bg-white/[0.12] hover:border-white/25 hover:shadow-[0_0_60px_rgba(164,60,255,0.25),0_0_120px_rgba(164,60,255,0.1)] hover:scale-[1.02]";
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={baseClass}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.div
+      className={baseClass}
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      {content}
     </motion.div>
   );
 }
@@ -95,6 +124,7 @@ export function StrategicPartnerSection() {
           >
             <div className="w-full max-w-lg">
               <PartnerCard
+                href="https://digitalchamber.org/"
                 imageSrc="/strategic-partner/logo-digitalchamber.svg"
                 imageAlt="Digital Chamber"
                 title={t("digitalChamber.description")}
