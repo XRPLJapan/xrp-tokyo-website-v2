@@ -18,15 +18,23 @@
       "twitter": "https://x.com/ghostfacex_0",
       "linkedin": "https://www.linkedin.com/in/christinabchan"
     },
-   
     {
-      "name": "Takuya Sugiyama",
-      "role": "Vice President",
-      "company": "SBI Ripple Asia",
-      "bio": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
-      "image": "/Takuy-Sugiyama.jpg",
+      "name": "Tatsuya Yamada",
+      "role": "President",
+      "company": "Rakuten Wallet, Inc.",
+      "bio": "",
+      "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
+      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a"
+    },
+    {
+      "name": "SungMo Park",
+      "role": "Partner, Head of APAC GTM",
+      "company": "A16z Crypto",
+      "bio": "",
+      "image": "/speakers/SungMo Park.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/smp0910/"
     },
      {
       "name": "Cody Carbone",
@@ -37,24 +45,17 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/codycarbone/"
     },
-	{
-      "name": "Seihaku Yoshida",
-      "role": "CEO",
-      "company": "HashPort Inc",
-      "bio": "",
-      "image": "/speakers/HashPort Inc.png",
-      "twitter": "https://x.com/seihakuyoshida",
-      "linkedin": ""
-    },
-	{
-      "name": "Tatsuya Yamada",
-      "role": "President",
-      "company": "Rakuten Wallet, Inc.",
-      "bio": "",
-      "image": "/speakers/Tatsuya Yamada.png",
+   
+    {
+      "name": "Takuya Sugiyama",
+      "role": "Vice President",
+      "company": "SBI Ripple Asia",
+      "bio": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
+      "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
-      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a"
+      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
     },
+	
     {
       "name": "Tomohiko Kondo",
       "role": "CEO",
@@ -63,6 +64,15 @@
       "image": "/speakers/Tomohiko Kondo.png",
       "twitter": "https://x.com/tomohiko_kondo",
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
+    },
+	{
+      "name": "Seihaku Yoshida",
+      "role": "CEO",
+      "company": "HashPort Inc",
+      "bio": "",
+      "image": "/speakers/HashPort Inc.png",
+      "twitter": "https://x.com/seihakuyoshida",
+      "linkedin": ""
     },
     {
       "name": "Masahi Okuyama",
@@ -81,15 +91,6 @@
       "image": "/speakers/Takafumi Shimoyama.png",
       "twitter": "",
       "linkedin": "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207"
-    },
-    {
-      "name": "SungMo Park",
-      "role": "Partner, Head of APAC GTM",
-      "company": "A16z Crypto",
-      "bio": "",
-      "image": "/speakers/SungMo Park.png",
-      "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/smp0910/"
     },
     {
       "name": "Meg Nakamura",
@@ -153,6 +154,15 @@
       "image": "/speakers/Alexis Sirkia.png",
       "twitter": "https://x.com/AlexisYellow",
       "linkedin": "https://www.linkedin.com/in/sirkia/"
+    },
+    {
+      "name": "Mai Furukawa",
+      "role": "Co-founder of XRPL Japan",
+      "company": "XRPL Labs",
+      "bio": "",
+      "image": "/speakers/Mai Furukawa1.png",
+      "twitter": "https://x.com/Mai_XRPLJapan",
+      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/"
     }
     
   ],
