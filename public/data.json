@@ -36,6 +36,60 @@
       "image": "/speakers/cody-carbone1.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/codycarbone/"
+    },
+	{
+      "name": "Seihaku Yoshida",
+      "role": "CEO",
+      "company": "HashPort Inc",
+      "bio": "",
+      "image": "/speakers/HashPort Inc.png",
+      "twitter": "https://x.com/seihakuyoshida",
+      "linkedin": ""
+    },
+	{
+      "name": "Tatsuya Yamada",
+      "role": "President",
+      "company": "Rakuten Wallet, Inc.",
+      "bio": "",
+      "image": "/speakers/Tatsuya Yamada.png",
+      "twitter": "",
+      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a"
+    },
+    {
+      "name": "Tomohiko Kondo",
+      "role": "CEO",
+      "company": "SBI VC Trade Co., Ltd",
+      "bio": "",
+      "image": "/speakers/Tomohiko Kondo.png",
+      "twitter": "https://x.com/tomohiko_kondo",
+      "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
+    },
+    {
+      "name": "Takafumi Shimoyama",
+      "role": "Sales and Customer Success Department",
+      "company": "SBI Ripple Asia",
+      "bio": "",
+      "image": "/speakers/Takafumi Shimoyama.png",
+      "twitter": "",
+      "linkedin": "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207"
+    },
+    {
+      "name": "SungMo Park",
+      "role": "Partner, Head of APAC GTM",
+      "company": "A16z Crypto",
+      "bio": "",
+      "image": "/speakers/SungMo Park.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/smp0910/"
+    },
+    {
+      "name": "Meg Nakamura",
+      "role": "Chief Operating Officer",
+      "company": "Evernorth",
+      "bio": "",
+      "image": "/speakers/Meg Nakamura.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/megnakamura"
     }
   ],
   "sponsors": [
