@@ -36,7 +36,7 @@ export function SpeakerCard({
   const cardContent = (
     <>
       {/* Avatar */}
-      <div className="group relative aspect-square md:aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300 group-hover:border-[#e81111]">
+      <div className="group relative aspect-square md:aspect-[4/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300 group-hover:border-[#e81111]">
         {speaker.image ? (
           <Image
             src={speaker.image}
@@ -97,7 +97,7 @@ export function SpeakerCard({
         <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug">
           {role}
         </p>
-        <p className="text-[11px] md:text-xs text-white/60 leading-snug">
+        <p className="text-[11px] md:text-base text-white/60 leading-snug">
           {company}
         </p>
       </div>

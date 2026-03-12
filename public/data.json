@@ -65,8 +65,17 @@
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
     },
     {
+      "name": "Masahi Okuyama",
+      "role": "CEO",
+      "company": "SBI Ripple Asia",
+      "bio": "",
+      "image": "/speakers/Masahi Okuyama.png",
+      "twitter": "",
+      "linkedin": ""
+    },
+    {
       "name": "Takafumi Shimoyama",
-      "role": "Sales and Customer Success Department",
+      "role": "General Manager, Head of Business Development",
       "company": "SBI Ripple Asia",
       "bio": "",
       "image": "/speakers/Takafumi Shimoyama.png",
@@ -90,7 +99,62 @@
       "image": "/speakers/Meg Nakamura.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/megnakamura"
+    },
+    {
+      "name": "Hinza Asif",
+      "role": "President",
+      "company": "Asia Web3 Alliance Japan",
+      "bio": "",
+      "image": "/speakers/Hinza Asif.png",
+      "twitter": "https://x.com/thehinza",
+      "linkedin": "https://jp.linkedin.com/in/hinza-asif"
+    },
+    {
+      "name": "Kyohei Shibano",
+      "role": "Blockchain Education program",
+      "company": "Tokyo University",
+      "bio": "",
+      "image": "/speakers/Tokyo University.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/kyohei-shibano-0a5165251"
+    },
+    {
+      "name": "Rox Park",
+      "role": "Head of Institutions",
+      "company": "Doppler Finance",
+      "bio": "",
+      "image": "/speakers/Doppler.png",
+      "twitter": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Panos Mekras",
+      "role": "Co-Founder & CEO",
+      "company": "Anodos Labs",
+      "bio": "",
+      "image": "/speakers/Anodos Finance.png",
+      "twitter": "https://x.com/panosmek",
+      "linkedin": "https://www.linkedin.com/in/panos-mekras/"
+    },
+    {
+      "name": "Robert Kiuru",
+      "role": "COO",
+      "company": "Xaman",
+      "bio": "",
+      "image": "/speakers/Xaman.png",
+      "twitter": "https://x.com/robertkiuru",
+      "linkedin": "https://www.linkedin.com/in/kiuru1/"
+    },
+    {
+      "name": "Alexis Sirkia",
+      "role": "Executive Chairman & Founder ",
+      "company": "Yellow",
+      "bio": "",
+      "image": "/speakers/Alexis Sirkia.png",
+      "twitter": "https://x.com/AlexisYellow",
+      "linkedin": "https://www.linkedin.com/in/sirkia/"
     }
+    
   ],
   "sponsors": [
     {
@@ -256,6 +320,42 @@
       "tier": "Community",
       "logo": "/partners/community/terry-toto.svg",
       "website": "https://terrytoto.com/"
+    },
+    {
+      "name": "YTTLINKS",
+      "tier": "Community",
+      "logo": "/partners/community/YTTLINKS_logo_square.png",
+      "website": "https://www.yttlinks.co.jp/"
+    },
+    {
+      "name": "Found",
+      "tier": "Community",
+      "logo": "/partners/community/Found.jpg",
+      "website": "https://found.com/"
+    },
+    {
+      "name": "0xConsultingGroup",
+      "tier": "Community",
+      "logo": "/partners/community/0xConsultingGroup_square_white.png",
+      "website": "https://zero-x.com/en/home-en/"
+    },
+    {
+      "name": "jupyter.org",
+      "tier": "Community",
+      "logo": "/partners/community/jupyter_logo_100kb.jpg",
+      "website": "https://jupyter.org/"
+    },
+    {
+      "name": "piyoneko",
+      "tier": "Community",
+      "logo": "/partners/community/piyoko_piyoneko(D) - piyoneko.png",
+      "website": ""
+    },
+    {
+      "name": "Trust Authy",
+      "tier": "Community",
+      "logo": "/partners/community/trust-authy.jpg",
+      "website": ""
     }
   ]
 }
