@@ -102,6 +102,15 @@
       "linkedin": "https://www.linkedin.com/in/megnakamura"
     },
     {
+      "name": "Mai Furukawa",
+      "role": "Co-founder of XRPL Japan",
+      "company": "XRPL Labs",
+      "bio": "",
+      "image": "/speakers/Mai Furukawa1.png",
+      "twitter": "https://x.com/Mai_XRPLJapan",
+      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/"
+    },
+    {
       "name": "Hinza Asif",
       "role": "President",
       "company": "Asia Web3 Alliance Japan",
@@ -154,15 +163,6 @@
       "image": "/speakers/Alexis Sirkia.png",
       "twitter": "https://x.com/AlexisYellow",
       "linkedin": "https://www.linkedin.com/in/sirkia/"
-    },
-    {
-      "name": "Mai Furukawa",
-      "role": "Co-founder of XRPL Japan",
-      "company": "XRPL Labs",
-      "bio": "",
-      "image": "/speakers/Mai Furukawa1.png",
-      "twitter": "https://x.com/Mai_XRPLJapan",
-      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/"
     }
     
   ],
