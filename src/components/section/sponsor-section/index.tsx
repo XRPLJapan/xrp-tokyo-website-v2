@@ -108,6 +108,7 @@ export function SponsorSection() {
       logo?: string;
       website?: string;
       whiteLogo?: boolean;
+      whiteBackground?: boolean;
     }[]
   >([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -126,6 +127,7 @@ export function SponsorSection() {
             logo?: string;
             website?: string;
             whiteLogo?: boolean;
+            whiteBackground?: boolean;
           }[];
         };
 
@@ -150,6 +152,7 @@ export function SponsorSection() {
             logo: sponsor.logo,
             website: sponsor.website,
             whiteLogo: sponsor.whiteLogo,
+            whiteBackground: sponsor.whiteBackground,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
           const seen = new Set<string>();
@@ -233,6 +236,7 @@ export function SponsorSection() {
                         website={sponsor.website}
                         className={logoClass}
                         whiteLogo={sponsor.whiteLogo}
+                        whiteBackground={sponsor.whiteBackground}
                       />
                     ))}
                   </motion.div>

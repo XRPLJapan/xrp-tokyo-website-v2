@@ -1,6 +1,6 @@
 {
   "speakers": [
-     {
+    {
       "name": "Markus Infanger",
       "role": "SVP, RippleX",
       "company": "Ripple",
@@ -36,7 +36,7 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/smp0910/"
     },
-     {
+    {
       "name": "Cody Carbone",
       "role": "CEO at The Digital Chamber",
       "company": "The Digital Chamber",
@@ -45,7 +45,6 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/codycarbone/"
     },
-   
     {
       "name": "Takuya Sugiyama",
       "role": "Vice President",
@@ -55,7 +54,6 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
     },
-	
     {
       "name": "Tomohiko Kondo",
       "role": "CEO",
@@ -65,7 +63,7 @@
       "twitter": "https://x.com/tomohiko_kondo",
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
     },
-	{
+    {
       "name": "Seihaku Yoshida",
       "role": "CEO",
       "company": "HashPort Inc",
@@ -164,7 +162,6 @@
       "twitter": "https://x.com/AlexisYellow",
       "linkedin": "https://www.linkedin.com/in/sirkia/"
     }
-    
   ],
   "sponsors": [
     {
@@ -212,6 +209,12 @@
       "website": "https://xaman.app/"
     },
     {
+      "name": "Levtech",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/levtech_wh.png",
+      "website": "https://levtech.jp/"
+    },
+    {
       "name": "Giant Gox",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/giantgox2.png",
@@ -254,10 +257,10 @@
       "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
     },
     {
-      "name": "渋谷Web3大学",
+      "name": " AKINDO",
       "tier": "Community",
-      "logo": "/partners/community/渋谷Web3大学横.jpg",
-      "website": "https://www.shibuyaweb3univ.com/"
+      "logo": "/partners/community/akindo_logo_white.png",
+      "website": "https://x.com/akindo_io/"
     },
     {
       "name": "OffChain Tokyo",
@@ -266,40 +269,22 @@
       "website": "https://luma.com/web3tokyo"
     },
     {
-      "name": "OP Market",
-      "tier": "Community",
-      "logo": "/partners/community/opmarket.jpg",
-      "website": "https://opmarket.ai/"
-    },
-    {
-      "name": "TextRP",
-      "tier": "Community",
-      "logo": "/partners/community/text-rp.jpg",
-      "website": "https://textrp.io/"
-    },
-    {
-      "name": "Wavee",
-      "tier": "Community",
-      "logo": "/partners/community/wavee-bg-white.png",
-      "website": "https://wavee.world/"
-    },
-    {
-      "name": "Wave of Innovation",
-      "tier": "Community",
-      "logo": "/partners/community/wave-of-innovation.png",
-      "website": "https://www.waveofinnovation.com/"
-    },
-    {
       "name": "Web3 Salon",
       "tier": "Community",
       "logo": "/partners/community/web3-salon1.png",
       "website": "https://web3salon.or.jp/"
     },
     {
-      "name": "AI Agent Run",
+      "name": "渋谷Web3大学",
       "tier": "Community",
-      "logo": "/partners/community/ai-agent-run1.png",
-      "website": "https://aigent.run/"
+      "logo": "/partners/community/渋谷Web3大学横.jpg",
+      "website": "https://www.shibuyaweb3univ.com/"
+    },
+    {
+      "name": "Wave of Innovation",
+      "tier": "Community",
+      "logo": "/partners/community/wave-of-innovation.png",
+      "website": "https://www.waveofinnovation.com/"
     },
     {
       "name": "XRPL Korea",
@@ -326,10 +311,10 @@
       "website": "https://x.com/xrplmalaysia"
     },
     {
-      "name": "Terry Toto",
+      "name": "OP Market",
       "tier": "Community",
-      "logo": "/partners/community/terry-toto.svg",
-      "website": "https://terrytoto.com/"
+      "logo": "/partners/community/opmarket.jpg",
+      "website": "https://opmarket.ai/"
     },
     {
       "name": "YTTLINKS",
@@ -341,7 +326,7 @@
       "name": "Found",
       "tier": "Community",
       "logo": "/partners/community/Found.jpg",
-      "website": "https://found.com/"
+      "website": "https://www.dotfound.co.jp/"
     },
     {
       "name": "0xConsultingGroup",
@@ -350,10 +335,10 @@
       "website": "https://zero-x.com/en/home-en/"
     },
     {
-      "name": "jupyter.org",
+      "name": "ciana",
       "tier": "Community",
-      "logo": "/partners/community/jupyter_logo_100kb.jpg",
-      "website": "https://jupyter.org/"
+      "logo": "/partners/community/ciana_logo_dark.png",
+      "website": "https://x.com/coinciana"
     },
     {
       "name": "piyoneko",
@@ -362,10 +347,65 @@
       "website": ""
     },
     {
+      "name": "Crunk Cat collection",
+      "tier": "Community",
+      "logo": "/partners/community/crunk_cat_collection_light.png",
+      "website": ""
+    },
+    {
+      "name": "OHAGI",
+      "tier": "Community",
+      "logo": "/partners/community/ohagi.jpg",
+      "website": ""
+    },
+    {
+      "name": "AI Agent Run",
+      "tier": "Community",
+      "logo": "/partners/community/ai-agent-run1.png",
+      "website": "https://aigent.run/",
+      "whiteBackground": true
+    },
+    {
+      "name": "TextRP",
+      "tier": "Community",
+      "logo": "/partners/community/text-rp.jpg",
+      "website": "https://textrp.io/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Wavee",
+      "tier": "Community",
+      "logo": "/partners/community/wavee-bg-white.png",
+      "website": "https://wavee.world/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Terry Toto",
+      "tier": "Community",
+      "logo": "/partners/community/terry-toto.svg",
+      "website": "https://terrytoto.com/",
+      "whiteBackground": true
+    },
+    {
+      "name": "jupyter.org",
+      "tier": "Community",
+      "logo": "/partners/community/jupyter_logo_100kb.jpg",
+      "website": "https://www.jupyter.co.jp/",
+      "whiteBackground": true
+    },
+    {
       "name": "Trust Authy",
       "tier": "Community",
       "logo": "/partners/community/trust-authy.jpg",
-      "website": ""
+      "website": "",
+      "whiteBackground": true
+    },
+    {
+      "name": "The Best Event",
+      "tier": "Community",
+      "logo": "/partners/community/TBV_logo.svg",
+      "website": "",
+      "whiteBackground": true
     }
   ]
 }
