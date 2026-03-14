@@ -217,25 +217,36 @@
       "name": "Levtech",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/levtech_wh_2.png",
-      "website": "https://levtech.jp/"
+      "website": "https://levtech.jp/",
+      "type": "corporate"
     },
     {
       "name": "Giant Gox",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/giantgox2.png",
-      "website": "https://x.com/GiantGox"
+      "website": "https://x.com/GiantGox",
+      "type": "individual"
     },
     {
       "name": "メイフラちゃん",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/mayflower3096.jpg",
-      "website": "https://x.com/mayflower3096"
+      "website": "https://x.com/mayflower3096",
+      "type": "individual"
     },
     {
       "name": "Daikoku",
       "tier": "Bronze",
       "logo": "/partners/community/daikoku.png",
-      "website": "https://x.com/daikokunet009"
+      "website": "https://x.com/daikokunet009",
+      "type": "individual"
+    },
+    {
+      "name": "Hotei",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/hotei.png",
+      "website": "https://x.com/5porter5",
+      "type": "individual"
     },
     {
       "name": "CoinPost",
