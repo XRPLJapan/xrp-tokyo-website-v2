@@ -257,6 +257,13 @@
       "website": "https://www.nadanews.com/"
     },
     {
+      "name": "IOLITE",
+      "tier": "Media",
+      "logo": "/partners/media/iolite.png",
+      "website": "https://iolite.net/",
+      "whiteLogo": true
+    },
+    {
       "name": "東大公開講座",
       "tier": "Education",
       "logo": "/partners/education/東大公開講座.png",
