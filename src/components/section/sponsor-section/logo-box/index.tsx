@@ -73,6 +73,9 @@ interface LogoBoxProps {
   alt: string;
   className?: string;
   website?: string;
+  cardClassName?: string;
+  logoClassName?: string;
+  whiteLogo?: boolean;
 }
 
 export const LogoBox = ({
@@ -81,6 +84,9 @@ export const LogoBox = ({
   alt,
   website,
   className,
+  cardClassName,
+  logoClassName,
+  whiteLogo,
 }: LogoBoxProps) => {
   const ts = TIER_STYLES[tier];
   const { borderAccent } = TIER_CONFIGS[tier];
@@ -92,6 +98,7 @@ export const LogoBox = ({
     ts.shadow,
     borderAccent,
     className,
+    cardClassName,
   );
 
   const inner = logo ? (
@@ -103,7 +110,11 @@ export const LogoBox = ({
           src={logo}
           alt={alt}
           fill
-          className="object-contain"
+          className={cn(
+            "object-contain",
+            whiteLogo && "brightness-0 invert",
+            logoClassName,
+          )}
           sizes="(max-width: 768px) 50vw, 200px"
         />
       </div>
