@@ -62,14 +62,12 @@ logoClass: "w-full max-w-[240px] md:max-w-none aspect-[1.8/1] border-2 border-[#
   },
   {
     tier: Tier.Bronze,
-containerClass: "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg md:max-w-xl mx-auto",
-
-logoClass:
-"w-[calc(50%-0.375rem)] md:w-[calc(25%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-[#CD7F32]/60 rounded-md bg-black/5",
-
-gap: "mt-10 md:mt-12",
-titleGap: "mb-3",
-initialY: 24,,
+    containerClass: "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg md:max-w-xl mx-auto",
+logoClass: "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-[#CD7F32]/60 rounded-md bg-black/5",
+    gap: "mt-10 md:mt-12",
+    titleGap: "mb-3",
+    initialY: 24,
+  },
   {
     tier: Tier.Media,
     containerClass:
@@ -110,8 +108,6 @@ export function SponsorSection() {
       logo?: string;
       website?: string;
       whiteLogo?: boolean;
-      whiteBackground?: boolean;
-      type?: string;
     }[]
   >([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -130,8 +126,6 @@ export function SponsorSection() {
             logo?: string;
             website?: string;
             whiteLogo?: boolean;
-            whiteBackground?: boolean;
-            type?: string;
           }[];
         };
 
@@ -156,8 +150,6 @@ export function SponsorSection() {
             logo: sponsor.logo,
             website: sponsor.website,
             whiteLogo: sponsor.whiteLogo,
-            whiteBackground: sponsor.whiteBackground,
-            type: sponsor.type,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
           const seen = new Set<string>();
@@ -213,75 +205,6 @@ export function SponsorSection() {
               const sponsors = sponsorsByTier.filter((s) => s.tier === tier);
               if (sponsors.length === 0) return null;
 
-              if (tier === Tier.Bronze) {
-                const corporate = sponsors.filter((s) => s.type === "corporate");
-                const individual = sponsors.filter((s) => s.type !== "corporate");
-                return (
-                  <motion.div
-                    key={tier}
-                    className={`w-full  ${gap}`}
-                    initial={{ opacity: 0, y: initialY }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                  >
-                    <div className={titleGap}>
-                      <TierTitle tier={tier} />
-                    </div>
-                    {corporate.length > 0 && (
-                      <div className="mb-4">
-                        <p className="text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center">Corporate</p>
-                        <motion.div
-                          className={containerClass}
-                          initial="hidden"
-                          whileInView="visible"
-                          viewport={{ once: true, margin: "-80px" }}
-                          transition={{ staggerChildren: 0.06 }}
-                        >
-                          {corporate.map((sponsor) => (
-                            <LogoBox
-                              key={sponsor.name}
-                              tier={tier}
-                              alt={sponsor.name}
-                              logo={sponsor.logo}
-                              website={sponsor.website}
-                              className={logoClass}
-                              whiteLogo={sponsor.whiteLogo}
-                              whiteBackground={sponsor.whiteBackground}
-                            />
-                          ))}
-                        </motion.div>
-                      </div>
-                    )}
-                    {individual.length > 0 && (
-                      <div>
-                        <p className="text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center">Heroes</p>
-                        <motion.div
-                          className={containerClass}
-                          initial="hidden"
-                          whileInView="visible"
-                          viewport={{ once: true, margin: "-80px" }}
-                          transition={{ staggerChildren: 0.06 }}
-                        >
-                          {individual.map((sponsor) => (
-                            <LogoBox
-                              key={sponsor.name}
-                              tier={tier}
-                              alt={sponsor.name}
-                              logo={sponsor.logo}
-                              website={sponsor.website}
-                              className={logoClass}
-                              whiteLogo={sponsor.whiteLogo}
-                              whiteBackground={sponsor.whiteBackground}
-                            />
-                          ))}
-                        </motion.div>
-                      </div>
-                    )}
-                  </motion.div>
-                );
-              }
-
               return (
                 <motion.div
                   key={tier}
@@ -310,7 +233,6 @@ export function SponsorSection() {
                         website={sponsor.website}
                         className={logoClass}
                         whiteLogo={sponsor.whiteLogo}
-                        whiteBackground={sponsor.whiteBackground}
                       />
                     ))}
                   </motion.div>
