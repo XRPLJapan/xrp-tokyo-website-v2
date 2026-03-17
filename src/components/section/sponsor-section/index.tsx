@@ -62,12 +62,14 @@ logoClass: "w-full max-w-[240px] md:max-w-none aspect-[1.8/1] border-2 border-[#
   },
   {
     tier: Tier.Bronze,
-    containerClass: "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg md:max-w-xl mx-auto",
-logoClass: "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-[#CD7F32]/60 rounded-md bg-black/5",
-    gap: "mt-10 md:mt-12",
-    titleGap: "mb-3",
-    initialY: 24,
-  },
+containerClass: "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg md:max-w-xl mx-auto",
+
+logoClass:
+"w-[calc(50%-0.375rem)] md:w-[calc(25%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-[#CD7F32]/60 rounded-md bg-black/5",
+
+gap: "mt-10 md:mt-12",
+titleGap: "mb-3",
+initialY: 24,,
   {
     tier: Tier.Media,
     containerClass:

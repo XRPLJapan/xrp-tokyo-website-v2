@@ -78,16 +78,6 @@
       "website": "https://hashport.io/"
     },
     {
-      "name": "Masahi Okuyama",
-      "role": "CEO",
-      "company": "SBI Ripple Asia",
-      "bio": "",
-      "image": "/speakers/Masahi Okuyama.png",
-      "twitter": "",
-      "linkedin": "",
-      "website":"https://www.sbigroup.co.jp/english/company/group/sbirippleasia.html"
-    },
-    {
       "name": "Takafumi Shimoyama",
       "role": "General Manager, Head of Business Development",
       "company": "SBI Ripple Asia",
@@ -123,6 +113,86 @@
       "twitter": "https://x.com/thehinza",
       "linkedin": "https://jp.linkedin.com/in/hinza-asif",
       "website":"https://asiaweb3alliance.jp/"
+    },
+    {
+      "name": "Noritaka Okabe",
+      "role": "Founder & CEO",
+      "company": "JPYC Inc",
+      "bio": "",
+      "image": "/speakers/Noritaka Okabe.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Ryo Kato",
+      "role": "CEO",
+      "company": "HashHub Inc",
+      "bio": "",
+      "image": "/speakers/Ryo Kato.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":"https://hashhub.tokyo/"
+    },
+    {
+      "name": "Go Makino",
+      "role": "Regional Director",
+      "company": "Fireblocks Japan",
+      "bio": "",
+      "image": "/speakers/Go Makino.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Tatsuya Saito",
+      "role": "Representative Director, Founder & CEO",
+      "company": "Progmat Inc.",
+      "bio": "",
+      "image": "/speakers/Tatsuya Saito.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Taisuke Isono",
+      "role": "Head of Nikko Innovation Lab",
+      "company": "SMBC Nikko Securities Inc.",
+      "bio": "",
+      "image": "/speakers/Taisuke Isono.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Masa Kikuchi",
+      "role": "Founder & CEO",
+      "company": "Secured Finance",
+      "bio": "",
+      "image": "/speakers/Masa Kikuchi.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Noriaki Yagi",
+      "role": "Editor-in-chief",
+      "company": "Iolite Magazine",
+      "bio": "",
+      "image": "/speakers/Noriaki Yagi.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Ryo Sakai",
+      "role": "Head of Business Development & CO",
+      "company": "CoinPost,Webx",
+      "bio": "",
+      "image": "/speakers/Ryo Sakai.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
     },
     {
       "name": "Kyohei Shibano",
