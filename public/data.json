@@ -259,17 +259,17 @@
       "website": "https://doppler.finance/"
     },
     {
-      "name": "SBI VC Trade",
-      "tier": "Gold",
-      "logo": "/sponsors/gold/sbi-vct.png",
-      "website": "https://www.sbivc.co.jp/",
-      "whiteLogo": true
-    },
-    {
       "name": "SBI Ripple Asia",
       "tier": "Gold",
       "logo": "/sponsors/gold/sbi-ripple-asia.png",
       "website": "https://www.sbigroup.co.jp/company/group/sbirippleasia.html",
+      "whiteLogo": true
+    },
+    {
+      "name": "SBI VC Trade",
+      "tier": "Gold",
+      "logo": "/sponsors/gold/sbi-vct.png",
+      "website": "https://www.sbivc.co.jp/",
       "whiteLogo": true
     },
     {
