@@ -272,6 +272,12 @@
       "website": "https://anodos.finance/"
     },
     {
+      "name": "楽天ウォレット",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/rakuten-wallet.png",
+      "website": "https://www.rakuten-wallet.co.jp/"
+    },
+    {
       "name": "XRPCafe",
       "tier": "Silver",
       "logo": "/sponsors/silver/xrpcafe1.png",
