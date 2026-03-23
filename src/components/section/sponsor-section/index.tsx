@@ -235,9 +235,15 @@ export function SponsorSection() {
               const bronzeSubLabelClass =
                 "text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center";
 
-              const renderLogoGrid = (list: typeof sponsors) => (
+              const renderLogoGrid = (list: typeof sponsors) => {
+                const resolvedContainerClass =
+                  tier === Tier.Gold && list.length === 2
+                    ? "grid grid-cols-2 gap-4 lg:gap-6 w-full max-w-lg mx-auto justify-items-center items-start lg:flex lg:flex-wrap lg:justify-center lg:max-w-5xl"
+                    : containerClass;
+
+                return (
                 <motion.div
-                  className={containerClass}
+                  className={resolvedContainerClass}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
@@ -255,7 +261,8 @@ export function SponsorSection() {
                     />
                   ))}
                 </motion.div>
-              );
+                );
+              };
 
               return (
                 <motion.div

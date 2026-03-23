@@ -266,19 +266,6 @@
       "whiteLogo": true
     },
     {
-      "name": "SBI VC Trade",
-      "tier": "Gold",
-      "logo": "/sponsors/gold/sbi-vct.png",
-      "website": "https://www.sbivc.co.jp/",
-      "whiteLogo": true
-    },
-    {
-      "name": "BITPOINT",
-      "tier": "Gold",
-      "logo": "/sponsors/gold/bitpoint.png",
-      "website": "https://www.bitpoint.co.jp/"
-    },
-    {
       "name": "anodos",
       "tier": "Gold",
       "logo": "/sponsors/gold/anodos1.png",
