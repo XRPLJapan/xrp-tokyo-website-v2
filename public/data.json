@@ -66,6 +66,26 @@
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
     },
     {
+  "name": "Dave McComb",
+  "role": "Senior Re-Writer",
+  "company": "NHK World Japan",
+  "bio": "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
+  "image": "/speakers/Dave McComb.png",
+  "twitter": "",
+  "linkedin": "",
+  "website": ""
+},
+{
+  "name": "Hiroshi Onozawa",
+  "role": "Executive Officer",
+  "company": "GMO Aozora Net Bank, Ltd",
+  "bio": "",
+  "image": "/speakers/Hiroshi Onozawa.png",
+  "twitter": "",
+  "linkedin": "",
+  "website": ""
+},
+    {
       "name": "Seihaku Yoshida",
       "role": "CEO",
       "company": "HashPort Inc",
@@ -153,6 +173,57 @@
       "website":""
     },
     {
+      "name": "Eiji Kobayashi",
+      "role": "Director & Country Head",
+      "company": "Securitize Japan",
+      "bio": "",
+      "image": "/speakers/Eiji Kobayashi.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Ken Kawai",
+      "role": "Advisor Partner Lawyer",
+      "company": "Anderson Mori & Tomotsune",
+      "bio": "",
+      "image": "/speakers/Ken Kawai.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Seiichi Kawamura",
+      "role": "Strategic Plannning Dept",
+      "company": "Blockchain Group Toyota Blockchain Lab",
+      "bio": "",
+      "image": "/speakers/Seiichi Kawamura.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Tatsuya Kohrogi",
+      "role": "Senior Ecosystem Growth Manager",
+      "company": "Ripple",
+      "bio": "",
+      "image": "/speakers/Tatsuya Kohrogi.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+     {
+      "name": "Yoshimasa Satoh",
+      "role": "CFA Representative Director and CEO, Japan",
+      "company": "Alpaca",
+      "bio": "",
+      "image": "/speakers/Yoshimasa Satoh.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    
+    {
       "name": "Masa Kikuchi",
       "role": "Founder & CEO",
       "company": "Secured Finance",
@@ -178,6 +249,96 @@
       "company": "CoinPost,Webx",
       "bio": "",
       "image": "/speakers/Ryo Sakai.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "J. Ayo Akinyele",
+      "role": "Head of Engineering",
+      "company": "RippleX",
+      "bio": "",
+      "image": "/speakers/Ayo Akinyele.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Cyrus Cruz",
+      "role": "APAC Head",
+      "company": "Tenity",
+      "bio": "",
+      "image": "/speakers/Cyrus Cruz.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Sojun Katsura",
+      "role": "Director",
+      "company": "Papi Code",
+      "bio": "",
+      "image": "/speakers/Sojun Katsura.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Ai Kosuke",
+      "role": "Founder",
+      "company": "SuzuPay",
+      "bio": "",
+      "image": "/speakers/Ai Kosuke.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Kazuyuki Matsuda",
+      "role": "Representative Director & CEO",
+      "company": "Digital Platformer Co., Ltd.",
+      "bio": "",
+      "image": "/speakers/Kazuyuki Matsuda.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Jean Zhu",
+      "role": "Co Founder",
+      "company": "Nexbridge",
+      "bio": "",
+      "image": "/speakers/Jean Zhu.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Yusuke Hirota",
+      "role": "Founder",
+      "company": "Laplace",
+      "bio": "",
+      "image": "/speakers/Yusuke Hirota.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+     {
+      "name": "Eri ~ Carpe Diem",
+      "role": "Crypto Influncer",
+      "company": "",
+      "bio": "",
+      "image": "/speakers/Carpe Diem.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Sebastian Valdez",
+      "role": "Co-Founder",
+      "company": "xrp.cafe",
+      "bio": "",
+      "image": "/speakers/Sebastian Valdez.png",
       "twitter": "",
       "linkedin": "",
       "website":""
