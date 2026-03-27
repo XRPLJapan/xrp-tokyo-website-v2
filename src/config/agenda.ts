@@ -137,6 +137,16 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/hinza-asif",
     website: "https://asiaweb3alliance.jp/",
   },
+   {
+      "name": "Eri Ishiyama",
+      "role": "Blockchain Advocate",
+      "company": "",
+      "bio": "",
+      "image": "/speakers/Carpe Diem.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
   {
     name: "Noritaka Okabe",
     role: "Founder & CEO",
@@ -327,6 +337,36 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     twitter: "https://x.com/AlexisYellow",
     linkedin: "https://www.linkedin.com/in/sirkia/",
   },
+   {
+      "name": "Fumihiro Arasawa",
+      "role": "CEO, XWIN Group Chair, DeFi Committee",
+      "company": "Blockchain Collaborative Consortium",
+      "bio": "",
+      "image": "/speakers/Fumihiro Arasawa.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Nathaniel T. Bradley",
+      "role": "CEO",
+      "company": "Datavault AI",
+      "bio": "",
+      "image": "/speakers/Nathaniel.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
+    {
+      "name": "Steven Zeiler",
+      "role": "Developer Evangelist",
+      "company": "Yellow",
+      "bio": "",
+      "image": "/speakers/Steven Zeiler.png",
+      "twitter": "",
+      "linkedin": "",
+      "website":""
+    },
 ];
 
 export const AGENDA_ITEMS: AgendaItem[] = [
@@ -380,7 +420,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Hinza Asif"],
   },
   {
-    time: "1:05 PM - 1:30 PM",
+    time: "1:00 PM - 1:25 PM",
     title:
       "Tokenized Payments for the Tourism Economy: Real-World Implementation",
     track: "Panel",
@@ -388,18 +428,26 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Mai Furukawa"],
   },
   {
+    time: "1:25 PM - 1:35 PM",
+    title:
+      "TVA",
+    track: "Keynote",
+    speakerNames: ["Tomohiko Kondo"],
+    
+  },
+  {
     time: "1:35 PM - 1:45 PM",
     title:
       "International Cooperation in Digital Assets: Strengthening U.S.–Japan Collaboration",
     track: "Fireside",
-    speakerNames: ["Hinza Asif", "Cody Carbone"],
-    moderatorNames: ["Alice French"],
+    speakerNames: ["Cody Carbone"],
+    moderatorNames: ["Hinza Asif"],
   },
   {
     time: "1:50 PM - 2:10 PM",
-    title: "XRPL Community (XRPL Korea, Canada, Japan)",
-    track: "Panel",
-    speakerNames: [],
+    title: "How to License Your Reputation Like a Pro Athlete: Unlocking the Power of Name, Image & Likeness with Datavault AI",
+    track: "Keynote",
+    speakerNames: ["Nathaniel T. Bradley"],
   },
   {
     time: "2:15 PM - 2:45 PM",
@@ -447,7 +495,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     title:
       "Building the Future of Web3 Infrastructure: The Yellow Network Layer-3 Vision",
     track: "Keynote",
-    speakerNames: ["Alexis Sirkia"],
+    speakerNames: ["Alexis Sirkia","Steven Zeiler"],
   },
   {
     time: "4:35 PM - 5:05 PM",
@@ -463,14 +511,14 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Tatsuya Kohrogi"],
   },
   {
-    time: "5:10 PM - 5:17 PM",
+    time: "5:10 PM - 5:18 PM",
     title:
-      "The University of Tokyo- Blockchain Education program",
+      "The University of Tokyo- Blockchain Education Program",
     track: "Keynote",
     speakerNames: ["Kyohei Shibano"],
   },
   {
-    time: "5:17 PM - 5:22 PM",
+    time: "5:18 PM - 5:30 PM",
     title: "Closing",
     track: "Closing",
     speakerNames: ["Mai Furukawa", "Hinza Asif"],

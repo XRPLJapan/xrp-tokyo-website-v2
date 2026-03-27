@@ -1,4 +1,6 @@
 import { AGENDA_ITEMS, AGENDA_SPEAKERS } from "@/config/agenda";
+import Image from "next/image";
+import Link from "next/link";
 
 const speakerMap = new Map(
   AGENDA_SPEAKERS.map((speaker) => [speaker.name, speaker]),
@@ -38,7 +40,7 @@ export default function AgendaPage() {
     return (
       <div
         key={`${itemTitle}-${speaker.name}-${tag ?? "speaker"}`}
-        className="flex items-start gap-3 rounded-xl border border-[#D4AF37]/50 bg-[#0A0A0A] p-3"
+        className="flex items-start gap-3 rounded-xl border border-[#c6c7ac]/20 bg-[#0A0A0A] p-3"
       >
         <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[#D4AF37]/50 bg-black sm:h-14 sm:w-14">
           {speaker.image ? (
@@ -78,18 +80,34 @@ export default function AgendaPage() {
   return (
     <main className="min-h-screen bg-[#000000] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-6 rounded-2xl border border-[#D4AF37] bg-[#0A0A0A] px-5 py-6 text-center shadow-[0_10px_28px_rgba(212,175,55,0.24)] sm:px-8">
-          <h1 className="text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
-            XRP TOKYO
-          </h1>
-          <p className="mt-2 text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase sm:text-sm">
-            Agenda & Session Lineup
-          </p>
-          <p className="mt-3 text-xs text-[#A0A0A0] sm:text-sm">
-            Changes may occur to the agenda content. Please refer to this
-            website for the latest information.
-          </p>
-        </div>
+        <Link  href="https://tickets.teamz.co.jp/?utm_source=xrp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-6 block overflow-hidden "
+          aria-label="Get ticket for XRP Tokyo"
+        >
+          <Image
+            src="/headerinternalimagedesktop4.png"
+            alt="XRP Tokyo ticket banner"
+            width={1400}
+            height={420}
+            className="hidden h-auto w-full object-cover sm:block"
+            priority
+          />
+          <Image
+            src="/xrp-header-mobile1.png"
+            alt="XRP Tokyo ticket banner"
+            width={900}
+            height={900}
+            className="block h-auto w-full object-cover sm:hidden"
+            priority
+          />
+        </Link>
+
+        <p className="mb-6 text-center text-xs text-[#A0A0A0] sm:text-sm">
+          Changes may occur to the agenda content. Please refer to this website
+          for the latest information.
+        </p>
 
         <div className="space-y-4 sm:space-y-5 lg:space-y-6">
           {AGENDA_ITEMS.map((item, itemIndex) => (
@@ -106,7 +124,7 @@ export default function AgendaPage() {
                 <span className="mt-2 block h-[2px] w-full bg-gradient-to-r from-[#D4AF37] to-transparent" />
               </div>
 
-              <article className="rounded-xl border border-[#D4AF37]/60 bg-[#0A0A0A] px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_0_22px_rgba(212,175,55,0.32)] sm:px-5 sm:py-5 lg:px-6">
+              <article className="rounded-xl border border-[#c6c7ac]/30 bg-[#0A0A0A] px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_0_22px_rgba(212,175,55,0.32)] sm:px-5 sm:py-5 lg:px-6">
                 {item.track ? (
                   <p className="mb-2 inline-flex rounded-full border border-[#D4AF37] bg-black px-2 py-0.5 text-[11px] font-semibold tracking-[0.14em] text-white uppercase sm:text-xs">
                     {item.track}
