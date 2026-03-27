@@ -521,6 +521,13 @@
       "website": "https://digitalchamber.org/",
       "whiteLogo": true
     },
+     {
+      "name": "ECCC",
+      "tier": "Supporter",
+      "logo": "/partners/supporter/ecccc.png",
+      "website": "https://bccc.global/",
+      "whiteLogo": false
+    },
     {
       "name": "東大公開講座",
       "tier": "Education",
