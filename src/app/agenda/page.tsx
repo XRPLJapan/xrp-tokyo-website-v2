@@ -87,7 +87,7 @@ export default function AgendaPage() {
           aria-label="Get ticket for XRP Tokyo"
         >
           <Image
-            src="/headerinternalimagedesktop4.png"
+            src="/agenda-header1.png"
             alt="XRP Tokyo ticket banner"
             width={1400}
             height={420}
@@ -95,7 +95,7 @@ export default function AgendaPage() {
             priority
           />
           <Image
-            src="/xrp-header-mobile1.png"
+            src="/agenda-header1.png"
             alt="XRP Tokyo ticket banner"
             width={900}
             height={900}

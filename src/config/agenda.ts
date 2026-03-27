@@ -430,7 +430,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "1:25 PM - 1:35 PM",
     title:
-      "TVA",
+      "TBA",
     track: "Keynote",
     speakerNames: ["Tomohiko Kondo"],
     
