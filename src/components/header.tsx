@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Ticket, Gift, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -18,20 +19,30 @@ import { useGiveawayDialog } from "@/components/giveaway-dialog";
 export function Header() {
   const t = useTranslations();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
   const isScrolled = useScrolled();
   const { openDialog } = useGiveawayDialog();
 
-  const navItems = [
+  const navItems: Array<
+    { label: string; id: string; href?: never } | { label: string; href: string; id?: never }
+  > = [
     { label: t("header.about"), id: "about" },
     { label: t("header.highlights"), id: "highlights" },
     { label: t("header.speakers"), id: "speakers" },
     { label: t("header.sponsors"), id: "sponsors" },
+    { label: t("header.agenda"), href: "/agenda" },
   ];
 
   /** about セクションへのスクロール位置（決め打ち: ヒーロー高さ + モバイルブラウザUI分の補正） */
   const ABOUT_SCROLL_TOP = typeof window !== "undefined" ? window.innerHeight + 80 : 0;
 
   const handleNavClick = (id: string) => {
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      return;
+    }
+
     if (id === "about" && typeof window !== "undefined") {
       window.scrollTo({ top: ABOUT_SCROLL_TOP, behavior: "smooth" });
       return;
@@ -73,14 +84,24 @@ export function Header() {
         {/* デスクトップナビゲーション（1280px以上で表示、それ未満はハンバーガー） */}
         <nav className="hidden items-center gap-2 xl:flex">
           {navItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => handleNavClick(item.id)}
-              className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
-            >
-              {item.label}
-            </button>
+            item.href ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleNavClick(item.id)}
+                className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
+              >
+                {item.label}
+              </button>
+            )
           ))}
         </nav>
 
@@ -206,14 +227,25 @@ export function Header() {
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => handleMobileNavClick(item.id)}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
-                  >
-                    {item.label}
-                  </button>
+                  item.href ? (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => handleMobileNavClick(item.id)}
+                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
+                    >
+                      {item.label}
+                    </button>
+                  )
                 ))}
               </div>
               {/* モバイル用チケットボタン */}

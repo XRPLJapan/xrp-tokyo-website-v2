@@ -14,6 +14,7 @@ export interface AgendaItem {
   title: string;
   track?: string;
   speakerNames: string[];
+  moderatorNames?: string[];
   watchUrl?: string;
 }
 
@@ -340,9 +341,9 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     title:
       "Firechat: Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
     track: "Fireside",
-    speakerNames: ["Markus Infanger", "Dave McComb"],
+    speakerNames: ["Markus Infanger"],
+    moderatorNames: ["Dave McComb"],
   },
-  
   {
     time: "11:05 AM - 11:35 AM",
     title:
@@ -353,81 +354,67 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Seihaku Yoshida",
       "Noritaka Okabe",
       "Tatsuya Yamada",
-      "Ryo Sakai",
     ],
+    moderatorNames: ["Ryo Sakai"],
   },
-  
   {
     time: "11:40 AM - 11:55 AM",
     title: "When Capital Commits: Why Institutions Are Moving On-Chain Now",
     track: "Keynote",
     speakerNames: ["Meg Nakamura"],
   },
- 
   {
     time: "11:55 AM - 12:25 PM",
     title:
       "Institutional Blockchain Adoption : From Pilot to Production: How Banks Are Building the Next Financial Infrastructure with Blockchain",
     track: "Panel",
-    speakerNames: ["Hiroshi Onozawa", "Ryo Kato", "Go Makino", "Noriaki Yagi"],
+    speakerNames: ["Hiroshi Onozawa", "Ryo Kato", "Go Makino"],
+    moderatorNames: ["Noriaki Yagi"],
   },
-  
   {
     time: "12:30 PM - 1:00 PM",
     title:
       "Connecting Japan and Global Capital: The Future of Web3 Investment and Expansion",
     track: "Panel",
-    speakerNames: [
-      "SungMo Park",
-      "Meg Nakamura",
-      "Takuya Sugiyama",
-      "Hinza Asif",
-    ],
+    speakerNames: ["SungMo Park", "Meg Nakamura", "Takuya Sugiyama"],
+    moderatorNames: ["Hinza Asif"],
   },
-  
   {
     time: "1:05 PM - 1:30 PM",
     title:
       "Tokenized Payments for the Tourism Economy: Real-World Implementation",
     track: "Panel",
-    speakerNames: ["Takafumi Shimoyama", "Mai Furukawa"],
+    speakerNames: ["Takafumi Shimoyama"],
+    moderatorNames: ["Mai Furukawa"],
   },
- 
   {
     time: "1:35 PM - 1:45 PM",
     title:
       "International Cooperation in Digital Assets: Strengthening U.S.–Japan Collaboration",
     track: "Fireside",
     speakerNames: ["Hinza Asif", "Cody Carbone"],
+    moderatorNames: ["Alice French"],
   },
- 
   {
     time: "1:50 PM - 2:10 PM",
     title: "XRPL Community (XRPL Korea, Canada, Japan)",
     track: "Panel",
     speakerNames: [],
   },
- 
   {
     time: "2:15 PM - 2:45 PM",
     title:
       "The Institutional Future of RWA Tokenization through Security Tokens",
     track: "Panel",
-    speakerNames: [
-      "Taisuke Isono",
-      "Eiji Kobayashi",
-      "Masa Kikuchi",
-      "Eri ~ Carpe Diem",
-    ],
+    speakerNames: ["Taisuke Isono", "Eiji Kobayashi", "Masa Kikuchi"],
+    moderatorNames: ["Eri Ishiyama"],
   },
-  
   {
     time: "2:50 PM - 3:00 PM",
     title: "Ripple APAC Ecosystem Announcement - TBA",
     track: "Keynote",
     speakerNames: ["Christina Chan"],
   },
- 
   {
     time: "3:05 PM - 3:30 PM",
     title:
@@ -438,8 +425,8 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Panos Mekras",
       "Sebastian Valdez",
       "Robert Kiuru",
-      "Cyrus Cruz",
     ],
+    moderatorNames: ["Cyrus Cruz"],
   },
   {
     time: "3:30 PM - 3:40 PM",
@@ -447,15 +434,14 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     track: "Keynote",
     speakerNames: ["Rox Park"],
   },
-  
   {
     time: "3:45 PM - 4:15 PM",
     title:
       "From Real Assets to Digital Infrastructure: How Institutions Are Building the Next Financial System",
     track: "Panel",
     speakerNames: ["Ken Kawai", "Yoshimasa Satoh", "Seiichi Kawamura"],
+    moderatorNames: ["Fumihiro Arasawa"],
   },
-  
   {
     time: "4:20 PM - 4:30 PM",
     title:
@@ -463,7 +449,6 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     track: "Keynote",
     speakerNames: ["Alexis Sirkia"],
   },
- 
   {
     time: "4:35 PM - 5:05 PM",
     title: "Japan’s XRPL Ecosystem: Local Innovation and Global Opportunities",
@@ -474,14 +459,13 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Sojun Katsura",
       "Jean Zhu",
       "Yusuke Hirota",
-      "Tatsuya Kohrogi",
     ],
+    moderatorNames: ["Tatsuya Kohrogi"],
   },
-  
   {
     time: "5:10 PM - 5:17 PM",
     title:
-      "The University of Tokyo - The Endowed Chair for Blockchain Innovation",
+      "The University of Tokyo- Blockchain Education program",
     track: "Keynote",
     speakerNames: ["Kyohei Shibano"],
   },

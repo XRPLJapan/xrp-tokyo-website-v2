@@ -5,105 +5,127 @@ const speakerMap = new Map(
 );
 
 export default function AgendaPage() {
-  return (
-    <main className="min-h-screen bg-[#efefef] px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
-      <div className="mx-auto max-w-6xl">
-        <p className="mb-6 text-center text-xs text-[#5b6471] sm:mb-8 sm:text-sm">
-          Changes may occur to the agenda content. Please refer to this website
-          for the latest information.
-        </p>
+  const renderPersonCard = (
+    itemTitle: string,
+    personName: string,
+    tag?: string,
+  ) => {
+    const speaker = speakerMap.get(personName);
 
-        <div className="space-y-4 sm:space-y-6 lg:space-y-7">
+    if (!speaker) {
+      return (
+        <div
+          key={`${itemTitle}-${personName}-${tag ?? "speaker"}`}
+          className="rounded-xl border border-[#E81111]/50 bg-[#0A0A0A] p-3"
+        >
+          {tag ? (
+            <p className="mb-2 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
+              {tag}
+            </p>
+          ) : null}
+          <p className="text-sm font-semibold text-white">{personName}</p>
+        </div>
+      );
+    }
+
+    const initials = speaker.name
+      .split(" ")
+      .map((value) => value[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+
+    return (
+      <div
+        key={`${itemTitle}-${speaker.name}-${tag ?? "speaker"}`}
+        className="flex items-start gap-3 rounded-xl border border-[#E81111]/50 bg-[#0A0A0A] p-3"
+      >
+        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[#E81111]/50 bg-black sm:h-14 sm:w-14">
+          {speaker.image ? (
+            // biome-ignore lint/performance/noImgElement: static agenda avatar with graceful 404 fallback
+            <img
+              src={speaker.image}
+              alt={speaker.name}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-xs font-semibold text-[#A0A0A0]">
+              {initials}
+            </div>
+          )}
+        </div>
+
+        <div>
+          {tag ? (
+            <p className="mb-1 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
+              {tag}
+            </p>
+          ) : null}
+          <p className="text-base leading-5 font-semibold tracking-tight text-white sm:text-lg">
+            {speaker.name}
+          </p>
+          <p className="text-xs leading-4 text-[#A0A0A0] sm:text-sm">
+            {speaker.role}
+          </p>
+          <p className="text-xs leading-4 text-[#A0A0A0] sm:text-sm">
+            {speaker.company}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <main className="min-h-screen bg-[#000000] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-6 rounded-2xl border border-[#E81111] bg-[#0A0A0A] px-5 py-6 text-center shadow-[0_10px_28px_rgba(232,17,17,0.22)] sm:px-8">
+          <h1 className="text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
+            XRP TOKYO
+          </h1>
+          <p className="mt-2 text-xs font-semibold tracking-[0.2em] text-[#E81111] uppercase sm:text-sm">
+            Agenda & Session Lineup
+          </p>
+          <p className="mt-3 text-xs text-[#A0A0A0] sm:text-sm">
+            Changes may occur to the agenda content. Please refer to this
+            website for the latest information.
+          </p>
+        </div>
+
+        <div className="space-y-4 sm:space-y-5 lg:space-y-6">
           {AGENDA_ITEMS.map((item, itemIndex) => (
             <section
               key={`${item.time}-${item.title}-${itemIndex}`}
-              className="grid items-start gap-3 sm:gap-4 lg:grid-cols-[210px_1fr] lg:gap-6"
+              className="relative grid items-start gap-3 sm:gap-4 lg:grid-cols-[220px_1fr] lg:gap-6"
             >
-              <div className="pt-1 text-lg leading-none font-semibold tracking-tight text-[#021024] sm:text-xl lg:text-2xl">
+              <div className="pointer-events-none absolute top-0 bottom-0 left-[220px] hidden w-px bg-gradient-to-b from-[#E81111] via-[#ff4d4d] to-transparent lg:block" />
+
+              <div className="rounded-xl border border-[#E81111]/60 bg-[#0A0A0A] px-3 py-3 text-base leading-none font-semibold tracking-tight text-[#E81111] sm:text-lg lg:text-xl">
                 <span className="inline-block whitespace-nowrap">
                   {item.time}
                 </span>
+                <span className="mt-2 block h-[2px] w-full bg-gradient-to-r from-[#E81111] to-transparent" />
               </div>
 
-              <article className="border-l-4 border-[#202733] bg-white px-4 py-4 shadow-[0_2px_10px_rgba(2,16,36,0.08)] sm:px-5 sm:py-5 lg:px-6">
+              <article className="rounded-xl border border-[#E81111]/60 bg-[#0A0A0A] px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_0_22px_rgba(232,17,17,0.35)] sm:px-5 sm:py-5 lg:px-6">
                 {item.track ? (
-                  <p className="mb-2 text-[11px] font-semibold tracking-[0.14em] text-[#5b6471] uppercase sm:text-xs">
+                  <p className="mb-2 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[11px] font-semibold tracking-[0.14em] text-white uppercase sm:text-xs">
                     {item.track}
                   </p>
                 ) : null}
 
-                <h2 className="text-2xl leading-tight font-semibold tracking-tight text-[#021024] sm:text-3xl lg:text-[30px]">
+                <h2 className="text-xl leading-tight font-semibold tracking-tight text-white sm:text-2xl lg:text-[28px]">
                   {item.title}
                 </h2>
 
-                {/* {item.watchUrl ? (
-                  <Link
-                    href={item.watchUrl}
-                    className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#f11111] py-2 text-center font-bold text-white transition hover:bg-[#ca0e0e]"
-                  >
-                    ▶ Watch Session
-                  </Link>
-                ) : null} */}
-
-                {item.speakerNames.length > 0 ? (
-                  <div className="mt-4 grid gap-3 sm:mt-5 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
-                    {item.speakerNames.map((speakerName) => {
-                      const speaker = speakerMap.get(speakerName);
-
-                      if (!speaker) {
-                        return (
-                          <div
-                            key={`${item.title}-${speakerName}`}
-                            className="rounded-lg border border-[#dce0e6] px-3 py-2"
-                          >
-                            <p className="text-sm font-semibold text-[#021024]">
-                              {speakerName}
-                            </p>
-                          </div>
-                        );
-                      }
-
-                      const initials = speaker.name
-                        .split(" ")
-                        .map((value) => value[0])
-                        .join("")
-                        .slice(0, 2)
-                        .toUpperCase();
-
-                      return (
-                        <div
-                          key={`${item.title}-${speaker.name}`}
-                          className="flex items-start gap-3"
-                        >
-                          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-gray-200 sm:h-14 sm:w-14">
-                            {speaker.image ? (
-                              // biome-ignore lint/performance/noImgElement: static agenda avatar with graceful 404 fallback
-                              <img
-                                src={speaker.image}
-                                alt={speaker.name}
-                                className="h-full w-full object-cover"
-                              />
-                            ) : (
-                              <div className="flex h-full w-full items-center justify-center text-xs font-semibold text-gray-700">
-                                {initials}
-                              </div>
-                            )}
-                          </div>
-
-                          <div>
-                            <p className="text-lg leading-5 font-semibold tracking-tight text-[#021024]">
-                              {speaker.name}
-                            </p>
-                            <p className="text-sm leading-4 text-[#111827]">
-                              {speaker.role}
-                            </p>
-                            <p className="text-sm leading-4 text-[#5f6672]">
-                              {speaker.company}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
+                {item.speakerNames.length > 0 ||
+                (item.moderatorNames?.length ?? 0) > 0 ? (
+                  <div className="mt-4 grid gap-3 sm:mt-5 sm:grid-cols-2 xl:grid-cols-3">
+                    {item.speakerNames.map((speakerName) =>
+                      renderPersonCard(item.title, speakerName),
+                    )}
+                    {item.moderatorNames?.map((moderatorName) =>
+                      renderPersonCard(item.title, moderatorName, "Moderator"),
+                    )}
                   </div>
                 ) : null}
               </article>
