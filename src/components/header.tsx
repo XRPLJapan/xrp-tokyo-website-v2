@@ -86,8 +86,8 @@ export function Header() {
           {navItems.map((item) => (
             "href" in item ? (
               <Link
-                key={item.href}
-                href={item.href}
+                key={item.href!}
+                href={item.href!}
                 className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
               >
                 {item.label}
@@ -229,8 +229,8 @@ export function Header() {
                 {navItems.map((item) => (
                   "href" in item ? (
                     <Link
-                      key={item.href}
-                      href={item.href}
+                      key={item.href!}
+                      href={item.href!}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
                     >
