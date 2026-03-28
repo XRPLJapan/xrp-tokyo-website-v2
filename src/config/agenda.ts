@@ -513,7 +513,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "5:10 PM - 5:18 PM",
     title:
-      "The University of Tokyo- Blockchain Education Program",
+      "Introducing the Endowed Chair for Blockchain Innovation at the University of Tokyo",
     track: "Keynote",
     speakerNames: ["Kyohei Shibano"],
   },
