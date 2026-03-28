@@ -79,93 +79,40 @@ export default function AgendaPage() {
   return (
     <main className="min-h-screen bg-[#000000] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
       <div className="mx-auto max-w-6xl">
-        <section className="relative mb-6 overflow-hidden">
-          <div className="absolute inset-0" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[length:100%_3px] opacity-[0.07]" />
-          <div className="absolute left-1/2 top-[8%] h-28 w-[72%] -translate-x-1/2 rounded-full bg-white/12 blur-3xl" />
+       <section className="relative overflow-hidden">
+  <div className="mx-auto flex flex-col items-center px-4 py-0 text-center sm:px-6 lg:px-10">
+    <div className="grid w-full max-w-[520px] grid-cols-[1.2fr_0.9fr_1.1fr] items-stretch overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
+      <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-4 sm:px-5">
+        <span className="text-4xl leading-none font-extrabold text-white sm:text-5xl">
+          5
+        </span>
+        <span className="text-left text-xl font-semibold text-white/92 sm:text-2xl">
+          Floor
+        </span>
+      </div>
 
-          <div className="relative z-10 flex min-h-[360px] flex-col items-center justify-center px-4 py-8 text-center sm:min-h-[420px] sm:px-6 lg:min-h-[560px] lg:px-10 lg:py-12">
-            <Image
-              src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/6937cee58307d36d0e7b93b7_xrp-tokyo-26-negrative.svg"
-              alt="XRP Tokyo 2026 Logo"
-              width={560}
-              height={128}
-              className="h-auto w-[300px] max-w-full sm:w-[420px] lg:w-[560px]"
-              unoptimized
-            />
+      <div className="flex items-center justify-center border-r border-white/10 px-3 text-center text-sm font-semibold leading-tight text-white/85 sm:px-4 sm:text-base">
+        Day
+        <br />
+        Time
+      </div>
 
-            <p className="mt-3 text-[12px] font-extrabold tracking-[0.08em] text-white sm:text-sm lg:text-base">
-              XRP TOKYO 2026 FIRST EDITION
-            </p>
+      <div className="flex flex-col justify-center px-4 py-4 text-left sm:px-5">
+        <span className="text-sm font-extrabold text-white sm:text-base">
+          April 7th
+        </span>
+        <span className="text-sm font-extrabold text-white sm:text-base">
+          09:00 ~ 18:00
+        </span>
+      </div>
+    </div>
 
-            <div className="mt-10 grid w-full max-w-[660px] grid-cols-2 items-start gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-6 lg:mt-12">
-              <div className="flex min-w-0 flex-col items-start text-left">
-                <span className="mb-2 text-[11px] font-bold tracking-[0.04em] text-[#B6B6B6] sm:mb-3 sm:text-sm">
-                  Hosted By:
-                </span>
-                <div className="flex min-h-[52px] w-full items-center justify-start sm:min-h-[68px]">
-                  <Image
-                    src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/69b61ef4b73770a04d2b7115_xrp-white-and-color.svg"
-                    alt="XRPL Japan"
-                    width={208}
-                    height={64}
-                    className="h-auto w-[118px] sm:w-[190px] lg:w-[208px]"
-                    unoptimized
-                  />
-                </div>
-              </div>
-
-              <div className="mx-auto hidden h-20  sm:block" />
-
-              <div className="flex min-w-0 flex-col items-start text-left">
-                <span className="mb-2 text-[11px] font-bold tracking-[0.04em] text-[#B6B6B6] sm:mb-3 sm:text-sm">
-                  Managing Partner
-                </span>
-                <div className="flex min-h-[52px] w-full items-center justify-start sm:min-h-[68px]">
-                  <Image
-                    src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/69b61f578d878d06e0eea264_asia-web3.svg"
-                    alt="Asia Web3 Alliance Japan"
-                    width={228}
-                    height={68}
-                    className="h-auto w-[128px] sm:w-[204px] lg:w-[228px]"
-                    unoptimized
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 grid w-full max-w-[520px] grid-cols-[1.2fr_0.9fr_1.1fr] items-stretch overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
-              <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-4 sm:px-5">
-                <span className="text-4xl leading-none font-extrabold text-white sm:text-5xl">
-                  5
-                </span>
-                <span className="text-left text-xl font-semibold text-white/92 sm:text-2xl">
-                  Floor
-                </span>
-              </div>
-
-              <div className="flex items-center justify-center border-r border-white/10 px-3 text-center text-sm font-semibold leading-tight text-white/85 sm:px-4 sm:text-base">
-                Day
-                <br />
-                Time
-              </div>
-
-              <div className="flex flex-col justify-center px-4 py-4 text-left sm:px-5">
-                <span className="text-sm font-extrabold text-white sm:text-base">
-                  April 7th
-                </span>
-                <span className="text-sm font-extrabold text-white sm:text-base">
-                  09:00 ~ 18:00
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-            <p className="mt-4 text-xl sm:text-2xl font-extrabold tracking-[0.28em] text-[#D4AF37] uppercase">
-              Agenda
-            </p>
-          </div>
-        </section>
+    <div className="mt-2 h-px w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+    <p className="mt-2 text-xl font-extrabold tracking-[0.28em] text-[#D4AF37] uppercase sm:text-2xl">
+      Agenda
+    </p>
+  </div>
+</section>
 
         <p className="mb-6 text-center text-xs text-[#A0A0A0] sm:text-sm">
           Changes may occur to the agenda content. Please refer to this website
