@@ -80,29 +80,62 @@ export default function AgendaPage() {
   return (
     <main className="min-h-screen bg-[#000000] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
       <div className="mx-auto max-w-6xl">
-        <Link  href="https://tickets.teamz.co.jp/?utm_source=xrp"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-6 block overflow-hidden "
-          aria-label="Get ticket for XRP Tokyo"
-        >
-          <Image
-            src="/agenda-header1.png"
-            alt="XRP Tokyo ticket banner"
-            width={1400}
-            height={420}
-            className="hidden h-auto w-full object-cover sm:block"
-            priority
-          />
-          <Image
-            src="/agenda-header1.png"
-            alt="XRP Tokyo ticket banner"
-            width={900}
-            height={900}
-            className="block h-auto w-full object-cover sm:hidden"
-            priority
-          />
-        </Link>
+           <section className="relative mb-6 overflow-hidden">
+          <div className="absolute inset-0 " />
+
+          <div className="relative z-10 flex min-h-[240px] flex-col items-center justify-center px-4 text-center sm:min-h-[300px] lg:min-h-[360px]">
+            <Image
+              src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/6937cee58307d36d0e7b93b7_xrp-tokyo-26-negrative.svg"
+              alt="XRP Tokyo 2026 Logo"
+              width={440}
+              height={100}
+              className="mb-3 h-auto w-[290px] max-w-full sm:w-[440px]"
+              unoptimized
+            />
+            <p className="text-[13px] font-semibold tracking-wide text-white sm:text-base">
+              XRP TOKYO 2026 FIRST EDITION
+            </p>
+            <p className="mt-3 text-[11px] tracking-[0.28em] text-[#D4AF37] uppercase sm:text-xl font-bold">
+              AGENDA
+            </p>
+
+            <div className="mt-5 grid w-full max-w-2xl grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-8">
+              <div className="flex flex-col items-center text-center">
+                <span className="mb-1 text-sm text-[#B6B6B6] font-bold">Hosted By:</span>
+                <div className="flex items-center gap-2.5">
+                  <Image
+                    src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/69b61ef4b73770a04d2b7115_xrp-white-and-color.svg"
+                    alt="XRPL Japan"
+                    width={150}
+                    height={150}
+                    className="h-15"
+                    unoptimized
+                  />
+                  
+                </div>
+              </div>
+               <div className="flex flex-col items-center text-center">
+                <span className="mb-1 text-sm text-[#B6B6B6] font-bold">
+                  Managing Partner
+                </span>
+                <div className="flex items-center gap-2.5">
+                  <Image
+                    src="https://cdn.prod.website-files.com/63905feb5ec39b55fbfcc10a/69b61f578d878d06e0eea264_asia-web3.svg"
+                    alt="Asia Web3 Alliance Japan"
+                    width={150}
+                    height={150}
+                    className="h-15"
+                    unoptimized
+                  />
+                  
+                  
+                </div>
+              
+                
+              </div>
+            </div>
+          </div>
+        </section>
 
         <p className="mb-6 text-center text-xs text-[#A0A0A0] sm:text-sm">
           Changes may occur to the agenda content. Please refer to this website
