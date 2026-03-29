@@ -227,8 +227,8 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Ryo Sakai",
-    role: "Head of Business Development & CO",
-    company: "CoinPost,Webx",
+    role: "Head of Business Development & CEO",
+    company: "CoinPost, WebX",
     bio: "",
     image: "/speakers/Ryo Sakai.png",
   },
@@ -261,11 +261,11 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     image: "/speakers/Ai Kosuke.png",
   },
   {
-    name: "Kazuyuki Matsuda",
+    name: "Matsuda Ikkei",
     role: "Representative Director & CEO",
     company: "Digital Platformer Co., Ltd.",
     bio: "",
-    image: "/speakers/Kazuyuki Matsuda.png",
+    image: "/speakers/Matsuda Ikkei.png",
   },
   {
     name: "Jean Zhu",
@@ -297,7 +297,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Kyohei Shibano",
-    role: "Blockchain Education program",
+    role: "Endowed Chair for Blockchain Innovation",
     company: "The University of Tokyo",
     bio: "",
     image: "/speakers/Tokyo University.png",
@@ -460,7 +460,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "1:50 PM - 2:10 PM",
-    title: "How to License Your Reputation Like a Pro Athlete: Unlocking the Power of Name, Image & Likeness with Datavault AI",
+    title: "International Element Exchange: A Datavault AI Technology",
     track: "Keynote",
     speakerNames: ["Nathaniel T. Bradley"],
   },
@@ -518,7 +518,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     track: "Panel",
     speakerNames: [
       "Ai Kosuke",
-      "Kazuyuki Matsuda",
+      "Matsuda Ikkei",
       "Sojun Katsura",
       "Jean Zhu",
       "Yusuke Hirota",
