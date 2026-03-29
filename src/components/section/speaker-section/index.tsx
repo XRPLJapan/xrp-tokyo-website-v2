@@ -197,6 +197,15 @@ export function SpeakerSection() {
                   </svg>
                 </button>
 
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(-1)}
+                  className="absolute top-4 right-4 z-20 hidden h-10 w-10 items-center justify-center rounded-full bg-black/5 text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black sm:flex"
+                  aria-label="Close"
+                >
+                  <span className="relative -top-px">×</span>
+                </button>
+
                 <div
                   ref={modalBodyRef}
                   className="max-h-[80svh] sm:max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-y-contain px-6 py-6 sm:px-8 sm:py-8 md:px-18 md:py-12"
@@ -205,7 +214,7 @@ export function SpeakerSection() {
                   <button
                     type="button"
                     onClick={() => setActiveIndex(-1)}
-                    className="sticky top-0 ml-auto mr-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black z-10 -mb-10"
+                    className="sticky top-0 ml-auto mr-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black z-10 -mb-10 sm:hidden"
                     aria-label="Close"
                   >
                     <span className="relative -top-px">×</span>
