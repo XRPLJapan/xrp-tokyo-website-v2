@@ -57,7 +57,7 @@ export function SpeakerSection() {
       locale === "ja" && speaker.companyJa
         ? speaker.companyJa
         : speaker.company;
-    const bio = locale === "ja" && speaker.bioJa ? speaker.bioJa : speaker.bio;
+    const bio = locale === "en" && speaker.bio_en ? speaker.bio_en : speaker.bio;
     return { name, role, company, bio };
   };
 
@@ -123,15 +123,15 @@ export function SpeakerSection() {
             return (
               <DialogPanel
                 showCloseButton={false}
-                className="max-w-[720px] bg-white text-black rounded-3xl p-8 sm:p-10"
+                className="inset-x-0 mx-auto top-4 w-[94%] max-w-none translate-x-0 translate-y-0 max-h-[calc(100dvh-2rem)] overflow-y-auto sm:top-1/2 sm:left-1/2 sm:right-auto sm:mx-0 sm:w-full sm:max-w-[720px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-h-[calc(100dvh-4rem)] bg-white text-black rounded-3xl sm:p-8 md:p-12"
               >
                 <button
                   type="button"
                   onClick={() => setActiveSpeaker(null)}
-                  className="absolute right-5 top-5 text-black/50 hover:text-black"
+                  className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black"
                   aria-label="Close"
                 >
-                  ×
+                  <span className="relative -top-px">×</span>
                 </button>
 
                 <div className="flex flex-col items-center text-center">
@@ -143,7 +143,7 @@ export function SpeakerSection() {
                     />
                   </div>
 
-                  <div className="mt-6">
+                  <div className="mt-4">
                     <h3 className="text-2xl sm:text-3xl font-semibold">
                       {name}
                     </h3>
@@ -152,23 +152,23 @@ export function SpeakerSection() {
                     </p>
                   </div>
 
-                  <div className="mt-4 inline-flex items-center rounded-full bg-black px-4 py-2 text-white text-sm font-semibold">
+                  <div className="mt-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-white text-sm font-semibold">
                     {company}
                   </div>
 
                   {(activeSpeaker.twitter ||
                     activeSpeaker.linkedin ||
                     activeSpeaker.website) && (
-                    <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
                       {activeSpeaker.twitter && (
                         <a
                           href={activeSpeaker.twitter}
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${name} on X`}
-                          className="flex h-9 w-9 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
                         >
-                          <XLogoIcon className="origin-center scale-[0.9] text-black" />
+                          <XLogoIcon className="origin-center scale-[0.7] text-black" />
                         </a>
                       )}
                       {activeSpeaker.linkedin && (
@@ -177,9 +177,9 @@ export function SpeakerSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${name} on LinkedIn`}
-                          className="flex h-9 w-9 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
                         >
-                          <LinkedInLogoIcon className="text-black" />
+                          <LinkedInLogoIcon className="origin-center scale-[0.8] text-black" />
                         </a>
                       )}
                       {activeSpeaker.website && (
@@ -188,15 +188,15 @@ export function SpeakerSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${name} website`}
-                          className="flex h-9 w-9 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
                         >
-                          <GlobeWebIcon className="text-black" />
+                          <GlobeWebIcon className="origin-center scale-[0.8] text-black" />
                         </a>
                       )}
                     </div>
                   )}
 
-                  <p className="mt-6 text-base text-gray-800 leading-relaxed max-w-2xl antialiased">
+                  <p className="mt-6 text-left text-[13px] sm:text-[15px] text-gray-800 leading-relaxed max-w-2xl antialiased whitespace-pre-line">
                     {bio}
                   </p>
                 </div>
