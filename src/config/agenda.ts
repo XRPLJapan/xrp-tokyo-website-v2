@@ -80,7 +80,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/tomohiko-kondo-78748bab",
   },
   {
-    name: "Dave McComb",
+    name: "Dave McCombs",
     role: "Senior Re-Writer",
     company: "NHK World Japan",
     bio: "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
