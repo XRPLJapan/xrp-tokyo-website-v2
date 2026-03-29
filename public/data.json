@@ -26,7 +26,7 @@
       "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
       "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
-       "website": ""
+      "website": ""
     },
     {
       "name": "SungMo Park",
@@ -36,7 +36,7 @@
       "image": "/speakers/SungMo Park.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/smp0910/",
-      "website":"https://a16zcrypto.com/team/sungmo-park/"
+      "website": "https://a16zcrypto.com/team/sungmo-park/"
     },
     {
       "name": "Cody Carbone",
@@ -59,36 +59,36 @@
     {
       "name": "Tomohiko Kondo",
       "role": "CEO",
-      "company": "SBI VC Trade Co., Ltd",
+      "company": "SBI VC Trade Co., Ltd.",
       "bio": "",
       "image": "/speakers/Tomohiko Kondo.png",
       "twitter": "https://x.com/tomohiko_kondo",
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
     },
     {
-  "name": "Dave McComb",
-  "role": "Senior Re-Writer",
-  "company": "NHK World Japan",
-  "bio": "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
-  "image": "/speakers/Dave McComb.png",
-  "twitter": "",
-  "linkedin": "",
-  "website": ""
-},
-{
-  "name": "Hiroshi Onozawa",
-  "role": "Executive Officer",
-  "company": "GMO Aozora Net Bank, Ltd",
-  "bio": "",
-  "image": "/speakers/Hiroshi Onozawa.png",
-  "twitter": "",
-  "linkedin": "",
-  "website": ""
-},
+      "name": "Dave McComb",
+      "role": "Senior Re-Writer",
+      "company": "NHK World Japan",
+      "bio": "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
+      "image": "/speakers/Dave McComb.png",
+      "twitter": "",
+      "linkedin": "",
+      "website": ""
+    },
+    {
+      "name": "Hiroshi Onozawa",
+      "role": "Executive Officer",
+      "company": "GMO Aozora Net Bank, Ltd.",
+      "bio": "",
+      "image": "/speakers/Hiroshi Onozawa.png",
+      "twitter": "",
+      "linkedin": "",
+      "website": "https://gmo-aozora.com/"
+    },
     {
       "name": "Seihaku Yoshida",
       "role": "CEO",
-      "company": "HashPort Inc",
+      "company": "HashPort Inc.",
       "bio": "",
       "image": "/speakers/HashPort Inc.png",
       "twitter": "https://x.com/seihakuyoshida",
@@ -130,27 +130,27 @@
       "image": "/speakers/Hinza Asif.png",
       "twitter": "https://x.com/thehinza",
       "linkedin": "https://jp.linkedin.com/in/hinza-asif",
-      "website":"https://asiaweb3alliance.jp/"
+      "website": "https://asiaweb3alliance.jp/"
     },
     {
       "name": "Noritaka Okabe",
       "role": "Founder & CEO",
-      "company": "JPYC Inc",
+      "company": "JPYC Inc.",
       "bio": "",
       "image": "/speakers/Noritaka Okabe.png",
-      "twitter": "",
+      "twitter": "https://x.com/noritaka_okabe",
       "linkedin": "",
-      "website":""
+      "website": "https://corporate.jpyc.co.jp/"
     },
     {
       "name": "Ryo Kato",
       "role": "CEO",
-      "company": "HashHub Inc",
+      "company": "HashHub Inc.",
       "bio": "",
       "image": "/speakers/Ryo Kato.png",
-      "twitter": "",
+      "twitter": "https://x.com/kitaro_sskr",
       "linkedin": "",
-      "website":"https://hashhub.tokyo/"
+      "website": "https://hashhub.tokyo/"
     },
     {
       "name": "Fumihiro Arasawa",
@@ -160,7 +160,7 @@
       "image": "/speakers/Fumihiro Arasawa.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Nathaniel T. Bradley",
@@ -169,8 +169,8 @@
       "bio": "",
       "image": "/speakers/Nathaniel.png",
       "twitter": "",
-      "linkedin": "",
-      "website":""
+      "linkedin": "https://www.linkedin.com/in/natlink/",
+      "website": "https://datavaultsite.com/"
     },
     {
       "name": "Steven Zeiler",
@@ -179,8 +179,8 @@
       "bio": "",
       "image": "/speakers/Steven Zeiler.png",
       "twitter": "",
-      "linkedin": "",
-      "website":""
+      "linkedin": "https://www.linkedin.com/in/stevenzeiler/",
+      "website": ""
     },
     {
       "name": "Go Makino",
@@ -189,8 +189,8 @@
       "bio": "",
       "image": "/speakers/Go Makino.png",
       "twitter": "",
-      "linkedin": "",
-      "website":""
+      "linkedin": "https://www.linkedin.com/in/gou-makino-b362854b/",
+      "website": ""
     },
     {
       "name": "Taisuke Isono",
@@ -200,7 +200,7 @@
       "image": "/speakers/Taisuke Isono.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Eiji Kobayashi",
@@ -210,7 +210,7 @@
       "image": "/speakers/Eiji Kobayashi.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": "https://securitize.co.jp/"
     },
     {
       "name": "Ken Kawai",
@@ -220,7 +220,7 @@
       "image": "/speakers/Ken Kawai.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": "https://www.amt-law.com/"
     },
     {
       "name": "Seiichi Kawamura",
@@ -230,7 +230,7 @@
       "image": "/speakers/Seiichi Kawamura.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": "https://www.toyota-blockchain-lab.org/"
     },
     {
       "name": "Tatsuya Kohrogi",
@@ -240,9 +240,9 @@
       "image": "/speakers/Tatsuya Kohrogi.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": "https://ripple.com/"
     },
-     {
+    {
       "name": "Yoshimasa Satoh",
       "role": "CFA Representative Director and CEO, Japan",
       "company": "Alpaca",
@@ -250,9 +250,8 @@
       "image": "/speakers/Yoshimasa Satoh.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
-    
     {
       "name": "Masa Kikuchi",
       "role": "Founder & CEO",
@@ -261,7 +260,7 @@
       "image": "/speakers/Masa Kikuchi.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Noriaki Yagi",
@@ -271,17 +270,17 @@
       "image": "/speakers/Noriaki Yagi.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Ryo Sakai",
       "role": "Head of Business Development & CEO",
-      "company": "CoinPost, Webx",
+      "company": "CoinPost, WebX",
       "bio": "",
       "image": "/speakers/Ryo Sakai.png",
-      "twitter": "",
+      "twitter": "https://x.com/RyosCoinPost",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "J. Ayo Akinyele",
@@ -289,9 +288,9 @@
       "company": "RippleX",
       "bio": "",
       "image": "/speakers/Ayo Akinyele.png",
-      "twitter": "",
+      "twitter": "https://x.com/ja_akinyele",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Cyrus Cruz",
@@ -300,8 +299,8 @@
       "bio": "",
       "image": "/speakers/Cyrus Cruz.png",
       "twitter": "",
-      "linkedin": "",
-      "website":""
+      "linkedin": "https://www.linkedin.com/in/cyruscruz8/",
+      "website": "https://www.tenity.com/"
     },
     {
       "name": "Sojun Katsura",
@@ -311,7 +310,7 @@
       "image": "/speakers/Sojun Katsura.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Ai Kosuke",
@@ -321,7 +320,7 @@
       "image": "/speakers/Ai Kosuke.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Matsuda Ikkei",
@@ -330,8 +329,8 @@
       "bio": "",
       "image": "/speakers/Matsuda Ikkei.png",
       "twitter": "",
-      "linkedin": "",
-      "website":""
+      "linkedin": "https://www.linkedin.com/in/ikkei-matsuda-74549735/",
+      "website": "https://digitalplatformer.co.jp/"
     },
     {
       "name": "Jean Zhu",
@@ -341,7 +340,7 @@
       "image": "/speakers/Jean Zhu.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Yusuke Hirota",
@@ -351,17 +350,17 @@
       "image": "/speakers/Yusuke Hirota.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
-     {
+    {
       "name": "Eri Ishiyama",
       "role": "Blockchain Advocate",
       "company": "",
       "bio": "",
       "image": "/speakers/Carpe Diem.png",
-      "twitter": "",
+      "twitter": "https://x.com/sentosumosaba",
       "linkedin": "",
-      "website":""
+      "website": ""
     },
     {
       "name": "Sebastian Valdez",
@@ -371,16 +370,17 @@
       "image": "/speakers/Sebastian Valdez.png",
       "twitter": "",
       "linkedin": "",
-      "website":""
+      "website": "https://xrp.cafe/"
     },
     {
       "name": "Kyohei Shibano",
-      "role": "Blockchain Education program",
+      "role": "Endowed Chair for Blockchain Innovation",
       "company": "The University of Tokyo",
       "bio": "",
       "image": "/speakers/Tokyo University.png",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/kyohei-shibano-0a5165251"
+      "linkedin": "https://www.linkedin.com/in/kyohei-shibano-0a5165251",
+      "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
     },
     {
       "name": "Rox Park",
@@ -389,7 +389,8 @@
       "bio": "",
       "image": "/speakers/Doppler.png",
       "twitter": "",
-      "linkedin": ""
+      "linkedin": "",
+      "website": "https://doppler.finance/"
     },
     {
       "name": "Panos Mekras",
@@ -411,7 +412,7 @@
     },
     {
       "name": "Alexis Sirkia",
-      "role": "Executive Chairman & Founder ",
+      "role": "Executive Chairman & Founder",
       "company": "Yellow",
       "bio": "",
       "image": "/speakers/Alexis Sirkia.png",
@@ -551,7 +552,7 @@
       "website": "https://digitalchamber.org/",
       "whiteLogo": true
     },
-     {
+    {
       "name": "ECCC",
       "tier": "Supporter",
       "logo": "/partners/supporter/ecccc.png",
