@@ -17,7 +17,7 @@ interface SpeakerCardProps {
   speaker: Speaker;
   locale: string;
   className?: string;
-  onSelect?: (speaker: Speaker) => void;
+  onSelect?: ((speaker: Speaker) => void) | (() => void);
 }
 
 export function SpeakerCard({

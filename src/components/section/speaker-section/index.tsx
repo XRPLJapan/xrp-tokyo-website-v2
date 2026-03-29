@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -20,9 +20,34 @@ import { SECTION_STYLES } from "@/lib/styles/common";
 export function SpeakerSection() {
   const t = useTranslations();
   const locale = useLocale();
-  const [activeSpeaker, setActiveSpeaker] = useState<Speaker | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [speakers, setSpeakers] = useState<Speaker[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const activeSpeaker = activeIndex >= 0 ? speakers[activeIndex] : null;
+
+  const goToPrev = useCallback(() => {
+    setActiveIndex((i) => (i <= 0 ? speakers.length - 1 : i - 1));
+  }, [speakers.length]);
+
+  const goToNext = useCallback(() => {
+    setActiveIndex((i) => (i >= speakers.length - 1 ? 0 : i + 1));
+  }, [speakers.length]);
+
+  useEffect(() => {
+    if (activeIndex < 0) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToPrev();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goToNext();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeIndex, goToPrev, goToNext]);
 
   useEffect(() => {
     let isMounted = true;
@@ -108,7 +133,7 @@ export function SpeakerSection() {
                   key={speaker.name}
                   speaker={speaker}
                   locale={locale}
-                  onSelect={setActiveSpeaker}
+                  onSelect={() => setActiveIndex(index)}
                 />
               ))}
             </motion.div>
@@ -116,25 +141,47 @@ export function SpeakerSection() {
         </div>
       </div>
 
-      <Dialog open={!!activeSpeaker} onClose={() => setActiveSpeaker(null)}>
+      <Dialog open={!!activeSpeaker} onClose={() => setActiveIndex(-1)}>
         {activeSpeaker &&
           (() => {
             const { name, role, company, bio } = getSpeakerText(activeSpeaker);
             return (
               <DialogPanel
                 showCloseButton={false}
-                className="inset-x-0 mx-auto top-4 w-[94%] max-w-none translate-x-0 translate-y-0 max-h-[calc(100dvh-2rem)] overflow-y-auto sm:top-1/2 sm:left-1/2 sm:right-auto sm:mx-0 sm:w-full sm:max-w-[720px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-h-[calc(100dvh-4rem)] bg-white text-black rounded-3xl sm:p-8 md:p-12"
+                className="inset-x-0 mx-auto top-[10svh] w-[94%] max-w-none translate-x-0 translate-y-0 h-[80svh] overflow-y-auto sm:top-1/2 sm:left-1/2 sm:right-auto sm:mx-0 sm:w-full sm:max-w-[720px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-auto sm:max-h-[calc(100dvh-4rem)] bg-white text-black rounded-3xl sm:p-8 md:p-12"
               >
                 <button
                   type="button"
-                  onClick={() => setActiveSpeaker(null)}
-                  className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black"
+                  onClick={() => setActiveIndex(-1)}
+                  className="sticky top-0 ml-auto mr-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black z-10 -mb-10"
                   aria-label="Close"
                 >
                   <span className="relative -top-px">×</span>
                 </button>
 
-                <div className="flex flex-col items-center text-center">
+                <button
+                  type="button"
+                  onClick={goToPrev}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black/50 transition-colors hover:bg-black/10 hover:text-black sm:left-3 sm:h-10 sm:w-10 z-10"
+                  aria-label="Previous speaker"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={goToNext}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black/50 transition-colors hover:bg-black/10 hover:text-black sm:right-3 sm:h-10 sm:w-10 z-10"
+                  aria-label="Next speaker"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                    <polyline points="9 6 15 12 9 18" />
+                  </svg>
+                </button>
+
+                <div className="flex flex-col items-center text-center px-6 sm:px-8">
                   <div className="relative h-40 w-40 sm:h-44 sm:w-44 overflow-hidden rounded-3xl bg-black/10">
                     <img
                       src={activeSpeaker.image}
