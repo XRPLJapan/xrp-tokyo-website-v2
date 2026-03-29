@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -23,8 +23,14 @@ export function SpeakerSection() {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [speakers, setSpeakers] = useState<Speaker[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const modalBodyRef = useRef<HTMLDivElement>(null);
 
   const activeSpeaker = activeIndex >= 0 ? speakers[activeIndex] : null;
+
+  useLayoutEffect(() => {
+    if (activeIndex < 0) return;
+    modalBodyRef.current?.scrollTo(0, 0);
+  }, [activeIndex]);
 
   const goToPrev = useCallback(() => {
     setActiveIndex((i) => (i <= 0 ? speakers.length - 1 : i - 1));
@@ -48,6 +54,25 @@ export function SpeakerSection() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [activeIndex, goToPrev, goToNext]);
+
+  useEffect(() => {
+    if (activeIndex >= 0) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [activeIndex >= 0]);
 
   useEffect(() => {
     let isMounted = true;
@@ -148,17 +173,8 @@ export function SpeakerSection() {
             return (
               <DialogPanel
                 showCloseButton={false}
-                className="inset-x-0 mx-auto top-[10svh] w-[94%] max-w-none translate-x-0 translate-y-0 h-[80svh] overflow-y-auto sm:top-1/2 sm:left-1/2 sm:right-auto sm:mx-0 sm:w-full sm:max-w-[720px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-auto sm:max-h-[calc(100dvh-4rem)] bg-white text-black rounded-3xl sm:p-8 md:p-12"
+                className="inset-x-0 mx-auto top-[10svh] w-[94%] max-w-none translate-x-0 translate-y-0 block overflow-hidden gap-0 p-0 sm:top-1/2 sm:left-1/2 sm:right-auto sm:mx-0 sm:w-full sm:max-w-[720px] sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white text-black rounded-3xl"
               >
-                <button
-                  type="button"
-                  onClick={() => setActiveIndex(-1)}
-                  className="sticky top-0 ml-auto mr-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black z-10 -mb-10"
-                  aria-label="Close"
-                >
-                  <span className="relative -top-px">×</span>
-                </button>
-
                 <button
                   type="button"
                   onClick={goToPrev}
@@ -181,71 +197,86 @@ export function SpeakerSection() {
                   </svg>
                 </button>
 
-                <div className="flex flex-col items-center text-center px-6 sm:px-8">
-                  <div className="relative h-40 w-40 sm:h-44 sm:w-44 overflow-hidden rounded-3xl bg-black/10">
-                    <img
-                      src={activeSpeaker.image}
-                      alt={name}
-                      className="h-full w-full object-cover object-top"
-                    />
-                  </div>
+                <div
+                  ref={modalBodyRef}
+                  className="max-h-[80svh] sm:max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-y-contain px-6 py-6 sm:px-8 sm:py-8 md:px-18 md:py-12"
+                  data-lenis-prevent
+                >
+                  <button
+                    type="button"
+                    onClick={() => setActiveIndex(-1)}
+                    className="sticky top-0 ml-auto mr-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-3xl leading-none text-black/70 transition-colors hover:bg-black/10 hover:text-black z-10 -mb-10"
+                    aria-label="Close"
+                  >
+                    <span className="relative -top-px">×</span>
+                  </button>
 
-                  <div className="mt-4">
-                    <h3 className="text-2xl sm:text-3xl font-semibold">
-                      {name}
-                    </h3>
-                    <p className="mt-1 text-sm sm:text-base text-black/70">
-                      {role}
+                  <div className="flex flex-col items-center text-center">
+                    <div className="relative h-40 w-40 sm:h-44 sm:w-44 overflow-hidden rounded-3xl bg-black/10">
+                      <img
+                        src={activeSpeaker.image}
+                        alt={name}
+                        className="h-full w-full object-cover object-top"
+                      />
+                    </div>
+
+                    <div className="mt-4">
+                      <h3 className="text-2xl sm:text-3xl font-semibold">
+                        {name}
+                      </h3>
+                      <p className="mt-1 text-sm sm:text-base text-black/70">
+                        {role}
+                      </p>
+                    </div>
+
+                    <div className="mt-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-white text-sm font-semibold">
+                      {company}
+                    </div>
+
+                    {(activeSpeaker.twitter ||
+                      activeSpeaker.linkedin ||
+                      activeSpeaker.website) && (
+                      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                        {activeSpeaker.twitter && (
+                          <a
+                            href={activeSpeaker.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${name} on X`}
+                            className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          >
+                            <XLogoIcon className="origin-center scale-[0.7] text-black" />
+                          </a>
+                        )}
+                        {activeSpeaker.linkedin && (
+                          <a
+                            href={activeSpeaker.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${name} on LinkedIn`}
+                            className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          >
+                            <LinkedInLogoIcon className="origin-center scale-[0.8] text-black" />
+                          </a>
+                        )}
+                        {activeSpeaker.website && (
+                          <a
+                            href={activeSpeaker.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${name} website`}
+                            className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
+                          >
+                            <GlobeWebIcon className="origin-center scale-[0.8] text-black" />
+                          </a>
+                        )}
+                      </div>
+                    )}
+
+                    <p className="mt-6 text-left text-[13px] sm:text-[15px] text-gray-800 leading-relaxed max-w-2xl antialiased whitespace-pre-line">
+                      {bio}
                     </p>
                   </div>
-
-                  <div className="mt-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-white text-sm font-semibold">
-                    {company}
-                  </div>
-
-                  {(activeSpeaker.twitter ||
-                    activeSpeaker.linkedin ||
-                    activeSpeaker.website) && (
-                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-                      {activeSpeaker.twitter && (
-                        <a
-                          href={activeSpeaker.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${name} on X`}
-                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
-                        >
-                          <XLogoIcon className="origin-center scale-[0.7] text-black" />
-                        </a>
-                      )}
-                      {activeSpeaker.linkedin && (
-                        <a
-                          href={activeSpeaker.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${name} on LinkedIn`}
-                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
-                        >
-                          <LinkedInLogoIcon className="origin-center scale-[0.8] text-black" />
-                        </a>
-                      )}
-                      {activeSpeaker.website && (
-                        <a
-                          href={activeSpeaker.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${name} website`}
-                          className="flex h-7 w-7 items-center justify-center rounded-sm bg-black/[0.08] text-black transition-colors hover:bg-black/15"
-                        >
-                          <GlobeWebIcon className="origin-center scale-[0.8] text-black" />
-                        </a>
-                      )}
-                    </div>
-                  )}
-
-                  <p className="mt-6 text-left text-[13px] sm:text-[15px] text-gray-800 leading-relaxed max-w-2xl antialiased whitespace-pre-line">
-                    {bio}
-                  </p>
                 </div>
               </DialogPanel>
             );

@@ -114,9 +114,11 @@ export function SpeakerCard({
         <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug min-h-[32px] md:min-h-0 line-clamp-2 md:line-clamp-none">
           {role}
         </p>
-        <p className="text-[11px] md:text-base text-white/60 leading-snug">
-          {company}
-        </p>
+        {company && (
+          <p className="text-[11px] md:text-base text-white/60 leading-snug">
+            {company}
+          </p>
+        )}
       </div>
     </>
   );
