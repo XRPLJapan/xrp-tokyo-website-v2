@@ -47,7 +47,7 @@ logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-wh
   {
     tier: Tier.Gold,
     containerClass:
-      "grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-lg lg:max-w-5xl mx-auto justify-items-center items-start",
+      "flex flex-wrap justify-center items-start gap-4 lg:gap-6 w-full max-w-5xl mx-auto",
     logoClass:
       "w-full max-w-[260px] aspect-[1.6/1] lg:aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
     gap: "mt-14 md:mt-16",
@@ -236,14 +236,9 @@ export function SponsorSection() {
                 "text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center";
 
               const renderLogoGrid = (list: typeof sponsors) => {
-                const resolvedContainerClass =
-                  tier === Tier.Gold && list.length === 2
-                    ? "grid grid-cols-2 gap-4 lg:gap-6 w-full max-w-lg mx-auto justify-items-center items-start lg:flex lg:flex-wrap lg:justify-center lg:max-w-5xl"
-                    : containerClass;
-
                 return (
                 <motion.div
-                  className={resolvedContainerClass}
+                  className={containerClass}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
