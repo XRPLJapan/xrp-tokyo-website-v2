@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import {
@@ -28,11 +29,13 @@ export function useGiveawayDialog() {
 }
 
 export function GiveawayDialogProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   const { isSplashComplete } = useSplash();
   const [isOpen, setIsOpen] = useState(false);
+  const suppressGiveawayOnThisPage = pathname === "/agenda";
 
   useEffect(() => {
-    if (!isSplashComplete) return;
+    if (!isSplashComplete || suppressGiveawayOnThisPage) return;
 
     try {
       const dismissed = localStorage.getItem(STORAGE_KEY);
@@ -45,9 +48,12 @@ export function GiveawayDialogProvider({ children }: { children: React.ReactNode
       const timer = setTimeout(() => setIsOpen(true), 500);
       return () => clearTimeout(timer);
     }
-  }, [isSplashComplete]);
+  }, [isSplashComplete, suppressGiveawayOnThisPage]);
 
-  const openDialog = useCallback(() => setIsOpen(true), []);
+  const openDialog = useCallback(() => {
+    if (suppressGiveawayOnThisPage) return;
+    setIsOpen(true);
+  }, [suppressGiveawayOnThisPage]);
   const handleClose = useCallback(() => {
     setIsOpen(false);
     localStorage.setItem(STORAGE_KEY, "true");
@@ -56,7 +62,10 @@ export function GiveawayDialogProvider({ children }: { children: React.ReactNode
   return (
     <GiveawayDialogContext.Provider value={{ openDialog }}>
       {children}
-      <GiveawayDialogContent isOpen={isOpen} onClose={handleClose} />
+      <GiveawayDialogContent
+        isOpen={isOpen && !suppressGiveawayOnThisPage}
+        onClose={handleClose}
+      />
     </GiveawayDialogContext.Provider>
   );
 }
