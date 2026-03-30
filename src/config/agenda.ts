@@ -85,7 +85,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     role: "Senior Re-Writer",
     company: "NHK World Japan",
     bio: "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
-    image: "/speakers/Dave McComb.png",
+    image: "/speakers/Dave-McComb.png",
   },
   {
     name: "Hiroshi Onozawa",
@@ -398,7 +398,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Firechat: Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
     track: "Fireside",
     speakerNames: ["Markus Infanger"],
-    moderatorNames: ["Dave McComb"],
+    moderatorNames: ["Dave McCombs"],
   },
   {
     time: "11:05 AM - 11:35 AM",
