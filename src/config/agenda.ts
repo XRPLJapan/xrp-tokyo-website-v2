@@ -129,12 +129,12 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Yusuke Takezawa",
-    role: "Independent Advisor on Cross-Border Finance and Institutional Design",
-    company: "Former VP at Progmat",
+    role: "Independent Advisor on Cross-Border Finance and Institutional Design, Former VP at Progmat",
+    company: "",
     bio: "",
     image: "/speakers/Yusuke Takezawa.jpg",
     linkedin: "https://www.linkedin.com/in/yusuke-takezawa-327720156/",
-    website: "https://progmat.co.jp/",
+    website: "",
   },
   {
     name: "Mai Furukawa",
