@@ -517,7 +517,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "4:20 PM - 4:30 PM",
     title:
-      "Building the Future of Web3 Infrastructure: The Yellow Network Layer-3 Vision",
+      "Clearing the Path: How Yellow Enables the Internet of Value",
     track: "Keynote",
     speakerNames: ["Alexis Sirkia","Steven Zeiler"],
   },
