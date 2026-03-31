@@ -306,7 +306,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Kyohei Shibano",
-    role: "Endowed Chair for Blockchain Innovation",
+    role: "Project Researcher",
     company: "The University of Tokyo",
     bio: "",
     image: "/speakers/Tokyo University.png",
