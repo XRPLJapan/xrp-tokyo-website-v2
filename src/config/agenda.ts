@@ -511,7 +511,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "3:35 PM - 3:45 PM",
-    title: "Doppler Finance - Keynote",
+    title: "Doppler Finance: Powering Institutional Adoption on XRPL",
     track: "Keynote",
     speakerNames: ["Rox Park"],
   },
