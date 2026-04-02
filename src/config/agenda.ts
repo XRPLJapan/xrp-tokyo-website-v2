@@ -357,7 +357,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "VIP After Party",
-    role: "Limited attendance. VIP or prior approval required.",
+    role: "Limited attendance. Prior approval required.",
     company: "https://luma.com/da2ucul1",
     bio: "",
     image: "/speakers/partyimg.png",
