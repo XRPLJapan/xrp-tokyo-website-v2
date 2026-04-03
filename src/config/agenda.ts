@@ -492,7 +492,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "2:50 PM - 3:00 PM",
-    title: "Ripple APAC Ecosystem Announcement - TBA",
+    title: "Growing the XRPL Ecosystem",
     track: "Keynote",
     speakerNames: ["Christina Chan"],
   },
