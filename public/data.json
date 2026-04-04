@@ -777,28 +777,28 @@
       "tier": "Community",
       "logo": "/partners/community/ai-agent-run1.png",
       "website": "https://aigent.run/",
-      "whiteBackground": true
+      "forceWhiteBackground": true
     },
     {
       "name": "TextRP",
       "tier": "Community",
       "logo": "/partners/community/text-rp.jpg",
       "website": "https://textrp.io/",
-      "whiteBackground": true
+      "forceWhiteBackground": true
     },
     {
       "name": "Wavee",
       "tier": "Community",
       "logo": "/partners/community/wavee-bg-white.png",
       "website": "https://wavee.world/",
-      "whiteBackground": true
+      "forceWhiteBackground": true
     },
     {
       "name": "Terry Toto",
       "tier": "Community",
       "logo": "/partners/community/terry-toto.svg",
       "website": "https://terrytoto.com/",
-      "whiteBackground": true
+      "forceWhiteBackground": true
     },
     {
       "name": "jupyter.org",
@@ -827,6 +827,33 @@
       "logo": "/partners/community/chain-block-summit.png",
       "website": "https://chainofblockssummit.com/",
       "whiteBackground": true
+    },
+    {
+      "name": "xSPECTAR",
+      "tier": "Community",
+      "logo": "/partners/community/xspectar-logo.svg",
+      "website": "https://www.xspectar.com/",
+      "forceWhiteBackground": true
+    },
+    {
+      "name": "Rabbitflower",
+      "tier": "Community",
+      "logo": "/partners/community/rabbitflower.png",
+      "website": "https://x.com/RabiHouse"
+    },
+    {
+      "name": "Yukki",
+      "tier": "Community",
+      "logo": "/partners/community/yukki.png",
+      "website": "https://x.com/YukilovePenguin",
+      "forceWhiteBackground": true
+    },
+    {
+      "name": "hayai-akachan",
+      "tier": "Community",
+      "logo": "/partners/community/hayai-akachan.png",
+      "website": "https://x.com/hayaiakachan",
+      "forceWhiteBackground": true
     },
     {
       "name": "XRP Army JP",
