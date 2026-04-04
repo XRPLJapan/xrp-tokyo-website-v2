@@ -866,7 +866,8 @@
       "tier": "Community",
       "logo": "/partners/community/we-create-3.png",
       "website": "https://x.com/We_Create_3",
-      "forceWhiteBackground": true
+      "forceWhiteBackground": true,
+      "logoInset": true
     },
     {
       "name": "XRP Army JP",

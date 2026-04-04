@@ -129,6 +129,7 @@ export function SponsorSection() {
       website?: string;
       whiteLogo?: boolean;
       forceWhiteBackground?: boolean;
+      logoInset?: boolean;
       /** Bronze: "corporate" (企業) vs default / "individual" → Heroes */
       type?: string;
     }[]
@@ -150,6 +151,7 @@ export function SponsorSection() {
             website?: string;
             whiteLogo?: boolean;
             forceWhiteBackground?: boolean;
+            logoInset?: boolean;
             type?: string;
           }[];
         };
@@ -179,6 +181,7 @@ export function SponsorSection() {
             website: sponsor.website,
             whiteLogo: sponsor.whiteLogo,
             forceWhiteBackground: sponsor.forceWhiteBackground,
+            logoInset: sponsor.logoInset,
             type: sponsor.type,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
@@ -257,6 +260,7 @@ export function SponsorSection() {
                       className={logoClass}
                       whiteLogo={sponsor.whiteLogo}
                       whiteBackground={sponsor.forceWhiteBackground}
+                      logoInset={sponsor.logoInset}
                     />
                   ))}
                 </motion.div>
