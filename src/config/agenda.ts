@@ -412,7 +412,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "10:35 AM - 11:00 AM",
     title:
-      "Firechat: Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
+      "Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
     track: "Fireside",
     speakerNames: ["Markus Infanger"],
     moderatorNames: ["Dave McCombs"],
@@ -432,7 +432,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "11:40 AM - 11:55 AM",
-    title: "When Capital Commits: Why Institutions Are Moving On-Chain Now",
+    title: "When Capital Commits",
     track: "Keynote",
     speakerNames: ["Meg Nakamura"],
   },
