@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLenis } from "lenis/react";
 
 /**
  * スクロールしたかどうかを監視するカスタムフック
@@ -9,18 +10,27 @@ import { useState, useEffect } from "react";
  */
 export function useScrolled(threshold: number = 100) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > threshold);
+    const update = (scrollY: number) => {
+      setIsScrolled(scrollY > threshold);
     };
 
+    if (lenis) {
+      update(lenis.scroll);
+      const onScroll = ({ scroll }: { scroll: number }) => update(scroll);
+      lenis.on("scroll", onScroll);
+      return () => {
+        lenis.off("scroll", onScroll);
+      };
+    }
+
+    const handleScroll = () => update(window.scrollY);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // 初期状態をチェック
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [threshold]);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lenis, threshold]);
 
   return isScrolled;
 }

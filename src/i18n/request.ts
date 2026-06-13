@@ -1,10 +1,8 @@
 import { getRequestConfig } from "next-intl/server";
-import { cookies } from "next/headers";
+import { getServerLocale } from "@/lib/locale-server";
 
 export default getRequestConfig(async () => {
-  // localStorageからロケールを取得（クライアント側）またはcookieから取得（サーバー側）
-  const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value || "ja") as "ja" | "en";
+  const locale = await getServerLocale();
 
   return {
     locale,

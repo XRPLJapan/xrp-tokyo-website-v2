@@ -7,6 +7,8 @@ const EVENT_DATE = new Date(2026, 3, 7); // 2026年4月7日 (月は0ベースな
 export const EVENT_INFO = {
   date: EVENT_DATE,
   dateDisplay: "2026年4月7日",
+  startDateIso: "2026-04-07T09:00:00+09:00",
+  endDateIso: "2026-04-07T17:30:00+09:00",
   location: "東京・八芳園",
   locationUrl: "https://happo-en.com/",
   host: "XRPL Japan",

@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants";
 /**
  * sitemap.xmlを生成
  * 検索エンジンにサイト構造を伝える
+ * （Cookie ベース i18n のため URL は / と /agenda のみ）
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -11,28 +12,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: `${baseUrl}/ja`,
+      url: `${baseUrl}/`,
       lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
-      alternates: {
-        languages: {
-          ja: `${baseUrl}/ja`,
-          en: `${baseUrl}/en`,
-        },
-      },
     },
     {
-      url: `${baseUrl}/en`,
+      url: `${baseUrl}/agenda`,
       lastModified,
       changeFrequency: "weekly",
-      priority: 1.0,
-      alternates: {
-        languages: {
-          ja: `${baseUrl}/ja`,
-          en: `${baseUrl}/en`,
-        },
-      },
+      priority: 0.8,
     },
   ];
 }

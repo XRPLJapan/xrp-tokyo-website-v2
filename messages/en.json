@@ -82,12 +82,14 @@
   },
   "speakerSection": {
     "title": "Speakers",
-    "comingSoon": "Speakers will be announced soon."
+    "comingSoon": "Speakers will be announced soon.",
+    "loading": "Loading speakers..."
   },
   "sponsorSection": {
     "title": "Sponsors",
     "cta": "Become a Sponsor",
     "comingSoon": "Coming Soon",
+    "loading": "Loading sponsors...",
     "categories": {
       "title": "Title",
       "platinum": "Platinum",
@@ -102,6 +104,19 @@
   "footer": {
     "copyright": "© 2026 XRP Tokyo",
     "poweredBy": "Powered by XRPL Japan"
+  },
+  "agenda": {
+    "floorNumbers": "5,6",
+    "floor": "Floor",
+    "dayTimeLine1": "Day",
+    "dayTimeLine2": "Time",
+    "eventDate": "April 7th",
+    "eventTime": "09:00 ~ 17:30",
+    "vipAfterParty": "VIP After Party",
+    "vipTime": "19:00 ~ 21:00",
+    "title": "Agenda",
+    "disclaimer": "Changes may occur to the agenda content. Please refer to this website for the latest information.",
+    "moderator": "Moderator"
   },
   "giveaway": {
     "kicker": "Thank You",

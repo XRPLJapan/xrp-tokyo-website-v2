@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -6,21 +7,15 @@ import { SplashScreen } from "@/components/splash-screen";
 import { SplashContextProvider } from "@/contexts/splash-context";
 import { GiveawayDialogProvider } from "@/components/giveaway-dialog";
 import { NextIntlClientProvider } from "next-intl";
-import { cookies } from "next/headers";
-import { getMetadata } from "@/lib/metadata";
-import type { Locale } from "@/lib/constants";
 import { StructuredData } from "@/components/structured-data";
 import Script from "next/script";
 import { GoogleAnalyticsPageView } from "@/components/google-analytics";
 import { LocaleInitializer } from "@/components/locale-initializer";
 import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/gtag";
+import { getMetadata } from "@/lib/metadata";
+import { getServerLocale } from "@/lib/locale-server";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
-async function getLocale(): Promise<Locale> {
-  const cookieStore = await cookies();
-  return (cookieStore.get("locale")?.value || "ja") as Locale;
-}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +28,7 @@ const geistMono = Geist_Mono({
 });
 
 export async function generateMetadata() {
-  const locale = await getLocale();
+  const locale = await getServerLocale();
   return getMetadata(locale);
 }
 
@@ -42,7 +37,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
+  const locale = await getServerLocale();
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
@@ -76,7 +71,11 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        {GA_MEASUREMENT_ID && <GoogleAnalyticsPageView />}
+        {GA_MEASUREMENT_ID && (
+          <Suspense fallback={null}>
+            <GoogleAnalyticsPageView />
+          </Suspense>
+        )}
         <LocaleInitializer />
         <StructuredData />
         <SplashContextProvider>

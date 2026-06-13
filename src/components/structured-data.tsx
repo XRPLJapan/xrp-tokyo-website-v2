@@ -5,15 +5,14 @@ import { EVENT_INFO, OG_IMAGE_PATH, SITE_URL } from "@/lib/constants";
  * Schema.org Event schemaを使用
  */
 export function StructuredData() {
-  const eventDate = EVENT_INFO.date.toISOString();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
     name: "XRP Tokyo 2026",
     description:
       "「XRP Tokyo 2026」は、XRPL Japanが主催する日本最大級のXRPイベント。TEAMZ Web3/AI Summit 2026のタイトルスポンサーイベントとして東京・八芳園で開催され、XRP LedgerのRWA・決済・DeFi・NFTをテーマに、国内外のリーダー・開発者・投資家・企業が集結します。",
-    startDate: eventDate,
-    endDate: eventDate,
+    startDate: EVENT_INFO.startDateIso,
+    endDate: EVENT_INFO.endDateIso,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
@@ -30,8 +29,6 @@ export function StructuredData() {
       "@type": "Offer",
       url: EVENT_INFO.ticketUrl,
       availability: "https://schema.org/InStock",
-      price: "0",
-      priceCurrency: "JPY",
     },
     image: `${SITE_URL}${OG_IMAGE_PATH}`,
     url: SITE_URL,

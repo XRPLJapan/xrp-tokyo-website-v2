@@ -10,7 +10,7 @@
     "selectLanguage": "言語を選択",
     "giveaway": "お礼",
     "about": "概要",
-    "agenda":"プログラム",
+    "agenda": "プログラム",
     "highlights": "ハイライト",
     "speakers": "スピーカー",
     "sponsors": "スポンサー"
@@ -82,12 +82,14 @@
   },
   "speakerSection": {
     "title": "Speakers",
-    "comingSoon": "スピーカーは順次発表予定です。"
+    "comingSoon": "スピーカーは順次発表予定です。",
+    "loading": "スピーカーを読み込み中..."
   },
   "sponsorSection": {
     "title": "Sponsors",
     "cta": "スポンサーになる",
     "comingSoon": "Coming Soon",
+    "loading": "スポンサーを読み込み中...",
     "categories": {
       "title": "Title",
       "platinum": "Platinum",
@@ -102,6 +104,19 @@
   "footer": {
     "copyright": "© 2026 XRP Tokyo",
     "poweredBy": "Powered by XRPL Japan"
+  },
+  "agenda": {
+    "floorNumbers": "5,6",
+    "floor": "階",
+    "dayTimeLine1": "日",
+    "dayTimeLine2": "時",
+    "eventDate": "4月7日",
+    "eventTime": "09:00 ~ 17:30",
+    "vipAfterParty": "VIPアフターパーティー",
+    "vipTime": "19:00 ~ 21:00",
+    "title": "アジェンダ",
+    "disclaimer": "プログラム内容は変更になる場合があります。最新情報は当サイトをご確認ください。",
+    "moderator": "モデレーター"
   },
   "giveaway": {
     "kicker": "Thank You",

@@ -42,3 +42,7 @@ next-env.d.ts
 
 # local samples (do not commit)
 scripts/fetch-speakers-sample.mjs
+
+# accidental downloads / personal files
+public/partners/community/Downloads/
+*:Zone.Identifier

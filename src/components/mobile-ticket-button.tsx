@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Ticket } from "lucide-react";
 import { EVENT_INFO } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { BRAND_STYLES } from "@/lib/styles/common";
 import { trackTicketButtonClick } from "@/lib/gtag";
 
 export function MobileTicketButton() {
@@ -20,8 +21,7 @@ export function MobileTicketButton() {
           className={cn(
             "w-full h-12 flex items-center justify-center gap-2.5",
             "text-base font-semibold shadow-xl",
-            "bg-gradient-to-r from-[#e81111] to-[#b30d0d] text-white",
-            "hover:from-[#ff2b2b] hover:to-[#d31212]",
+            BRAND_STYLES.ctaButtonGradient,
             "relative inline-flex items-center justify-center",
             "animate-gradient rounded-xl",
             "transition-all duration-200",

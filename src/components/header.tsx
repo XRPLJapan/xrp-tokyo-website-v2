@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Ticket, Heart, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -13,6 +13,7 @@ import { IconButton } from "@/components/animate-ui/components/buttons/icon";
 import { SOCIAL_LINKS, EVENT_INFO, SPONSOR_LINKS } from "@/lib/constants";
 import { useScrolled } from "@/hooks/use-scrolled";
 import { cn } from "@/lib/utils";
+import { BRAND_STYLES } from "@/lib/styles/common";
 import { trackTicketButtonClick } from "@/lib/gtag";
 import { useGiveawayDialog } from "@/components/giveaway-dialog";
 
@@ -20,7 +21,6 @@ export function Header() {
   const t = useTranslations();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
   const isScrolled = useScrolled();
   const { openDialog } = useGiveawayDialog();
   const hideGiveawayUi = pathname === "/agenda";
@@ -40,7 +40,7 @@ export function Header() {
 
   const handleNavClick = (id: string) => {
     if (pathname !== "/") {
-      router.push(`/#${id}`);
+      window.location.href = `/#${id}`;
       return;
     }
 
@@ -174,7 +174,7 @@ export function Header() {
               <Button
                 size="sm"
                 variant="default"
-                className="h-9 px-4 text-sm font-semibold w-full relative overflow-hidden bg-[#e81111] text-white hover:bg-[#ff2b2b]"
+                className={cn("h-9 px-4 text-sm font-semibold w-full relative overflow-hidden", BRAND_STYLES.ctaButton)}
                 asChild
               >
                 <Link
@@ -260,7 +260,7 @@ export function Header() {
               >
                 <Button
                   size="default"
-                  className="w-full h-10 text-sm font-semibold bg-[#e81111] text-white hover:bg-[#ff2b2b]"
+                  className={cn("w-full h-10 text-sm font-semibold", BRAND_STYLES.ctaButton)}
                   asChild
                 >
                   <Link
@@ -317,7 +317,7 @@ export function Header() {
       </AnimatePresence>
 
       <div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e81111] to-transparent shadow-[0_0_15px_#e81111] animate-pulse"
+        className={cn("absolute bottom-0 left-0 right-0 h-[2px] animate-pulse", BRAND_STYLES.accentGradient, BRAND_STYLES.footerGlow)}
         aria-hidden="true"
       />
     </header>

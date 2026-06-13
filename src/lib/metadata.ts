@@ -7,7 +7,7 @@ import { SITE_URL, METADATA, OG_IMAGE_PATH, type Locale } from "./constants";
 export function getMetadata(locale: Locale): Metadata {
   const metadata = METADATA[locale];
   const alternateLocale = locale === "ja" ? "en" : "ja";
-  const currentUrl = `${SITE_URL}/${locale}`;
+  const currentUrl = `${SITE_URL}/`;
   const ogImageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
 
   const keywords =
@@ -84,11 +84,6 @@ export function getMetadata(locale: Locale): Metadata {
     },
     alternates: {
       canonical: currentUrl,
-      languages: {
-        ja: `${SITE_URL}/ja`,
-        en: `${SITE_URL}/en`,
-        "x-default": `${SITE_URL}/ja`,
-      },
     },
   };
 }

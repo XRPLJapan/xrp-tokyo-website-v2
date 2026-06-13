@@ -1,6 +1,5 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
+import { loadSiteData } from "@/lib/site-data";
 
 /** TEAMZ 本番・Webflow プレビュー + ローカル開発。パスはオリジンに含まれないためホストのみ一致で許可。 */
 const DEFAULT_ALLOWED_ORIGINS = [
@@ -46,17 +45,26 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  const path = join(process.cwd(), "public", "data.json");
-  const raw = await readFile(path, "utf-8");
-  const data = JSON.parse(raw) as { speakers?: unknown[] };
+  try {
+    const { speakers } = await loadSiteData();
 
-  return NextResponse.json(
-    { speakers: data.speakers ?? [] },
-    {
-      headers: {
-        ...corsHeaders(request),
-        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+    return NextResponse.json(
+      { speakers },
+      {
+        headers: {
+          ...corsHeaders(request),
+          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+        },
       },
-    },
-  );
+    );
+  } catch (error) {
+    console.error("Failed to read speakers data:", error);
+    return NextResponse.json(
+      { speakers: [], error: "Failed to load speakers data" },
+      {
+        status: 503,
+        headers: corsHeaders(request),
+      },
+    );
+  }
 }

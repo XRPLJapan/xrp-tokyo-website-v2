@@ -10,6 +10,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/animate-ui/components/radix/dropdown-menu";
 import { LOCALES, type Locale } from "@/lib/constants";
+import {
+  getClientLocaleCookie,
+  resolveClientLocale,
+  setClientLocaleCookie,
+} from "@/lib/locale";
 import { cn } from "@/lib/utils";
 
 type LanguageSelectorProps = {
@@ -22,38 +27,24 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Cookieから現在のロケールを読み込む（サーバー側と同期）
-    const getCookie = (name: string) => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop()?.split(";").shift();
-      return null;
-    };
-
-    const cookieLocale = getCookie("locale") as Locale | null;
-    if (cookieLocale && LOCALES.some((loc) => loc.code === cookieLocale)) {
+    const cookieLocale = getClientLocaleCookie();
+    if (cookieLocale) {
       setCurrentLocale(cookieLocale);
     } else {
-      // Cookieがない場合はlocalStorageから読み込む
-      const savedLocale = localStorage.getItem("locale") as Locale | null;
-      if (savedLocale && LOCALES.some((loc) => loc.code === savedLocale)) {
+      const savedLocale = resolveClientLocale();
+      if (savedLocale) {
         setCurrentLocale(savedLocale);
-        // Cookieにも同期
-        document.cookie = `locale=${savedLocale}; path=/; max-age=31536000`;
+        setClientLocaleCookie(savedLocale);
       }
     }
 
     setMounted(true);
   }, []);
 
-  const handleLocaleChange = async (locale: Locale) => {
+  const handleLocaleChange = (locale: Locale) => {
     setCurrentLocale(locale);
     localStorage.setItem("locale", locale);
-
-    // Cookieにも保存（サーバー側で読み取るため）
-    document.cookie = `locale=${locale}; path=/; max-age=31536000`; // 1年間有効
-
-    // ページをリロードしてロケールを反映
+    setClientLocaleCookie(locale);
     window.location.reload();
   };
 

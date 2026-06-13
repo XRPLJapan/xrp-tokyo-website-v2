@@ -43,6 +43,9 @@
   --cta-foreground: oklch(0.985 0 0);
   --cta-hover: oklch(0.68 0.22 15);
   --cta-secondary-hover: oklch(0.68 0.22 340);
+  --brand: #e81111;
+  --brand-hover: #ff2b2b;
+  --brand-muted: #b30d0d;
 }
 
 .dark {
@@ -84,6 +87,9 @@
   --cta-foreground: oklch(0.985 0 0);
   --cta-hover: oklch(0.68 0.22 15);
   --cta-secondary-hover: oklch(0.68 0.22 340);
+  --brand: #e81111;
+  --brand-hover: #ff2b2b;
+  --brand-muted: #b30d0d;
 }
 
 @theme inline {
@@ -128,6 +134,9 @@
   --color-cta-foreground: var(--cta-foreground);
   --color-cta-hover: var(--cta-hover);
   --color-cta-secondary-hover: var(--cta-secondary-hover);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-muted: var(--brand-muted);
 }
 
 @layer base {

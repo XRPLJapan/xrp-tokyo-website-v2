@@ -6,7 +6,9 @@ import {
   XLogoIcon,
 } from "@/components/icons/social";
 import type { Speaker } from "@/config/speakers";
+import { getSpeakerDisplayFields } from "@/lib/speakers";
 import { cn } from "@/lib/utils";
+import { BRAND_STYLES } from "@/lib/styles/common";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.97 },
@@ -26,12 +28,7 @@ export function SpeakerCard({
   className,
   onSelect,
 }: SpeakerCardProps) {
-  const name =
-    locale === "ja" && speaker.nameJa ? speaker.nameJa : speaker.name;
-  const role =
-    locale === "ja" && speaker.roleJa ? speaker.roleJa : speaker.role;
-  const company =
-    locale === "ja" && speaker.companyJa ? speaker.companyJa : speaker.company;
+  const { name, role, company } = getSpeakerDisplayFields(speaker, locale);
 
   const initials = speaker.name
     .split(" ")
@@ -43,7 +40,7 @@ export function SpeakerCard({
   const cardContent = (
     <>
       {/* Avatar */}
-      <div className="relative aspect-square md:aspect-[4/4] w-full shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300 group-hover:border-[#e81111]">
+      <div className={cn("relative aspect-square md:aspect-[4/4] w-full shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300", BRAND_STYLES.cardHoverBorder)}>
         {speaker.image ? (
           <div className="absolute inset-0 overflow-hidden rounded-2xl [transform:translateZ(0)] [backface-visibility:hidden]">
             <Image

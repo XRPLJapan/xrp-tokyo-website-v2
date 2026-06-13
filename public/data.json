@@ -9,7 +9,10 @@
       "image": "/Markus-Infanger.jpg",
       "twitter": "https://x.com/markusinfanger",
       "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/",
-      "website": "https://ripple.com/"
+      "website": "https://ripple.com/",
+      "nameJa": "Markus Infanger",
+      "roleJa": "RippleX シニア副社長（SVP）",
+      "companyJa": "Ripple"
     },
     {
       "name": "Christina Chan",
@@ -20,7 +23,10 @@
       "image": "/Christina-Chan.jpg",
       "twitter": "https://x.com/ghostfacex_0",
       "linkedin": "https://www.linkedin.com/in/christinabchan",
-      "website": "https://ripple.com/"
+      "website": "https://ripple.com/",
+      "nameJa": "Christina Chan",
+      "roleJa": "シニアディレクター、エコシステム成長",
+      "companyJa": "Ripple"
     },
     {
       "name": "Tatsuya Yamada",
@@ -31,7 +37,10 @@
       "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
       "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
-      "website": "https://www.rakuten-wallet.co.jp/"
+      "website": "https://www.rakuten-wallet.co.jp/",
+      "nameJa": "山田 達也",
+      "roleJa": "代表取締役社長",
+      "companyJa": "楽天ウォレット株式会社"
     },
     {
       "name": "SungMo Park",
@@ -42,7 +51,10 @@
       "image": "/speakers/SungMo Park.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/smp0910/",
-      "website": "https://a16zcrypto.com/team/sungmo-park/"
+      "website": "https://a16zcrypto.com/team/sungmo-park/",
+      "nameJa": "SungMo Park",
+      "roleJa": "Partner、APAC Go-to-Market 責任者",
+      "companyJa": "a16z crypto"
     },
     {
       "name": "Cody Carbone",
@@ -53,7 +65,10 @@
       "image": "/speakers/cody-carbone1.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/codycarbone/",
-      "website": "https://digitalchamber.org/"
+      "website": "https://digitalchamber.org/",
+      "nameJa": "Cody Carbone",
+      "roleJa": "CEO",
+      "companyJa": "The Digital Chamber"
     },
     {
       "name": "Takuya Sugiyama",
@@ -64,7 +79,10 @@
       "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a",
-      "website": "https://www.sbigroup.co.jp/"
+      "website": "https://www.sbigroup.co.jp/",
+      "nameJa": "杉山 拓也",
+      "roleJa": "SBI Ripple Asia 副社長",
+      "companyJa": "SBIホールディングス"
     },
     {
       "name": "Tomohiko Kondo",
@@ -74,7 +92,10 @@
       "bio_en": "Joined SBI Holdings in 2007 as a new graduate, managing IT systems for the SBI Group. After working in the group's electronic payment business, he served as a systems executive at SBI Liquidity Market, an FX-related subsidiary. In 2019, he was appointed Director of SBI VC Trade, fully engaging in crypto asset and Web3 businesses. Since 2023, as President and CEO, he has driven the expansion of staking services centered on the crypto asset exchange business. In March 2025, he led the company's registration as Japan's first and only \"Electronic Payment Instrument Exchange Service Provider,\" pioneering stablecoin trading services. He concurrently serves as a director at multiple crypto asset and Web3-related companies within the SBI Group.",
       "image": "/speakers/Tomohiko Kondo.png",
       "twitter": "https://x.com/tomohiko_kondo",
-      "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
+      "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab",
+      "nameJa": "近藤 智彦",
+      "roleJa": "代表取締役社長",
+      "companyJa": "SBI VCトレード株式会社"
     },
     {
       "name": "Dave McCombs",
@@ -85,7 +106,10 @@
       "image": "/speakers/Dave-McComb.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/dave-mccombs-1b0177/",
-      "website": ""
+      "website": "",
+      "nameJa": "Dave McCombs",
+      "roleJa": "シニアリライター",
+      "companyJa": "NHKワールドジャパン"
     },
     {
       "name": "Hirokuni Onozawa",
@@ -96,7 +120,10 @@
       "image": "/speakers/hirokuni_onozawa.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://gmo-aozora.com/"
+      "website": "https://gmo-aozora.com/",
+      "nameJa": "小野沢 浩邦",
+      "roleJa": "執行役員",
+      "companyJa": "GMOあおぞらネット銀行株式会社"
     },
     {
       "name": "Seihaku Yoshida",
@@ -107,7 +134,10 @@
       "image": "/speakers/HashPort Inc.png",
       "twitter": "https://x.com/seihakuyoshida",
       "linkedin": "",
-      "website": "https://hashport.io/"
+      "website": "https://hashport.io/",
+      "nameJa": "吉田 清白",
+      "roleJa": "代表取締役CEO",
+      "companyJa": "HashPort株式会社"
     },
     {
       "name": "Takafumi Shimoyama",
@@ -117,7 +147,10 @@
       "bio_en": "Takafumi Shimoyama is a professional dedicated to building financial infrastructure at the intersection of regulated financial systems and blockchain. He currently serves as Head of Business Development at SBI Ripple Asia, driving the development of tokenized payments and stablecoin infrastructure in Japan and South Korea.\n\nHe previously founded a search fund, leading the acquisition and management of a regional company as CEO. At Nomura Securities, he achieved top-tier nationwide sales performance before conducting research on the transformation of U.S. financial institutions and capital markets in New York.\n\nDrawing on extensive expertise at the convergence of traditional finance and blockchain, he is working to realize next-generation financial infrastructure.",
       "image": "/speakers/Takafumi Shimoyama.png",
       "twitter": "",
-      "linkedin": "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207"
+      "linkedin": "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207",
+      "nameJa": "下山 崇文",
+      "roleJa": "事業開発本部長",
+      "companyJa": "SBI Ripple Asia"
     },
     {
       "name": "Toshinari Shinohara",
@@ -128,7 +161,10 @@
       "image": "/speakers/Toshinari Shinohara.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://www.tobutoptours.co.jp/"
+      "website": "https://www.tobutoptours.co.jp/",
+      "nameJa": "篠原 俊成",
+      "roleJa": "未来共創研究所 所長",
+      "companyJa": "東武トップツアーズ"
     },
     {
       "name": "Meg Nakamura",
@@ -139,7 +175,10 @@
       "image": "/speakers/Meg Nakamura.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/megnakamura",
-      "website": "https://www.evernorth.xyz/"
+      "website": "https://www.evernorth.xyz/",
+      "nameJa": "Meg Nakamura",
+      "roleJa": "最高執行責任者（COO）",
+      "companyJa": "Evernorth"
     },
     {
       "name": "Mai Furukawa",
@@ -149,7 +188,10 @@
       "bio_en": "Mai Furukawa is the Co-founder and Director (Representative Director) of the XRPL Japan Association. She also serves as Customer Success / Community Builder at XRPL Labs (Xaman Wallet), leading the adoption and ecosystem expansion of XRP Ledger in Japan.\n\nThe XRPL Japan Association is a non-profit organization promoting the adoption and utilization of XRP Ledger in Japan. Through events, study groups, and information sharing, the association connects developers, businesses, and communities, aiming to advance the social implementation of XRPL technology and enhance Japan's presence in the ecosystem.",
       "image": "/speakers/Mai Furukawa1.png",
       "twitter": "https://x.com/Mai_XRPLJapan",
-      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/"
+      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/",
+      "nameJa": "古川 舞",
+      "roleJa": "XRPL Japan 協会ディレクター / XRPL Labs サポート",
+      "companyJa": "XRPL Japan / XRPL Labs"
     },
     {
       "name": "Hinza Asif",
@@ -160,7 +202,10 @@
       "image": "/speakers/Hinza Asif.png",
       "twitter": "https://x.com/thehinza",
       "linkedin": "https://jp.linkedin.com/in/hinza-asif",
-      "website": "https://asiaweb3alliance.jp/"
+      "website": "https://asiaweb3alliance.jp/",
+      "nameJa": "Hinza Asif",
+      "roleJa": "代表",
+      "companyJa": "Asia Web3 Alliance Japan"
     },
     {
       "name": "Noritaka Okabe",
@@ -171,7 +216,10 @@
       "image": "/speakers/Noritaka Okabe.png",
       "twitter": "https://x.com/noritaka_okabe",
       "linkedin": "",
-      "website": "https://corporate.jpyc.co.jp/"
+      "website": "https://corporate.jpyc.co.jp/",
+      "nameJa": "岡部 憲孝",
+      "roleJa": "創業者兼CEO",
+      "companyJa": "JPYC株式会社"
     },
     {
       "name": "Ryo Kato",
@@ -182,7 +230,10 @@
       "image": "/speakers/Ryo Kato.png",
       "twitter": "https://x.com/kitaro_sskr",
       "linkedin": "",
-      "website": "https://hashhub.tokyo/"
+      "website": "https://hashhub.tokyo/",
+      "nameJa": "加藤 亮",
+      "roleJa": "代表取締役CEO",
+      "companyJa": "HashHub株式会社"
     },
     {
       "name": "Fumihiro Arasawa",
@@ -193,7 +244,10 @@
       "image": "/speakers/Fumihiro Arasawa.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://bccc.global/"
+      "website": "https://bccc.global/",
+      "nameJa": "荒澤 文弘",
+      "roleJa": "XWIN Group 代表、DeFi委員会 議長",
+      "companyJa": "ブロックチェーン協同組合"
     },
     {
       "name": "Nathaniel T. Bradley",
@@ -204,7 +258,10 @@
       "image": "/speakers/Nathaniel.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/natlink/",
-      "website": "https://datavaultsite.com/"
+      "website": "https://datavaultsite.com/",
+      "nameJa": "Nathaniel T. Bradley",
+      "roleJa": "CEO",
+      "companyJa": "Datavault AI"
     },
     {
       "name": "Steven Zeiler",
@@ -215,7 +272,10 @@
       "image": "/speakers/Steven Zeiler.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/stevenzeiler/",
-      "website": "https://yellow.com/"
+      "website": "https://yellow.com/",
+      "nameJa": "Steven Zeiler",
+      "roleJa": "Developer Evangelist",
+      "companyJa": "Yellow"
     },
     {
       "name": "Go Makino",
@@ -226,7 +286,10 @@
       "image": "/speakers/Go Makino.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/gou-makino-b362854b/",
-      "website": ""
+      "website": "",
+      "nameJa": "牧野 豪",
+      "roleJa": "リージョナルディレクター",
+      "companyJa": "Fireblocks Japan"
     },
     {
       "name": "Taisuke Isono",
@@ -237,7 +300,10 @@
       "image": "/speakers/Taisuke Isono.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://www.smbcnikko.co.jp/"
+      "website": "https://www.smbcnikko.co.jp/",
+      "nameJa": "磯野 泰介",
+      "roleJa": "日興イノベーションラボ 所長",
+      "companyJa": "SMBC日興証券株式会社"
     },
     {
       "name": "Eiji Kobayashi",
@@ -248,7 +314,10 @@
       "image": "/speakers/Eiji Kobayashi.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://securitize.co.jp/"
+      "website": "https://securitize.co.jp/",
+      "nameJa": "小林 英司",
+      "roleJa": "ディレクター兼日本代表",
+      "companyJa": "Securitize Japan"
     },
     {
       "name": "Ken Kawai",
@@ -259,7 +328,10 @@
       "image": "/speakers/Ken Kawai.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://www.amt-law.com/"
+      "website": "https://www.amt-law.com/",
+      "nameJa": "川合 健",
+      "roleJa": "アドバイザーパートナー弁護士",
+      "companyJa": "アンダーソン・毛利・友常法律事務所"
     },
     {
       "name": "Seiichi Kawamura",
@@ -270,7 +342,10 @@
       "image": "/speakers/Seiichi Kawamura.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://www.toyota-blockchain-lab.org/"
+      "website": "https://www.toyota-blockchain-lab.org/",
+      "nameJa": "川村 誠一",
+      "roleJa": "戦略企画部",
+      "companyJa": "トヨタ ブロックチェーンラボ"
     },
     {
       "name": "Tatsuya Kohrogi",
@@ -281,7 +356,10 @@
       "image": "/speakers/Tatsuya Kohrogi.png",
       "twitter": "https://x.com/tatsuya_kohrogi",
       "linkedin": "https://sg.linkedin.com/in/tatsuya-kohrogi",
-      "website": "https://ripple.com/"
+      "website": "https://ripple.com/",
+      "nameJa": "Tatsuya Kohrogi",
+      "roleJa": "シニア エコシステム成長マネージャー",
+      "companyJa": "Ripple"
     },
     {
       "name": "Yoshimasa Satoh",
@@ -292,7 +370,10 @@
       "image": "/speakers/Yoshimasa Satoh.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/yoshimasa-satoh-cfa-84b6b92b/",
-      "website": "https://alpaca.markets/"
+      "website": "https://alpaca.markets/",
+      "nameJa": "佐藤 義正",
+      "roleJa": "日本代表取締役兼CEO（CFA）",
+      "companyJa": "Alpaca"
     },
     {
       "name": "Masa Kikuchi",
@@ -303,7 +384,10 @@
       "image": "/speakers/Masa Kikuchi.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/masa-senshi-kikuchi-55185a23/",
-      "website": "https://secured.finance/"
+      "website": "https://secured.finance/",
+      "nameJa": "菊池 雅",
+      "roleJa": "創業者兼CEO",
+      "companyJa": "Secured Finance"
     },
     {
       "name": "Yusuke Takezawa",
@@ -314,7 +398,10 @@
       "image": "/speakers/Yusuke Takezawa.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/yusuke-takezawa-327720156/",
-      "website": ""
+      "website": "",
+      "nameJa": "竹澤 祐介",
+      "roleJa": "クロスボーダー金融・制度設計 独立アドバイザー（元Progmat VP）",
+      "companyJa": ""
     },
     {
       "name": "Noriaki Yagi",
@@ -325,7 +412,10 @@
       "image": "/speakers/Noriaki Yagi.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://iolite.net/magazine"
+      "website": "https://iolite.net/magazine",
+      "nameJa": "八木 憲明",
+      "roleJa": "編集長",
+      "companyJa": "Iolite Magazine"
     },
     {
       "name": "Ryo Sakai",
@@ -336,7 +426,10 @@
       "image": "/speakers/Ryo Sakai.png",
       "twitter": "https://x.com/RyosCoinPost",
       "linkedin": "",
-      "website": ""
+      "website": "",
+      "nameJa": "坂井 亮",
+      "roleJa": "事業開発責任者兼CEO",
+      "companyJa": "CoinPost / WebX"
     },
     {
       "name": "Cyrus Cruz",
@@ -347,7 +440,10 @@
       "image": "/speakers/Cyrus Cruz.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/cyruscruz8/",
-      "website": "https://www.tenity.com/"
+      "website": "https://www.tenity.com/",
+      "nameJa": "Cyrus Cruz",
+      "roleJa": "APAC 責任者",
+      "companyJa": "Tenity"
     },
     {
       "name": "Sojun Katsura",
@@ -358,7 +454,10 @@
       "image": "/speakers/Sojun Katsura.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "",
+      "nameJa": "桂 宗純",
+      "roleJa": "ディレクター",
+      "companyJa": "Papi Code"
     },
     {
       "name": "Ai Kosuke",
@@ -369,7 +468,10 @@
       "image": "/speakers/Ai Kosuke.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://suzupay.com/"
+      "website": "https://suzupay.com/",
+      "nameJa": "Ai Kosuke",
+      "roleJa": "創業者",
+      "companyJa": "SuzuPay"
     },
     {
       "name": "Ikkei Matsuda",
@@ -380,7 +482,10 @@
       "image": "/speakers/Matsuda Ikkei.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/ikkei-matsuda-74549735/",
-      "website": "https://digitalplatformer.co.jp/"
+      "website": "https://digitalplatformer.co.jp/",
+      "nameJa": "松田 一慧",
+      "roleJa": "代表取締役兼CEO",
+      "companyJa": "デジタルプラットフォーマー株式会社"
     },
     {
       "name": "Jean Zhu",
@@ -391,7 +496,10 @@
       "image": "/speakers/Jean Zhu.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/jean-zhu-966b7754/",
-      "website": ""
+      "website": "",
+      "nameJa": "Jean Zhu",
+      "roleJa": "共同創業者",
+      "companyJa": "Nexbridge"
     },
     {
       "name": "Yusuke Hirota",
@@ -402,7 +510,10 @@
       "image": "/speakers/Yusuke Hirota.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "",
+      "nameJa": "廣田 祐介",
+      "roleJa": "創業者",
+      "companyJa": "Laplace"
     },
     {
       "name": "Eri Ishiyama",
@@ -413,7 +524,10 @@
       "image": "/speakers/Carpe Diem.png",
       "twitter": "https://x.com/sentosumosaba",
       "linkedin": "",
-      "website": ""
+      "website": "",
+      "nameJa": "Eri Ishiyama",
+      "roleJa": "ブロックチェーンアドボケート",
+      "companyJa": ""
     },
     {
       "name": "Sebastian Valdez",
@@ -424,7 +538,10 @@
       "image": "/speakers/Sebastian Valdez.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://xrp.cafe/"
+      "website": "https://xrp.cafe/",
+      "nameJa": "Sebastian Valdez",
+      "roleJa": "共同創業者",
+      "companyJa": "xrp.cafe"
     },
     {
       "name": "Kyohei Shibano",
@@ -435,7 +552,10 @@
       "image": "/speakers/Tokyo University.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/kyohei-shibano-0a5165251",
-      "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
+      "website": "https://www.blockchain.t.u-tokyo.ac.jp/",
+      "nameJa": "柴野 恭平",
+      "roleJa": "プロジェクト研究員",
+      "companyJa": "東京大学"
     },
     {
       "name": "Rox Park",
@@ -446,7 +566,10 @@
       "image": "/speakers/Doppler.png",
       "twitter": "",
       "linkedin": "",
-      "website": "https://doppler.finance/"
+      "website": "https://doppler.finance/",
+      "nameJa": "Rox Park",
+      "roleJa": "機関投資家担当 Head",
+      "companyJa": "Doppler Finance"
     },
     {
       "name": "Panos Mekras",
@@ -457,7 +580,10 @@
       "image": "/speakers/Anodos Finance.png",
       "twitter": "https://x.com/panosmek",
       "linkedin": "https://www.linkedin.com/in/panos-mekras/",
-      "website": "https://anodos.finance/"
+      "website": "https://anodos.finance/",
+      "nameJa": "Panos Mekras",
+      "roleJa": "共同創業者兼CEO",
+      "companyJa": "Anodos Labs"
     },
     {
       "name": "J. Ayo Akinyele",
@@ -468,7 +594,10 @@
       "image": "/speakers/Ayo Akinyele.png",
       "twitter": "https://x.com/ja_akinyele",
       "linkedin": "",
-      "website": "https://ripple.com/"
+      "website": "https://ripple.com/",
+      "nameJa": "J. Ayo Akinyele",
+      "roleJa": "Head of Engineering",
+      "companyJa": "RippleX"
     },
     {
       "name": "Robert Kiuru",
@@ -479,7 +608,10 @@
       "image": "/speakers/Xaman.png",
       "twitter": "https://x.com/robertkiuru",
       "linkedin": "https://www.linkedin.com/in/kiuru1/",
-      "website": "https://xaman.app/"
+      "website": "https://xaman.app/",
+      "nameJa": "Robert Kiuru",
+      "roleJa": "COO",
+      "companyJa": "Xaman"
     },
     {
       "name": "Alexis Sirkia",
@@ -490,7 +622,10 @@
       "image": "/speakers/Alexis Sirkia.png",
       "twitter": "https://x.com/AlexisYellow",
       "linkedin": "https://www.linkedin.com/in/sirkia/",
-      "website": "https://yellow.com/"
+      "website": "https://yellow.com/",
+      "nameJa": "Alexis Sirkia",
+      "roleJa": "エグゼクティブチェアマン兼創業者",
+      "companyJa": "Yellow"
     }
   ],
   "sponsors": [

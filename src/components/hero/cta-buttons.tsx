@@ -11,6 +11,7 @@ import {
 } from "@/components/animate-ui/components/radix/tooltip";
 import { EVENT_INFO, ANIMATION_DELAYS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { BRAND_STYLES } from "@/lib/styles/common";
 import { trackTicketButtonClick } from "@/lib/gtag";
 
 const MotionLink = motion(Link);
@@ -49,7 +50,8 @@ export function CTAButtons({ shouldAnimate = false }: CTAButtonsProps) {
             className={cn(
               buttonVariants({ variant: "cta", size: "lg" }),
               "min-w-[180px] h-12 text-base font-semibold shadow-lg hover:shadow-xl uppercase relative inline-flex items-center justify-center animate-gradient",
-              "bg-[#e81111] text-white hover:bg-[#ff2b2b] shadow-[0_0_20px_rgba(232,17,17,0.5)]",
+              BRAND_STYLES.ctaButton,
+              "shadow-[0_0_20px_rgba(232,17,17,0.5)]",
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
