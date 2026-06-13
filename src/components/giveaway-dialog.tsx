@@ -2,9 +2,11 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import { useSplash } from "@/contexts/splash-context";
 import { cn } from "@/lib/utils";
+import { BRAND_STYLES } from "@/lib/styles/common";
 
 type GiveawayDialogContextType = {
   openDialog: () => void;
@@ -80,6 +82,7 @@ function GiveawayDialogContent({
   isOpen: boolean;
   onClose: () => void;
 }) {
+  const t = useTranslations("giveaway");
   // Body scroll lock
   useEffect(() => {
     if (!isOpen) return;
@@ -147,7 +150,7 @@ function GiveawayDialogContent({
               >
                 {/* Top accent line — animates from center out */}
                 <motion.div
-                  className="h-[3px] bg-gradient-to-r from-transparent via-[#e81111]/60 to-transparent"
+                  className={BRAND_STYLES.giveawayAccentLine}
                   aria-hidden="true"
                   initial={{ scaleX: 0, opacity: 0 }}
                   animate={{ scaleX: 1, opacity: 1 }}
@@ -165,10 +168,10 @@ function GiveawayDialogContent({
                   {/* Thank You badge */}
                   <motion.div
                     variants={itemVariants}
-                    className="relative mb-5 px-5 py-1 rounded-full bg-[#e81111]/[0.07] border border-[#e81111]/20"
+                    className={cn("relative mb-5 px-5 py-1", BRAND_STYLES.giveawayBadge)}
                   >
-                    <span className="text-[10px] font-bold tracking-[0.4em] text-[#e81111] uppercase">
-                      Thank You
+                    <span className={BRAND_STYLES.giveawayBadgeText}>
+                      {t("kicker")}
                     </span>
                   </motion.div>
 
@@ -200,6 +203,8 @@ function GiveawayDialogContent({
                       height={1500}
                       sizes="(max-width: 640px) 150px, 170px"
                       className="relative w-[140px] sm:w-[160px] h-auto"
+                      style={{ width: "auto", height: "auto" }}
+                      priority
                     />
                   </motion.div>
                 </motion.div>
@@ -214,10 +219,10 @@ function GiveawayDialogContent({
                   {/* Bilingual title */}
                   <motion.div variants={itemVariants} className="text-center mb-5">
                     <h2 className="text-[21px] sm:text-[23px] font-bold tracking-tight text-zinc-900 leading-snug">
-                      心より御礼申し上げます
+                      {t("title")}
                     </h2>
                     <p className="mt-1.5 text-[13px] text-zinc-400 font-medium tracking-wide">
-                      From the Bottom of Our Hearts
+                      {t("titleAlt")}
                     </p>
                   </motion.div>
 
@@ -228,45 +233,40 @@ function GiveawayDialogContent({
                     aria-hidden="true"
                   >
                     <div className="flex-1 h-px bg-gradient-to-r from-transparent to-zinc-200" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#e81111]/35" />
+                    <div className={cn("w-1.5 h-1.5", BRAND_STYLES.giveawayDot)} />
                     <div className="flex-1 h-px bg-gradient-to-l from-transparent to-zinc-200" />
                   </motion.div>
 
                   {/* Japanese message */}
                   <motion.p
                     variants={itemVariants}
-                    className="text-[13px] sm:text-[13.5px] leading-[2.05] text-zinc-600 mb-5"
+                    className="text-[13px] sm:text-[13.5px] leading-[2.05] text-zinc-600 mb-5 whitespace-pre-line"
                   >
-                    ご来場いただいた皆さま、スポンサーとしてご支援くださった企業の皆さま、スピーカーとして貴重な知見を共有してくださった皆さま、遠方から温かい応援をいただいた皆さま、そしてSNSでイベントを盛り上げてくださったすべての皆さまに、運営チーム一同、心より感謝申し上げます。
-                    <br /><br />
-                    皆さまと共に創り上げたこの一日は、XRPコミュニティにとってかけがえのない財産です。
+                    {t("message")}
                   </motion.p>
 
-                  {/* Language separator */}
                   <motion.div
                     variants={itemVariants}
                     className="flex items-center gap-2.5 mb-5"
                     aria-hidden="true"
                   >
                     <div className="flex-1 h-px bg-zinc-100" />
-                    <span className="text-[9px] font-bold tracking-[0.3em] text-zinc-300 uppercase">English</span>
+                    <span className="text-[9px] font-bold tracking-[0.3em] text-zinc-300 uppercase">
+                      {t("altLanguageLabel")}
+                    </span>
                     <div className="flex-1 h-px bg-zinc-100" />
                   </motion.div>
 
-                  {/* English message */}
                   <motion.p
                     variants={itemVariants}
-                    className="text-[12px] sm:text-[12.5px] leading-[1.9] text-zinc-400 mb-6"
+                    className="text-[12px] sm:text-[12.5px] leading-[1.9] text-zinc-400 mb-6 whitespace-pre-line"
                   >
-                    To everyone who attended, the sponsors who made this possible, the speakers who shared their invaluable insights, those who supported us from afar, and everyone who amplified our event on social media — the entire XRP Tokyo team extends our deepest gratitude.
-                    <br /><br />
-                    The day we built together is an irreplaceable treasure for the XRP community.
+                    {t("messageAlt")}
                   </motion.p>
 
-                  {/* Signature */}
                   <motion.div variants={itemVariants} className="text-center mb-7">
                     <p className="text-[13.5px] font-semibold text-zinc-800 tracking-wide">
-                      XRPL Japan &amp; Asia Web3 Alliance JAPAN 一同
+                      {t("closing")}
                     </p>
                   </motion.div>
 
@@ -287,8 +287,8 @@ function GiveawayDialogContent({
                       "focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
                     )}
                   >
-                    <span>また東京で</span>
-                    <span className="text-zinc-500 text-[12px]">/ See You in Tokyo</span>
+                    <span>{t("close")}</span>
+                    <span className="text-zinc-500 text-[12px]">/ {t("closeAlt")}</span>
                   </motion.button>
                 </motion.div>
               </motion.div>

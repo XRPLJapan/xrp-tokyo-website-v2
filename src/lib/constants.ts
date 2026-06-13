@@ -13,6 +13,7 @@ export const EVENT_INFO = {
   locationUrl: "https://happo-en.com/",
   host: "XRPL Japan",
   ticketUrl: "https://www.teamz.co.jp/tickets?utm_source=xrp",
+  vipAfterPartyUrl: "https://luma.com/da2ucul1",
 } as const;
 
 export const SOCIAL_LINKS = {
@@ -23,12 +24,6 @@ export const SOCIAL_LINKS = {
 export const SPONSOR_LINKS = {
   teamz: "https://forms.gle/2EA5CyN4sZJB3aNZ6",
 } as const;
-
-/**
- * 背景動画のURL
- */
-export const BACKGROUND_VIDEO_URL =
-  "https://cms-public-artifacts.artlist.io/content/artgrid/footage-hls/4aa67173-fab9-477f-8dc1-104854c8988b_playlist_1752074962.m3u8";
 
 export const LOCALES = [
   { code: "ja", label: "日本語", shortLabel: "JA" },

@@ -34,7 +34,7 @@ export function SponsorSection({ sponsors }: SponsorSectionProps) {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              {t("sponsorSection.loading")}
+              {t("sponsorSection.comingSoon")}
             </motion.p>
           ) : (
             TIER_DISPLAY_ORDER.map(

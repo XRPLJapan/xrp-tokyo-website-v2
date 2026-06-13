@@ -29,6 +29,7 @@ export function Logo({
           width={width}
           height={height}
           className={cn("w-auto dark:hidden", baseClassName)}
+          style={{ width: "auto", height: "auto" }}
           priority={priority}
         />
         <Image
@@ -37,6 +38,7 @@ export function Logo({
           width={width}
           height={height}
           className={cn("hidden w-auto dark:block", baseClassName)}
+          style={{ width: "auto", height: "auto" }}
           priority={priority}
         />
       </>

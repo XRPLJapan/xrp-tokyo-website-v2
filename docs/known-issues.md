@@ -24,7 +24,7 @@
 | ISSUE-011 | スプラッシュの `Math.random()` hydration リスク解消 |
 | ISSUE-012 | ローディング文言の i18n 化 |
 | ISSUE-013 | 未使用 Sanity CMS コード・依存関係を削除 |
-| ISSUE-014 | `pnpm-lock.yaml` 削除（npm 統一） |
+| ISSUE-014 | `pnpm-lock.yaml` 整備・pnpm 統一（`packageManager` 指定） |
 | ISSUE-015 | Lenis 連携のスクロールフック |
 | ISSUE-016 | 登録枠を `notice` フィールドで専用表示 |
 | ISSUE-017 | 全アジェンダセッションに `titleJa` を追加 |

@@ -49,7 +49,7 @@ gtag('event', 'conversion', {
 
 | コンポーネント | 場所（button_location） |
 |----------------|---------------------------|
-| `hero/cta-buttons.tsx` | hero_cta |
+| `section/hero/index.tsx` | hero_image_link（チケット画像リンク） |
 | `header.tsx` | header_icon, header_text, header_mobile_menu |
 | `mobile-ticket-button.tsx` | mobile_fixed |
 

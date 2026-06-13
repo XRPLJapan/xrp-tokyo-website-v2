@@ -41,6 +41,7 @@ export function HomeFooter() {
             width={140}
             height={24}
             className="h-6 w-auto"
+            style={{ width: "auto", height: "auto" }}
             priority
           />
         </div>

@@ -34,15 +34,17 @@ export type AgendaSpeakerProfile = {
 /** Build name → profile map from site speakers + agenda-only overrides */
 export function buildSpeakerProfileMap(
   speakers: Speaker[],
+  locale: Locale | string,
   overrides: Record<string, AgendaSpeakerProfile> = {},
 ): Map<string, AgendaSpeakerProfile> {
   const map = new Map<string, AgendaSpeakerProfile>();
 
   for (const speaker of speakers) {
+    const { name, role, company } = getSpeakerDisplayFields(speaker, locale);
     map.set(speaker.name, {
-      name: speaker.name,
-      role: speaker.role,
-      company: speaker.company,
+      name,
+      role,
+      company,
       image: speaker.image,
     });
   }

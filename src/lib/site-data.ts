@@ -86,6 +86,3 @@ export async function loadSiteData(): Promise<SiteData> {
   const content = await readFile(path, "utf-8");
   return parseSiteData(JSON.parse(content) as RawSiteData);
 }
-
-/** Client-side URL for the same payload */
-export const SITE_DATA_URL = "/data.json";

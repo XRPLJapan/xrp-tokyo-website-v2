@@ -8,7 +8,7 @@ import {
 import type { Speaker } from "@/config/speakers";
 import { getSpeakerDisplayFields } from "@/lib/speakers";
 import { cn } from "@/lib/utils";
-import { BRAND_STYLES } from "@/lib/styles/common";
+import { BRAND_STYLES, VIP_STYLES } from "@/lib/styles/common";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.97 },
@@ -108,7 +108,7 @@ export function SpeakerCard({
           {name}
         </p>
 
-        <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug min-h-[32px] md:min-h-0 line-clamp-2 md:line-clamp-none">
+        <p className={cn("mt-1 text-xs md:text-sm leading-snug min-h-[32px] md:min-h-0 line-clamp-2 md:line-clamp-none", VIP_STYLES.statLabel)}>
           {role}
         </p>
         {company && (

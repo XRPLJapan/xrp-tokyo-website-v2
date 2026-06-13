@@ -1,7 +1,4 @@
 {
-  "splash": {
-    "officialInEventOf": "Official In-Event of"
-  },
   "header": {
     "sponsor": "Join us",
     "getTicket": "Get Ticket",
@@ -16,13 +13,7 @@
     "sponsors": "Sponsors"
   },
   "hero": {
-    "eventSchedule": "Event Schedule",
-    "getTicket": "Get Ticket",
-    "getTicketTooltip": "Available at TEAMZ Summit 2026"
-  },
-  "eventInfo": {
-    "dateDisplay": "April 7, 2026",
-    "location": "Happo-en, Tokyo"
+    "getTicket": "Get Ticket"
   },
   "eventOverview": {
     "title": "About",
@@ -47,13 +38,9 @@
     "subheading": "Asia's fastest-growing XRP-focused blockchain conferences",
     "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases.",
     "stats": {
-      "countries": "Countries",
       "attendees": "Attendees",
-      "speakers": "Speakers",
       "sessions": "Sessions",
-      "sponsors": "Sponsors",
-      "companies": "Company",
-      "days": "Days"
+      "sponsors": "Sponsors"
     }
   },
   "redCarpetSection": {
@@ -64,8 +51,7 @@
     },
     "meta": "7th April 2026 | 6F HALL HAKU | Main Building",
     "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases.",
-    "ctaLabel": "VIP PASS TICKET",
-    "ctaUrl": "https://www.teamz.co.jp/tickets?utm_source=xrp"
+    "ctaLabel": "VIP PASS TICKET"
   },
   "highlightsSection": {
     "kicker": "Highlights",
@@ -77,29 +63,13 @@
     "primaryCta": "VIP Pass Ticket",
     "secondaryCta": "Get Ticket"
   },
-  "nextSection": {
-    "title": "The journey begins."
-  },
   "speakerSection": {
     "title": "Speakers",
-    "comingSoon": "Speakers will be announced soon.",
-    "loading": "Loading speakers..."
+    "comingSoon": "Speakers will be announced soon."
   },
   "sponsorSection": {
     "title": "Sponsors",
-    "cta": "Become a Sponsor",
-    "comingSoon": "Coming Soon",
-    "loading": "Loading sponsors...",
-    "categories": {
-      "title": "Title",
-      "platinum": "Platinum",
-      "gold": "Gold",
-      "silver": "Silver",
-      "bronze": "Bronze",
-      "mediaPartner": "Media Partner",
-      "education": "Education Partner",
-      "communityPartner": "Community Partner"
-    }
+    "comingSoon": "Coming Soon"
   },
   "footer": {
     "copyright": "© 2026 XRP Tokyo",
@@ -121,7 +91,12 @@
   "giveaway": {
     "kicker": "Thank You",
     "title": "From the Bottom of Our Hearts",
+    "titleAlt": "心より御礼申し上げます",
     "message": "To everyone who attended, the sponsors who made this possible, the speakers who shared their invaluable insights, those who supported us from afar, and everyone who amplified our event on social media — the entire XRP Tokyo team extends our deepest gratitude.\n\nThe day we built together is an irreplaceable treasure for the XRP community.",
-    "closing": "XRPL Japan / Asia Web3 Alliance JAPAN"
+    "altLanguageLabel": "日本語",
+    "messageAlt": "ご来場いただいた皆さま、スポンサーとしてご支援くださった企業の皆さま、スピーカーとして貴重な知見を共有してくださった皆さま、遠方から温かい応援をいただいた皆さま、そしてSNSでイベントを盛り上げてくださったすべての皆さまに、運営チーム一同、心より感謝申し上げます。\n\n皆さまと共に創り上げたこの一日は、XRPコミュニティにとってかけがえのない財産です。",
+    "closing": "XRPL Japan / Asia Web3 Alliance JAPAN",
+    "close": "See You in Tokyo",
+    "closeAlt": "また東京で"
   }
 }

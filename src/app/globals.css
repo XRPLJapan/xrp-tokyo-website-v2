@@ -46,6 +46,11 @@
   --brand: #e81111;
   --brand-hover: #ff2b2b;
   --brand-muted: #b30d0d;
+  --agenda-gold: #d4af37;
+  --agenda-gold-light: #f1d17a;
+  --agenda-surface: #0a0a0a;
+  --agenda-muted: #a0a0a0;
+  --agenda-border: #c6c7ac;
 }
 
 .dark {
@@ -90,6 +95,11 @@
   --brand: #e81111;
   --brand-hover: #ff2b2b;
   --brand-muted: #b30d0d;
+  --agenda-gold: #d4af37;
+  --agenda-gold-light: #f1d17a;
+  --agenda-surface: #0a0a0a;
+  --agenda-muted: #a0a0a0;
+  --agenda-border: #c6c7ac;
 }
 
 @theme inline {
@@ -137,6 +147,11 @@
   --color-brand: var(--brand);
   --color-brand-hover: var(--brand-hover);
   --color-brand-muted: var(--brand-muted);
+  --color-agenda-gold: var(--agenda-gold);
+  --color-agenda-gold-light: var(--agenda-gold-light);
+  --color-agenda-surface: var(--agenda-surface);
+  --color-agenda-muted: var(--agenda-muted);
+  --color-agenda-border: var(--agenda-border);
 }
 
 @layer base {
